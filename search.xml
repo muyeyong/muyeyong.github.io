@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Git-操作失误案例</title>
+      <link href="/2020/04/16/git-cao-zuo-shi-wu-an-li/"/>
+      <url>/2020/04/16/git-cao-zuo-shi-wu-an-li/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Git操作失误案例"><a href="#Git操作失误案例" class="headerlink" title="Git操作失误案例"></a>Git操作失误案例</h1><h2 id="git-init-后找不到本地分支"><a href="#git-init-后找不到本地分支" class="headerlink" title="git init 后找不到本地分支"></a>git init 后找不到本地分支</h2><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_19-58-54.png" alt=""></p><p>  进行 <code>git init</code> 命令后，出现了master分支，然后我就傻傻的去查看本地分支<code>git branch -a</code>,但是没有任何输出：</p><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-02-17.png" alt=""></p><p>  就觉得很奇怪，后面查资料才知道，<strong>git 分支必须指向一个commit，没有任何commit就没有任何分支</strong> ，提交（git commit过一次，以后新建的分支不管有没有提交数据，都会显示。</p><h2 id="添加远程仓库后，看不到远程分支"><a href="#添加远程仓库后，看不到远程分支" class="headerlink" title="添加远程仓库后，看不到远程分支"></a>添加远程仓库后，看不到远程分支</h2><p>   新建的本地仓库需要关联远程仓库，使用命令<code>git remote add origin git@github.com:muyeyong/React.git</code> 后，使用<code>git branch -a</code>查看所有分支（包括远程），发现只查到本地分支</p><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-17-36.png" alt=""></p><p>  只是建立了连接，并没有获取远程分支的信息，还需要使用<code>git fetch</code>获取远程分支的所有信息。</p><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-33-58.png" alt=""></p><h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><pre><code> git fetch 和 git pull 的不同：</code></pre><p>​        首先使用一张盗的图</p><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-32-56.png" alt=""></p><p>解释一下远程仓库副本： 本地的远程仓库缓存</p><p>git fetch 获取远程仓库，并没有合并到本地分支，一般情况下<code>git pull = git fetch + git merge</code>。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 失误案例 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTML-常用标签</title>
       <link href="/2020/04/15/html-chang-yong-biao-qian/"/>
       <url>/2020/04/15/html-chang-yong-biao-qian/</url>
@@ -333,7 +358,7 @@
       <link href="/2020/04/15/css-he-zi-mo-xing/"/>
       <url>/2020/04/15/css-he-zi-mo-xing/</url>
       
-        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote><p>padding同border一样，可以设置上下左右内边距，padding的不同写法。</p><table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>padding: 15px</td><td>一个数值，设定了<code>上下左右</code>的内边距</td></tr><tr><td>padding: 15px 15px</td><td>两个数值，设定的是<code>上下</code> 和 <code>左右</code> 的内边距</td></tr><tr><td>padding: 15px 20px 34px</td><td>三个数值，设定的是<code>上</code> <code>左右</code> <code>下</code>的内边距</td></tr><tr><td>padding: 15px 23px 12px 23px</td><td>四个数值，设定的是<code>上</code>  <code>右</code>  <code>下</code>  <code>左</code>，顺时针方向设定内边距</td></tr></tbody></table><p>可能的值：</p><p><img src="Snipaste_2020-04-16_19-38-22.png" alt=""></p><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>​    <strong>内边距也会影响盒子的实际大小，会把盒子撑大</strong></p><p>​    <strong>解决办法</strong>： 设置盒子大小的时候减去内边距</p><p>​    <strong>应用</strong>： 解决盒子之间的距离问题</p><p>​    <img src="Snipaste_2020-04-16_19-20-55.png" alt=""></p><p>没有使用内边距，由于文字长度的原因，文字之间的距离不相等。</p><p><img src="Snipaste_2020-04-16_19-53-35.png" alt=""></p><p>使用了内边距就可以解决这样的问题。</p>]]></content>
       
       
       <categories>

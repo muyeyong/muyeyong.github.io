@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-04-15T10:37:58.860Z</updated>
+  <updated>2020-04-16T12:36:50.331Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git-操作失误案例</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/</id>
+    <published>2020-04-16T11:56:47.000Z</published>
+    <updated>2020-04-16T12:36:50.331Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Git操作失误案例&quot;&gt;&lt;a href=&quot;#Git操作失误案例&quot; class=&quot;headerlink&quot; title=&quot;Git操作失误案例&quot;&gt;&lt;/a&gt;Git操作失误案例&lt;/h1&gt;&lt;h2 id=&quot;git-init-后找不到本地分支&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/Git/"/>
+    
+    
+      <category term="失误案例" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML-常用标签</title>
@@ -399,7 +426,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/css-he-zi-mo-xing/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/15/css-he-zi-mo-xing/</id>
     <published>2020-04-15T08:03:30.000Z</published>
-    <updated>2020-04-15T11:11:32.021Z</updated>
+    <updated>2020-04-16T11:54:23.866Z</updated>
     
     <summary type="html">
     
@@ -553,33 +580,6 @@
 &lt;tbody&gt;&lt;tr&gt;
 &lt;td&gt;加粗&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;strong&amp;gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="HTML" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/HTML/"/>
-    
-    
-      <category term="HTML基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/HTML%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML-列表</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-lie-biao/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-lie-biao/</id>
-    <published>2020-04-15T08:01:53.000Z</published>
-    <updated>2020-04-15T10:36:42.066Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h1&gt;&lt;h2 id=&quot;无序列表&quot;&gt;&lt;a href=&quot;#无序列表&quot; class=&quot;headerlink&quot;
         
       
     

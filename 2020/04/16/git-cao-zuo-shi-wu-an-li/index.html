@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="React-export 和 export default的区别, 上帝说我帅的很">
+    <meta name="keywords" content="Git-操作失误案例, 上帝说我帅的很">
     <meta name="description" content="前端 | React | HTML | CSS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>React-export 和 export default的区别 | 上帝说我帅的很</title>
+    <title>Git-操作失误案例 | 上帝说我帅的很</title>
     <link rel="icon" type="image/png" href="/popsicle.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">React-export 和 export default的区别</h1>
+                    <h1 class="description center-align post-title">Git-操作失误案例</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%96%91%E6%83%91/">
-                                <span class="chip bg-color">疑惑</span>
+                            <a href="/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/">
+                                <span class="chip bg-color">失误案例</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/React/" class="post-category">
-                                React
+                            <a href="/categories/Git/" class="post-category">
+                                Git
                             </a>
                         
                     </div>
@@ -464,21 +464,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-04-16
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-04-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    94
+                    289
                 </div>
                 
 
@@ -500,14 +500,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="export-default-和-export-的区别"><a href="#export-default-和-export-的区别" class="headerlink" title="export default 和 export 的区别"></a>export default 和 export 的区别</h1><blockquote>
-<p>export 用于导出常量、函数、文件、模块等。</p>
-</blockquote>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
-<li>通过export导出，导入时需要加{}，export defalut 导出的则不需要</li>
-<li>export default为模块指定默认输出，不需要知道加载模块的变量名</li>
-<li>一个文件或模块里面，只能存在一个export default，import 和 export可以存在任意个。</li>
-</ul>
+                <h1 id="Git操作失误案例"><a href="#Git操作失误案例" class="headerlink" title="Git操作失误案例"></a>Git操作失误案例</h1><h2 id="git-init-后找不到本地分支"><a href="#git-init-后找不到本地分支" class="headerlink" title="git init 后找不到本地分支"></a>git init 后找不到本地分支</h2><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_19-58-54.png" alt=""></p>
+<p>  进行 <code>git init</code> 命令后，出现了master分支，然后我就傻傻的去查看本地分支<code>git branch -a</code>,但是没有任何输出：</p>
+<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-02-17.png" alt=""></p>
+<p>  就觉得很奇怪，后面查资料才知道，<strong>git 分支必须指向一个commit，没有任何commit就没有任何分支</strong> ，提交（git commit过一次，以后新建的分支不管有没有提交数据，都会显示。</p>
+<h2 id="添加远程仓库后，看不到远程分支"><a href="#添加远程仓库后，看不到远程分支" class="headerlink" title="添加远程仓库后，看不到远程分支"></a>添加远程仓库后，看不到远程分支</h2><p>   新建的本地仓库需要关联远程仓库，使用命令<code>git remote add origin git@github.com:muyeyong/React.git</code> 后，使用<code>git branch -a</code>查看所有分支（包括远程），发现只查到本地分支</p>
+<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-17-36.png" alt=""></p>
+<p>  只是建立了连接，并没有获取远程分支的信息，还需要使用<code>git fetch</code>获取远程分支的所有信息。</p>
+<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-33-58.png" alt=""></p>
+<h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><pre><code> git fetch 和 git pull 的不同：</code></pre><p>​        首先使用一张盗的图</p>
+<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-32-56.png" alt=""></p>
+<p>解释一下远程仓库副本： 本地的远程仓库缓存</p>
+<p>git fetch 获取远程仓库，并没有合并到本地分支，一般情况下<code>git pull = git fetch + git merge</code>。</p>
 
             </div>
             <hr/>
@@ -533,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/react-export-he-export-default-de-qu-bie/">https://github.com/muyeyong/muyeyong.github.io/2020/04/15/react-export-he-export-default-de-qu-bie/</a>
+                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/">https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,8 +575,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%96%91%E6%83%91/">
-                                    <span class="chip bg-color">疑惑</span>
+                                <a href="/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/">
+                                    <span class="chip bg-color">失误案例</span>
                                 </a>
                             
                         </div>
@@ -762,37 +766,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/15/git-git-chang-yong-ming-ling/">
+                <a href="/2020/04/16/git-cao-zuo-shi-wu-an-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.png" class="responsive-img" alt="Git-git常用命令">
+                        <img src="/medias/featureimages/11.png" class="responsive-img" alt="Git-操作失误案例">
                         
-                        <span class="card-title">Git-git常用命令</span>
+                        <span class="card-title">Git-操作失误案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git常用命令
-由于每次使用git命令的时候都要去google，特意写文章记录下，按照一个空白项目的开发流程来记录。
+                            Git操作失误案例git init 后找不到本地分支
+  进行 git init 命令后，出现了master分支，然后我就傻傻的去查看本地分支git branch -a,但是没有任何输出：
 
-从远程仓库克隆
- git clone  远程仓库的地址
-
-
-建立本地跟远程仓库的连接
-git remote add or
+  就觉得很奇怪，后面查资料才知道，git 分支
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -805,11 +805,12 @@ git remote add or
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">常用操作</span>
+                    <a href="/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/">
+                        <span class="chip bg-color">失误案例</span>
                     </a>
                     
                 </div>
@@ -823,37 +824,39 @@ git remote add or
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/15/emmet-yu-fa/">
+                <a href="/2020/04/15/html-chang-yong-biao-qian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.png" class="responsive-img" alt="Emmet语法">
+                        <img src="/medias/featureimages/17.png" class="responsive-img" alt="HTML-常用标签">
                         
-                        <span class="card-title">Emmet语法</span>
+                        <span class="card-title">HTML-常用标签</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Emmet语法快速生成HTML结构
-!，然后按下Table生成
-
-id 和class
-# : 设置id
-.: 设置class
+                            Web常用标签
 
 
-子节点和兄弟节点
-&gt;:设置子节点
-+:设置兄弟节点
+标签名
+用途
+属性
 
 
-重复
-* : 重复生成某个结构
+
+&lt;!DOCTYPE&gt;
+表明HTML使用的版本
 
 
-分组
-():
+
+html lang=xxx
+html网站使用语言说明,对浏览器识别有辅助作用
+
+
+
+meta charset=xxx
+编码字符规定
                         
                     </div>
                     <div class="publish-info">
@@ -864,8 +867,8 @@ id 和class
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/HTML/" class="post-category">
+                                    HTML
                                 </a>
                             
                             
@@ -875,8 +878,8 @@ id 和class
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS%E6%8A%80%E5%B7%A7/">
-                        <span class="chip bg-color">CSS技巧</span>
+                    <a href="/tags/HTML%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">HTML基础</span>
                     </a>
                     
                 </div>
