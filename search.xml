@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>HTML-常用标签</title>
+      <link href="/2020/04/15/html-chang-yong-biao-qian/"/>
+      <url>/2020/04/15/html-chang-yong-biao-qian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Web常用标签"><a href="#Web常用标签" class="headerlink" title="Web常用标签"></a>Web常用标签</h1><table><thead><tr><th align="center">标签名</th><th align="center">用途</th><th align="left">属性</th></tr></thead><tbody><tr><td align="center">&lt;!DOCTYPE&gt;</td><td align="center">表明HTML使用的版本</td><td align="left"></td></tr><tr><td align="center">html lang=xxx</td><td align="center">html网站使用语言说明,对浏览器识别有辅助作用</td><td align="left"></td></tr><tr><td align="center">meta charset=xxx</td><td align="center">编码字符规定, 一般使用UTF-8，万国码</td><td align="left"></td></tr><tr><td align="center">p</td><td align="center">双标签，标明一个段落,p标签之间有明显的间隙</td><td align="left"></td></tr><tr><td align="center">br</td><td align="center">单标签，换行</td><td align="left"></td></tr><tr><td align="center">strong/b</td><td align="center">双标签，字体加粗</td><td align="left"></td></tr><tr><td align="center">em/</td><td align="center">双标签,字体倾斜效果</td><td align="left"></td></tr><tr><td align="center">del</td><td align="center">双标签,删除线效果</td><td align="left"></td></tr><tr><td align="center">ico</td><td align="center">双标签,下划线</td><td align="left"></td></tr><tr><td align="center">div</td><td align="center">双标签,块级域,单独成行</td><td align="left"></td></tr><tr><td align="center">span</td><td align="center">双标签,块级域,可多个span标签在一行</td><td align="left"></td></tr><tr><td align="center">img</td><td align="center">单标签,引入图片</td><td align="left">src:图片路径,alt:图片显示不了的时候的文字说明，title:图片说明,width:图片宽度,height:图片高度</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML-Web标准</title>
+      <link href="/2020/04/15/html-web-biao-zhun/"/>
+      <url>/2020/04/15/html-web-biao-zhun/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>主要包括结构(Structure)、表现(Presentation)和行为(Behavior)三个方面</p></blockquote><table><thead><tr><th align="center">标准</th><th align="left">说明</th></tr></thead><tbody><tr><td align="center">结构</td><td align="left">对网页元素进行整理和分类，HTML</td></tr><tr><td align="center">表现</td><td align="left">设置网页元素的外观样式，css</td></tr><tr><td align="center">行为</td><td align="left">网页模型的定义以及交互的编写，javaScript</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快捷化-VSCode代码格式化</title>
+      <link href="/2020/04/15/kuai-jie-hua-vscode-dai-ma-ge-shi-hua/"/>
+      <url>/2020/04/15/kuai-jie-hua-vscode-dai-ma-ge-shi-hua/</url>
+      
+        <content type="html"><![CDATA[<h1 id="VSCode代码格式化快捷键及保存时自动格式化"><a href="#VSCode代码格式化快捷键及保存时自动格式化" class="headerlink" title="VSCode代码格式化快捷键及保存时自动格式化"></a>VSCode代码格式化快捷键及保存时自动格式化</h1><h2 id="VSCode代码格式化"><a href="#VSCode代码格式化" class="headerlink" title="VSCode代码格式化"></a>VSCode代码格式化</h2><blockquote><p>shift + alt + F</p></blockquote><h2 id="保存代码格式化"><a href="#保存代码格式化" class="headerlink" title="保存代码格式化"></a>保存代码格式化</h2><ol><li><p>点击左下角的设置图标，进入设置</p><p><img src="Snipaste_2020-04-09_16-29-38.png" alt=""></p></li></ol><ol start="2"><li><p>搜索emmet，进入settings.json</p><p><img src="Snipaste_2020-04-09_16-33-16.png" alt=""></p></li></ol><ol start="3"><li><p>添加<code>&quot;editor.formatOnType&quot;: true,  &quot;editor.formatOnSave&quot;: true</code></p><p><img src="Snipaste_2020-04-09_16-34-44.png" alt=""></p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 快捷化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode快捷化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React-onClick使用箭头函数的问题</title>
+      <link href="/2020/04/15/react-onclick-shi-yong-jian-tou-han-shu-de-wen-ti/"/>
+      <url>/2020/04/15/react-onclick-shi-yong-jian-tou-han-shu-de-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Reac中onClick使用箭头函数的疑问"><a href="#Reac中onClick使用箭头函数的疑问" class="headerlink" title="Reac中onClick使用箭头函数的疑问"></a>Reac中onClick使用箭头函数的疑问</h1><p>如果直接写：</p><pre><code>onClock = {this.handleClick(i)}</code></pre><p>这样的话，在render的时候就已经执行了，肯定不行。</p><p>写成这样：</p><pre><code>onClick= {this.handleClick}</code></pre><p>需要携带参数过去的话就不好解决。</p><p>就需要匿名函数将参数带过去：</p><pre><code>onClick = {()=&gt; handleClick(i)}</code></pre><p>闭包让<code>i</code> 保持对renderSquare的 <code>i</code> 的引用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 疑惑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git-git常用命令</title>
+      <link href="/2020/04/15/git-git-chang-yong-ming-ling/"/>
+      <url>/2020/04/15/git-git-chang-yong-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h1 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h1><blockquote><p>由于每次使用git命令的时候都要去google，特意写文章记录下，按照一个空白项目的开发流程来记录。</p></blockquote><h2 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h2><blockquote><p> git clone  远程仓库的地址</p></blockquote><p><img src="1.png" alt=""></p><h2 id="建立本地跟远程仓库的连接"><a href="#建立本地跟远程仓库的连接" class="headerlink" title="建立本地跟远程仓库的连接"></a>建立本地跟远程仓库的连接</h2><blockquote><p>git remote add origin 远程仓库的地址</p><blockquote><p>其中remote 是指远程仓库，origin是给远程仓库添加别名</p></blockquote></blockquote><h2 id="建立本地分支跟远程分支的关联"><a href="#建立本地分支跟远程分支的关联" class="headerlink" title="建立本地分支跟远程分支的关联"></a>建立本地分支跟远程分支的关联</h2><blockquote><p>git branch –set-upstream-to 远程分支名 本地分支名</p></blockquote><h2 id="将工作区的更改移到暂存区"><a href="#将工作区的更改移到暂存区" class="headerlink" title="将工作区的更改移到暂存区"></a>将工作区的更改移到暂存区</h2><blockquote><p>git add  [ 需要移动的范围]</p></blockquote><ul><li><code>git add .</code> 将所有文件移到暂存区</li><li><code>git add &lt;filename1&gt; &lt;filename2&gt; ...</code> 将指定文件移到暂存区</li><li><code>git add [dir1] [dit2] ..</code> 将指定文件夹移到暂存区</li></ul><h2 id="将暂存区的更改提交到本地仓库"><a href="#将暂存区的更改提交到本地仓库" class="headerlink" title="将暂存区的更改提交到本地仓库"></a>将暂存区的更改提交到本地仓库</h2><blockquote><p>git commit -m ‘对于本次提交的留言’</p></blockquote><h2 id="撤销上次提交"><a href="#撤销上次提交" class="headerlink" title="撤销上次提交"></a>撤销上次提交</h2><blockquote><p>git commit –amend</p></blockquote><h2 id="将本地仓库分支推送到对应的远程仓库的分支"><a href="#将本地仓库分支推送到对应的远程仓库的分支" class="headerlink" title="将本地仓库分支推送到对应的远程仓库的分支"></a>将本地仓库分支推送到对应的远程仓库的分支</h2><blockquote><p>git push 远程仓库的名字 远程仓库分支名</p></blockquote><h2 id="将本地仓库分支推送到远程仓库的某分支"><a href="#将本地仓库分支推送到远程仓库的某分支" class="headerlink" title="将本地仓库分支推送到远程仓库的某分支"></a>将本地仓库分支推送到远程仓库的某分支</h2><blockquote><p>git push 远程仓库名 本地分支名：远程分支名</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常用操作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React-export 和 export default的区别</title>
+      <link href="/2020/04/15/react-export-he-export-default-de-qu-bie/"/>
+      <url>/2020/04/15/react-export-he-export-default-de-qu-bie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="export-default-和-export-的区别"><a href="#export-default-和-export-的区别" class="headerlink" title="export default 和 export 的区别"></a>export default 和 export 的区别</h1><blockquote><p>export 用于导出常量、函数、文件、模块等。</p></blockquote><h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul><li>通过export导出，导入时需要加{}，export defalut 导出的则不需要</li><li>export default为模块指定默认输出，不需要知道加载模块的变量名</li><li>一个文件或模块里面，只能存在一个export default，import 和 export可以存在任意个。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 疑惑 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Emmet语法</title>
+      <link href="/2020/04/15/emmet-yu-fa/"/>
+      <url>/2020/04/15/emmet-yu-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Emmet语法"><a href="#Emmet语法" class="headerlink" title="Emmet语法"></a>Emmet语法</h1><h2 id="快速生成HTML结构"><a href="#快速生成HTML结构" class="headerlink" title="快速生成HTML结构"></a>快速生成HTML结构</h2><blockquote><p><code>!</code>，然后按下Table生成</p></blockquote><h2 id="id-和class"><a href="#id-和class" class="headerlink" title="id 和class"></a>id 和class</h2><blockquote><p><code>#</code> : 设置id</p><p><code>.</code>: 设置class</p></blockquote><p><img src="Snipaste_2020-04-09_15-58-54.png" alt=""></p><h2 id="子节点和兄弟节点"><a href="#子节点和兄弟节点" class="headerlink" title="子节点和兄弟节点"></a>子节点和兄弟节点</h2><blockquote><p><code>&gt;</code>:设置子节点</p><p><code>+</code>:设置兄弟节点</p></blockquote><p><img src="Snipaste_2020-04-09_16-01-35.png" alt=""></p><h2 id="重复"><a href="#重复" class="headerlink" title="重复"></a>重复</h2><blockquote><p><code>*</code> : 重复生成某个结构</p></blockquote><p><img src="Snipaste_2020-04-09_16-05-40.png" alt=""></p><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><blockquote><p><code>()</code>: 将多个标签分为一组，表示括号内的结构与括号外的结构同层</p></blockquote><p><img src="Snipaste_2020-04-09_16-09-05.png" alt=""></p><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><blockquote><p><code>[]</code>: 括号里面添加标签属性</p></blockquote><p><img src="Snipaste_2020-04-09_16-11-05.png" alt=""></p><h2 id="编号-自增符"><a href="#编号-自增符" class="headerlink" title="编号 自增符"></a>编号 自增符</h2><blockquote><p><code>$</code> : 一个$代表一位数字，两个$代表两位数字，以此类推生成$(1) $(01)</p><p>如果想自定义从几开始递增就用: $@+数字</p></blockquote><p><img src="Snipaste_2020-04-09_16-19-37.png" alt=""></p><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><blockquote><p><code>{}</code>:里面添加描述文字</p></blockquote><p><img src="Snipaste_2020-04-09_16-20-39.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS技巧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-字体属性</title>
+      <link href="/2020/04/15/css-zi-ti-shu-xing/"/>
+      <url>/2020/04/15/css-zi-ti-shu-xing/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>属性</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>font-family</td><td>‘Microsoft YaHei’</td><td>设置字体，通常设置在body标签内。可以使用多个字体，会遍历字体，找到了就是要，没有找到使用浏览器默认字体。</td></tr><tr><td>font-size</td><td>20px</td><td>设置字体大小，通常在body中使用，标题标签需要单独指定文字大小</td></tr><tr><td>font-weight</td><td>bold,bolder,lighter,number:[100|200|….|900]</td><td>设置字体粗细</td></tr><tr><td>font-style</td><td>字体样式</td><td>设置文本样式,斜体…</td></tr><tr><td>font</td><td>复合属性</td><td>遵循顺序：font-style font-weight font-size/line-weight  font-family</td></tr></tbody></table><p><img src="image-20200331113710518.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-语法规范</title>
+      <link href="/2020/04/15/css-yu-fa-gui-fan/"/>
+      <url>/2020/04/15/css-yu-fa-gui-fan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css语法规范"><a href="#css语法规范" class="headerlink" title="css语法规范"></a>css语法规范</h1><h2 id="样式格式书写"><a href="#样式格式书写" class="headerlink" title="样式格式书写"></a>样式格式书写</h2><blockquote><p>用宽松式风格</p></blockquote><pre class=" language-css"><code class="language-css"><span class="token selector">error: p </span><span class="token punctuation">{</span><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token property">fond-size</span><span class="token punctuation">:</span><span class="token number">20</span>px<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">right: p </span><span class="token punctuation">{</span>  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>t  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><h2 id="样式大小写书写风格"><a href="#样式大小写书写风格" class="headerlink" title="样式大小写书写风格"></a>样式大小写书写风格</h2><blockquote><p>使用小写</p></blockquote><pre class=" language-css"><code class="language-css"><span class="token selector">error: p </span><span class="token punctuation">{</span>    <span class="token property">COLOR</span><span class="token punctuation">:</span> RED<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">right: p </span><span class="token punctuation">{</span>    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><h2 id="样式空格风格"><a href="#样式空格风格" class="headerlink" title="样式空格风格"></a>样式空格风格</h2><blockquote><p>选择器和大括号中间保留空格</p><p>属性值前面，冒号后面保留空格</p></blockquote><pre><code>p {    color: red;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-引入方式</title>
+      <link href="/2020/04/15/css-yin-ru-fang-shi/"/>
+      <url>/2020/04/15/css-yin-ru-fang-shi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css引入方式"><a href="#css引入方式" class="headerlink" title="css引入方式"></a>css引入方式</h1><ul><li>行内样式表</li><li>内部样式表</li><li>外部样式表</li></ul><h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><blockquote><p>将css抽取出来，使用sytle标签包围</p></blockquote><p><img src="Snipaste_2020-04-09_08-49-51.png" alt=""></p><h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><blockquote><p>在标签内部使用style属性</p></blockquote><p><img src="Snipaste_2020-04-09_09-02-17.png" alt=""></p><h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><blockquote><p>通过link 标签引入外部样式，href表示引入的路径</p></blockquote><p><img src="Snipaste_2020-04-09_09-04-34.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-文本属性</title>
+      <link href="/2020/04/15/css-wen-ben-shu-xing/"/>
+      <url>/2020/04/15/css-wen-ben-shu-xing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS文本属性"><a href="#CSS文本属性" class="headerlink" title="CSS文本属性"></a>CSS文本属性</h1><blockquote><p>可定义文本的外观，文本颜色、对齐文本、装饰文本、文本缩进、行间距等</p></blockquote><h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><blockquote><p>可以通过color属性定义文本颜色</p></blockquote><pre class=" language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><table><thead><tr><th>表示</th><th>属性值</th></tr></thead><tbody><tr><td>预定义颜色</td><td>red green blue</td></tr><tr><td>十六进制</td><td>#fff000 （开发用的最多）</td></tr><tr><td>RGB</td><td>reg(255,255,255)</td></tr></tbody></table><h2 id="对齐文本"><a href="#对齐文本" class="headerlink" title="对齐文本"></a>对齐文本</h2><blockquote><p>text-align属性设置文本的水平对齐方式</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>left</td><td>左对齐,默认对齐方式</td></tr><tr><td>center</td><td>居中对齐</td></tr><tr><td>right</td><td>右对齐</td></tr></tbody></table><h2 id="装饰文本"><a href="#装饰文本" class="headerlink" title="装饰文本"></a>装饰文本</h2><blockquote><p>text-decoration属性设置文本装饰</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>none</td><td>默认值，没有装饰</td></tr><tr><td>underline</td><td>下划线</td></tr><tr><td>overline</td><td>上划线</td></tr><tr><td>line-through</td><td>删除线</td></tr></tbody></table><h2 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h2><blockquote><p>text-indent设置首行缩进</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>像素点 20px</td><td>缩进值</td></tr><tr><td>em ： 2em</td><td>相对当前文字大小距离，相对单位</td></tr></tbody></table><h2 id="行间距"><a href="#行间距" class="headerlink" title="行间距"></a>行间距</h2><blockquote><p>line-height 设置行间距离，设置行间距改变的是上下间距</p></blockquote><p><img src="image-20200331150959563.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-三大特性</title>
+      <link href="/2020/04/15/css-san-da-te-xing/"/>
+      <url>/2020/04/15/css-san-da-te-xing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css三大特性"><a href="#css三大特性" class="headerlink" title="css三大特性"></a>css三大特性</h1><blockquote><p>重叠性、继承性和权重选择</p></blockquote><h2 id="重叠性"><a href="#重叠性" class="headerlink" title="重叠性"></a>重叠性</h2><blockquote><p>对于同一个标签使用的样式，后面的样式会覆盖前面的样式</p></blockquote><p><img src="Snipaste_2020-04-13_10-13-24.png" alt=""></p><h2 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h2><blockquote><p>子标签会继承父标签的样式，主要是文字样式</p></blockquote><p><img src="Snipaste_2020-04-13_10-15-19.png" alt=""></p><p><img src="Snipaste_2020-04-13_10-18-06.png" alt="Snipaste_2020-04-13_10-18-06"></p><h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><blockquote><p>不同类型的选择器选择了相同的标签，会根据权重进行选择使用</p></blockquote><table><thead><tr><th>选择器类型</th><th>权重</th></tr></thead><tbody><tr><td>继承 或 通配符选择器</td><td>0,0,0,0</td></tr><tr><td>标签选择器</td><td>0,0,0,1</td></tr><tr><td>类选择器</td><td>0,0,1,0</td></tr><tr><td>ID选择器</td><td>0,1,0,0</td></tr><tr><td>行内样式</td><td>1,0,0,0</td></tr><tr><td>import</td><td>无穷大</td></tr></tbody></table><p><img src="Snipaste_2020-04-13_10-32-15.png" alt=""></p><p><img src="Snipaste_2020-04-13_10-32-34.png" alt="Snipaste_2020-04-13_10-32-34"></p><p><strong>范围越小，权重越大</strong></p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul><li>继承的权重为0</li></ul><p><img src="/Snipaste_2020-04-14_09-43-14.png" alt=""></p><p>虽然span的父级的类选择器的权重比span标签选择器的权重高，但是span标签是继承父类选择器的权重为0</p><ul><li>关于a标签的继承</li></ul><p><img src="Snipaste_2020-04-14_09-48-03.png" alt=""></p><p>虽然a标签直接继承父级选折起的样式，但是颜色却没有变红，是应为浏览器默认给a标签加了一个样式(蓝色字体+下划线)</p><ul><li>权重叠加</li></ul><p><img src="Snipaste_2020-04-14_09-55-56.png" alt=""></p><p>虽然都选择了a标签，一个是<code>类选择器+标签选择器</code> ，另一个是<code>标签选择器</code> ,但是呈现的效果第一个选择器，是因为选择器权重的叠加(0,0,1,0) + (0,0,01) &gt; (0,0,0,1), <strong>请注意权重叠加不会产生进位，也就是六个标签选择器叠加也没有一个类选择器权重大，量变无法引起质变</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-简介</title>
+      <link href="/2020/04/15/css-jian-jie/"/>
+      <url>/2020/04/15/css-jian-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css简介"><a href="#css简介" class="headerlink" title="css简介"></a>css简介</h1><blockquote><p>层叠样式表</p></blockquote><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>选择器{样式}</p><ul><li>选择器：给谁改样式</li><li>样式： 改什么样的样式</li><li>选择器：HTML的标签</li><li>样式是键值对 key:value</li><li>不同样式用;分隔</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-盒子模型</title>
+      <link href="/2020/04/15/css-he-zi-mo-xing/"/>
+      <url>/2020/04/15/css-he-zi-mo-xing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-基础选择器</title>
+      <link href="/2020/04/15/css-ji-chu-xuan-ze-qi/"/>
+      <url>/2020/04/15/css-ji-chu-xuan-ze-qi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h1><blockquote><p>分为标签选择器、id选择器、类选择器和通用符选择器</p></blockquote><h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><p>以html的标签名作为选择器，进行选择</p><pre class=" language-css"><code class="language-css"><span class="token selector">p </span><span class="token punctuation">{</span>    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><p>样式点定义 结构类调用 一个或多个  开发最常用</p><pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.red</span> </span><span class="token punctuation">{</span>    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><ul><li>不能使用纯数字或中文作为类名</li><li>类名名字过长用-分隔</li></ul><p>可以给clas属性使用多个类名，只需使用空格分开。</p><ul><li>对于多个类，属性值重复的时候怎么解决？</li></ul><h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><p>样式#定义 结构id调用 只能调用一次  别人切勿使用</p><pre class=" language-css"><code class="language-css"><span class="token selector">&lt;style>    <span class="token id">#pink</span> </span><span class="token punctuation">{</span>    <span class="token punctuation">}</span>&lt;/style>&lt;div id=<span class="token string">"pink"</span>>&lt;/div></code></pre><h2 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h2><blockquote><p>* 通配符，会修改所用标签的样式，不需要调用</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-复合选择器</title>
+      <link href="/2020/04/15/css-fu-he-xuan-ze-qi/"/>
+      <url>/2020/04/15/css-fu-he-xuan-ze-qi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css复合选择器"><a href="#css复合选择器" class="headerlink" title="css复合选择器"></a>css复合选择器</h1><h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><blockquote><p>选择父选择器的的所有符合条件的子选择器，父选择器和子选择器可以是任意的基础选着器</p></blockquote><pre class=" language-javascript"><code class="language-javascript">父选择器 子选择器 <span class="token punctuation">{</span>    设置属性<span class="token punctuation">}</span></code></pre><p><img src="Snipaste_2020-04-09_17-15-05.png" alt=""></p><h2 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h2><blockquote><p>选择直接关联的子选择器</p></blockquote><pre class=" language-javascript"><code class="language-javascript">父选择器 子选择器<span class="token punctuation">{</span>    设置属性<span class="token punctuation">}</span></code></pre><p><img src="Snipaste_2020-04-09_18-01-39.png" alt=""></p><h2 id="并集选择器"><a href="#并集选择器" class="headerlink" title="并集选择器"></a>并集选择器</h2><blockquote><p>实现多个选择起的集体声明</p></blockquote><p><img src="Snipaste_2020-04-09_18-11-37.png" alt=""></p><h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><blockquote><p>伪类选择器通过<code>:</code>声明</p></blockquote><h3 id="链接伪类选择器"><a href="#链接伪类选择器" class="headerlink" title="链接伪类选择器"></a>链接伪类选择器</h3><table><thead><tr><th>名称</th><th>效果</th></tr></thead><tbody><tr><td>a:hove</td><td>鼠标放上去触发</td></tr><tr><td>a:active</td><td>点击链接时触发</td></tr><tr><td>a:link</td><td>未访问链接</td></tr><tr><td>a:visited</td><td>链接被点击时触发</td></tr></tbody></table><p><img src="Snipaste_2020-04-12_10-36-44.png" alt=""></p><p>注意使用链接伪类的顺序： link =&gt; visited =&gt; hover =&gt; active</p><p>使用这种顺序的原因是为了防止前面触发的效果被后面出发的效果覆盖。</p><p>未点击链接前，link伪类长期处于激活状态，鼠标悬停（或点击）时，<a>链接同时处于link和hover(或active)状态，由于它们特指度相同，在同时激活的情况下，后出现的伪类样式会覆盖前面的伪类样式，故link状态必须写在hover(或active)之前。</p><p>再讨论hover和active的顺序，若把hover放在active后面，当点击链接一瞬，实际你在激活active状态的同时触发了hover伪类,hover在后面覆盖了active的颜色，所以无法看到active的颜色。故hover在active之前</p><p>其次，若把visited放在hover后面，那已访问过的链接一直触发着visited伪类，会覆盖hover样式。</p><p>最后，其实link、visited两个伪类之间顺序无所谓。（因为它俩不可能同时触发，即又未访问同时又已访问。）</p><h2 id="focus伪类"><a href="#focus伪类" class="headerlink" title="focus伪类"></a>focus伪类</h2><blockquote><p>元素获取焦点时，添加样式，一般用于input表单</p></blockquote><p><img src="Snipaste_2020-04-12_10-44-19.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-背景</title>
+      <link href="/2020/04/15/css-bei-jing/"/>
+      <url>/2020/04/15/css-bei-jing/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css背景"><a href="#css背景" class="headerlink" title="css背景"></a>css背景</h1><blockquote><p>主要分为背景颜色、背景图片、背景颜色的重复以及背景颜色的定位</p></blockquote><h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color"></a>background-color</h2><blockquote><p>默认是transparent（透明），可以用16进制、RGB以及直接设置颜色来设置</p></blockquote><pre><code>p { background-color: silver }div { background-color: rgb(223,71,177) } body { background-color: #98AB6F }pre { background-color: transparent; } </code></pre><h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><blockquote><p>设置背景图片，使用背景图片是为了更好的控制图片的位置（相对于imag标签），使用url导入</p></blockquote><pre><code>code { background-image: url(&quot;comet.jpg&quot;); }blockquote { background-image: url(&quot;c:\InetPub\MyPixs\comet.jpg&quot;); } br { background-image: url(http://Fred.com/ImageFile/Q.gif); } body { background-image: none; </code></pre><h2 id="backgroung-repeat"><a href="#backgroung-repeat" class="headerlink" title="backgroung-repeat"></a>backgroung-repeat</h2><blockquote><p>设置背景图片的平铺方法，默认为repeat</p></blockquote><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>repeat</td><td>图像在x、y轴平铺</td></tr><tr><td>no-repeat</td><td>图像不平铺</td></tr><tr><td>repeat-x</td><td>图像延x轴平铺</td></tr><tr><td>repeat-y</td><td>图像延y轴平铺</td></tr></tbody></table><pre><code>menu { background: url(&quot;images/aardvark.gif&quot;); background-repeat: repeat-y; } p { background: url(&quot;images/aardvark.gif&quot;); background-repeat: no-repeat; } </code></pre><h2 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a>background-position</h2><blockquote><p>设置背景图片的位置，可以使用具体数值排列、方位排列和混合排列</p></blockquote><h3 id="具体数字排列"><a href="#具体数字排列" class="headerlink" title="具体数字排列"></a>具体数字排列</h3><blockquote><p>具体数值：百分数 | 由浮点数字和单位标识符组成的长度值</p></blockquote><pre class=" language-background-position:20px"><code class="language-background-position:20px">background-position:20px 40px;background-position:20px;</code></pre><p>如果指定两个数值，第一个是x轴，第二个是y轴</p><p>如果只指定一个数值，默认指定为x轴，y轴默认居中</p><p><img src="Snipaste_2020-04-13_09-41-27.png" alt=""></p><h2 id="方位排列"><a href="#方位排列" class="headerlink" title="方位排列"></a>方位排列</h2><blockquote><p>使用top,buttom,left,right,center来设置</p></blockquote><pre><code>background-position: top right;background-position: top;</code></pre><p>如果只指定一个，默认指定为x轴，y轴默认为center</p><h2 id="混合排列"><a href="#混合排列" class="headerlink" title="混合排列"></a>混合排列</h2><blockquote><p>结合数值排列和方位排列</p></blockquote><pre><code>background-position:20px top;</code></pre><p>第一个是x轴数值，第二个是y轴数值，如果指定的是不合法的定位，图片会定位为默认状态（x:0px , y:0px）</p><h2 id="background-attachment"><a href="#background-attachment" class="headerlink" title="background-attachment"></a>background-attachment</h2><blockquote><p>设置背景图片的滚动和固定</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>scroll</td><td>背景图片可滚动</td></tr><tr><td>fixed</td><td>背景图片固定</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-元素显示模式及转换</title>
+      <link href="/2020/04/15/css-yuan-su-xian-shi-mo-shi-ji-zhuan-huan/"/>
+      <url>/2020/04/15/css-yuan-su-xian-shi-mo-shi-ji-zhuan-huan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="css元素显示模式"><a href="#css元素显示模式" class="headerlink" title="css元素显示模式"></a>css元素显示模式</h1><blockquote><p>元素显示模式分为：块级元素、行内元素以及块级行内元素</p></blockquote><h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><blockquote><p>代表元素： div、h1-h6、 p…..</p></blockquote><ul><li>块级元素独占一行</li><li>块级元素可以设置元素的宽高，如果没有设置，默认为父级元素的宽高</li><li>块级元素内可以插入其它块级元素以及行内元素</li></ul><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>  p标签内不能插入div标签</p><h2 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h2><blockquote><p>代表元素：span、a…..</p></blockquote><ul><li>行内元素可以并列在一行</li><li>行内元素不能直接设置宽高，默认的宽是里面包含内容的长度</li><li>行内元素里面只能插入行内元素</li></ul><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>a标签内可以插入块级元素</p><h2 id="块级行内元素"><a href="#块级行内元素" class="headerlink" title="块级行内元素"></a>块级行内元素</h2><blockquote><p>既具有块级元素的特点也具有行内元素的特点，代表元素：img、input、td…</p></blockquote><ul><li>一行可以排列多个，但之间会留有缝隙</li><li>默认宽度是里面包含类容的长度</li><li>可以设置宽高、内外边距</li></ul><h1 id="元素显示模式的转换"><a href="#元素显示模式的转换" class="headerlink" title="元素显示模式的转换"></a>元素显示模式的转换</h1><blockquote><p>行内元素 、 块级元素、行内块元素的相互转换，使其拥有其它显示模式的特性</p></blockquote><pre><code>display:block; //可以将元素转换成块级元素dispaly:inline;//将元素转换成行内元素dispaly:inline-block;//将元素转换成行内块元素</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML-文本格式化标签</title>
+      <link href="/2020/04/15/html-wen-ben-ge-shi-hua-biao-qian/"/>
+      <url>/2020/04/15/html-wen-ben-ge-shi-hua-biao-qian/</url>
+      
+        <content type="html"><![CDATA[<table><thead><tr><th>语义</th><th>标签</th><th>说明</th></tr></thead><tbody><tr><td>加粗</td><td><code>&lt;strong&gt; &lt;/strong&gt;</code>  or  <code>&lt;b&gt;&lt;/b&gt;</code></td><td>推荐使用strong</td></tr><tr><td>倾斜</td><td><em></em>  or <i></i></td><td>推荐使用em</td></tr><tr><td>删除线</td><td><del></del> or <s></s></td><td>推荐使用del</td></tr><tr><td>下划线</td><td><ins></ins> or <u></u></td><td>推荐使用ins</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML-列表</title>
+      <link href="/2020/04/15/html-lie-biao/"/>
+      <url>/2020/04/15/html-lie-biao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><blockquote><p>ul里面只能加li</p></blockquote><p>&lt;ul&gt; <br/> &lt;li&gt;任意元素 &lt;/li&gt; <br/>&lt;/ul&gt;</p><p>喜欢的食物</p><ul><li>榴莲</li><li>鲱鱼罐头</li></ul><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><blockquote><p>ol进行包含，li描述每一列</p></blockquote><p>&lt;ol&gt; <br/> &lt;li&gt;任意元素 &lt;/li&gt; <br/>&lt;/ol&gt;</p><p>粉丝排行榜</p><ol><li>徐勇</li><li>徐小贱</li></ol><h2 id="自定义列表"><a href="#自定义列表" class="headerlink" title="自定义列表"></a>自定义列表</h2><blockquote><p>dl包含 dt,dd,dd是对dt的解释</p></blockquote><p>&lt;dl&gt; <br/> &lt;dt&gt;名词&lt;/dt&gt; <br/>&lt;dd&gt;对名词的解释&lt;/dd&gt;<br/>&lt;/dl&gt;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML-表格</title>
+      <link href="/2020/04/15/html-biao-ge/"/>
+      <url>/2020/04/15/html-biao-ge/</url>
+      
+        <content type="html"><![CDATA[<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>&lt;table 属性：&gt; <br/><br> &lt;tr&gt;  &lt;th&gt; &nbsp; 表头 &nbsp;&lt;/th&gt; &lt;/tr&gt; <br/><br> &lt;tr&gt; &lt;td&gt; &nbsp; 普通单元格 &nbsp;&lt;/td&gt; &lt;/tr&gt; <br/><br>&lt;/table&gt;</p><table><thead><tr><th align="center">属性名</th><th align="center">作用</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">width</td><td align="center">设置表格的宽</td><td align="center">跟height搭配使用时，只需要设置其中一个属性，另一个自适应</td></tr><tr><td align="center">height</td><td align="center">设置表格的高</td><td align="center">同上</td></tr><tr><td align="center">cellspacing</td><td align="center">设置单元格与单元格之间的间隙</td><td align="center"></td></tr><tr><td align="center">border</td><td align="center">设置表格边界宽度</td><td align="center"></td></tr><tr><td align="center">cellpadding</td><td align="center">设置单元格内容与单元格的间隙</td><td align="center"></td></tr><tr><td align="center">align</td><td align="center">设置表格相对于周围元素的位置</td><td align="center"></td></tr></tbody></table><h2 id="表单区域"><a href="#表单区域" class="headerlink" title="表单区域"></a>表单区域</h2><blockquote><p>thead 和 tbody, thead区别于th标签,thead表示的是表头区域，th表示表头单元格</p></blockquote><h2 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h2><blockquote><p>跨行合并: rowspan =’合并单元格的的个数’，操作的目标单元格是操作的最上的单元格</p><p>跨列合并：colspan =’合并单元格的个数’，操作的目标单元格是操作的最左的单元格</p></blockquote><h3 id="合并单元格的步骤"><a href="#合并单元格的步骤" class="headerlink" title="合并单元格的步骤"></a>合并单元格的步骤</h3><ol><li>确定跨行还是跨列合并</li><li>操作目标单元格</li><li>删除多余的单元格</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HTML-表单</title>
+      <link href="/2020/04/15/html-biao-dan/"/>
+      <url>/2020/04/15/html-biao-dan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><blockquote><p>由三部分组成，表单域，表单元素和提示信息</p></blockquote><h2 id="表单域"><a href="#表单域" class="headerlink" title="表单域"></a>表单域</h2><blockquote><p> form 设置表单域</p></blockquote><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>from</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url地址<span class="token punctuation">"</span></span>  <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>提交方式<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>表单域名称<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>    表单元素<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>from</span><span class="token punctuation">></span></span></code></pre><h2 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h2><blockquote><p>允许用户输入或选择的内容控件</p></blockquote><h3 id="input标签"><a href="#input标签" class="headerlink" title="input标签"></a>input标签</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>属性值<span class="token punctuation">'</span></span><span class="token punctuation">/></span></span></code></pre><ul><li>根据type的不同可以指定不同的控件类型</li></ul><h4 id="其他常用属性"><a href="#其他常用属性" class="headerlink" title="其他常用属性"></a>其他常用属性</h4><table><thead><tr><th>属性</th><th>属性值</th><th>描述</th></tr></thead><tbody><tr><td>name</td><td>用户自定义</td><td>定义input元素的名称</td></tr><tr><td>value</td><td>用户自定义</td><td>规定input元素的值</td></tr><tr><td>checked</td><td>checked</td><td>设置是否被选中</td></tr><tr><td>maxlength</td><td>正整数</td><td>input的最大输入长度</td></tr></tbody></table><ul><li>对于单选和复选需要设定相同的name</li><li>checked是对单复选框使用的</li></ul><h4 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h4><blockquote><p>绑定表单元素，当点击lable标签包含的文本时，浏览器会自动将焦点转到对应的表单元素上去</p></blockquote><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lable</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>sex<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>男<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>lable</span><span class="token punctuation">></span></span>&lt;input type='radio' name = 'sex'  id = 'sex' /></code></pre><ul><li>lable标签的for属性要与相关标签的id属性相同</li></ul><h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><pre class=" language-html1"><code class="language-html1"><select>    <option>选项名</option>    ...........</select></code></pre><ul><li>可以设置option的selected属性为’selected’选中</li></ul><h3 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h3><blockquote><p>定义多行文本控件</p></blockquote><pre><code>&lt;textarea&gt;&lt;/textarea&gt;</code></pre><table><thead><tr><th>属性</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>clos</td><td>每行中的字符</td><td>实际开发中不会使用，通过css控制</td></tr><tr><td>rows</td><td>自大输入行数</td><td>实际开发中不会使用，通过css控制</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
