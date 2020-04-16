@@ -500,16 +500,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git操作失误案例"><a href="#Git操作失误案例" class="headerlink" title="Git操作失误案例"></a>Git操作失误案例</h1><h2 id="git-init-后找不到本地分支"><a href="#git-init-后找不到本地分支" class="headerlink" title="git init 后找不到本地分支"></a>git init 后找不到本地分支</h2><p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_19-58-54.png" alt=""></p>
+                <h1 id="Git操作失误案例"><a href="#Git操作失误案例" class="headerlink" title="Git操作失误案例"></a>Git操作失误案例</h1><h2 id="git-init-后找不到本地分支"><a href="#git-init-后找不到本地分支" class="headerlink" title="git init 后找不到本地分支"></a>git init 后找不到本地分支</h2><p><img src="Snipaste_2020-04-16_19-58-54.png" alt=""></p>
 <p>  进行 <code>git init</code> 命令后，出现了master分支，然后我就傻傻的去查看本地分支<code>git branch -a</code>,但是没有任何输出：</p>
-<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-02-17.png" alt=""></p>
+<p><img src="Snipaste_2020-04-16_20-02-17.png" alt=""></p>
 <p>  就觉得很奇怪，后面查资料才知道，<strong>git 分支必须指向一个commit，没有任何commit就没有任何分支</strong> ，提交（git commit过一次，以后新建的分支不管有没有提交数据，都会显示。</p>
 <h2 id="添加远程仓库后，看不到远程分支"><a href="#添加远程仓库后，看不到远程分支" class="headerlink" title="添加远程仓库后，看不到远程分支"></a>添加远程仓库后，看不到远程分支</h2><p>   新建的本地仓库需要关联远程仓库，使用命令<code>git remote add origin git@github.com:muyeyong/React.git</code> 后，使用<code>git branch -a</code>查看所有分支（包括远程），发现只查到本地分支</p>
-<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-17-36.png" alt=""></p>
+<p><img src="Snipaste_2020-04-16_20-17-36.png" alt=""></p>
 <p>  只是建立了连接，并没有获取远程分支的信息，还需要使用<code>git fetch</code>获取远程分支的所有信息。</p>
-<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-33-58.png" alt=""></p>
+<p><img src="Snipaste_2020-04-16_20-33-58.png" alt=""></p>
 <h3 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h3><pre><code> git fetch 和 git pull 的不同：</code></pre><p>​        首先使用一张盗的图</p>
-<p><img src="Git-%E6%93%8D%E4%BD%9C%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/Snipaste_2020-04-16_20-32-56.png" alt=""></p>
+<p><img src="Snipaste_2020-04-16_20-32-56.png" alt=""></p>
 <p>解释一下远程仓库副本： 本地的远程仓库缓存</p>
 <p>git fetch 获取远程仓库，并没有合并到本地分支，一般情况下<code>git pull = git fetch + git merge</code>。</p>
 
