@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>上帝说我帅的很</title>
   
-  
+  <subtitle>上帝说我帅的很</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
