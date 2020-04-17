@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS-引入方式, 上帝说我帅的很">
+    <meta name="keywords" content="日常翻车集锦-数组操作, 上帝说我帅的很">
     <meta name="description" content="前端 | React | HTML | CSS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS-引入方式 | 上帝说我帅的很</title>
+    <title>日常翻车集锦-数组操作 | 上帝说我帅的很</title>
     <link rel="icon" type="image/png" href="/popsicle.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS-引入方式</h1>
+                    <h1 class="description center-align post-title">日常翻车集锦-数组操作</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CSS%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">CSS基础</span>
+                            <a href="/tags/%E6%95%B0%E7%BB%84%E7%AF%87/">
+                                <span class="chip bg-color">数组篇</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CSS/" class="post-category">
-                                CSS
+                            <a href="/categories/%E6%97%A5%E5%B8%B8%E7%BF%BB%E8%BD%A6/" class="post-category">
+                                日常翻车
                             </a>
                         
                     </div>
@@ -464,21 +464,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-04-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-15
+                    2020-04-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    77
+                    233
                 </div>
                 
 
@@ -500,23 +500,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="css引入方式"><a href="#css引入方式" class="headerlink" title="css引入方式"></a>css引入方式</h1><ul>
-<li>行内样式表</li>
-<li>内部样式表</li>
-<li>外部样式表</li>
-</ul>
-<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><blockquote>
-<p>将css抽取出来，使用sytle标签包围</p>
-</blockquote>
-<p><img src="Snipaste_2020-04-09_08-49-51.png" alt=""></p>
-<h2 id="行内样式表"><a href="#行内样式表" class="headerlink" title="行内样式表"></a>行内样式表</h2><blockquote>
-<p>在标签内部使用style属性</p>
-</blockquote>
-<p><img src="Snipaste_2020-04-09_09-02-17.png" alt=""></p>
-<h2 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h2><blockquote>
-<p>通过link 标签引入外部样式，href表示引入的路径</p>
-</blockquote>
-<p><img src="Snipaste_2020-04-09_09-04-34.png" alt=""></p>
+                <h1 id="日常翻车集锦-数组篇"><a href="#日常翻车集锦-数组篇" class="headerlink" title="日常翻车集锦-数组篇"></a>日常翻车集锦-数组篇</h1><p>​    今天写代码操作数组时，用了几个关于数组的操作，数据一直不是我想要的，一直很困惑，直到我翻开了</p>
+<p><img src="s9056065.jpg" alt=""></p>
+<p>使用的是 <code>Array.filter()</code>  和<code>Array.push()</code>，是不是觉得很迷，这么简单的方法都能出错，哈哈哈。</p>
+<p>​    使用<code>Array.filter()</code>的时候是为了从一个这样的数据结构中获取里面对象的relys：</p>
+<p><img src="Snipaste_2020-04-17_20-35-08.png" alt=""></p>
+<p>​    我以为返回给我的数据就是单个的relys（本身过滤条件只会返回一条数据），但是返回给我的数据包了一层数组，类似于这样<code>[[]]</code> ，导致我搞了好久。</p>
+<p>​    使用<code>Array.push()</code> ，直接上图</p>
+<p><img src="Snipaste_2020-04-17_20-43-01.png" alt=""></p>
+<p>请求里面的参数，resourceId不是我想要的数据，是因为<code>Array.push()</code>返回值的问题。</p>
+<p><strong>作为奖励，计划把数组的全部操作写一篇文章</strong></p>
+<p><strong>不要问为什么，我就是这么菜</strong></p>
 
             </div>
             <hr/>
@@ -542,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/css-yin-ru-fang-shi/">https://github.com/muyeyong/muyeyong.github.io/2020/04/15/css-yin-ru-fang-shi/</a>
+                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/">https://github.com/muyeyong/muyeyong.github.io/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -580,8 +574,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CSS%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">CSS基础</span>
+                                <a href="/tags/%E6%95%B0%E7%BB%84%E7%AF%87/">
+                                    <span class="chip bg-color">数组篇</span>
                                 </a>
                             
                         </div>
@@ -771,56 +765,50 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/15/css-yu-fa-gui-fan/">
+                <a href="/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.png" class="responsive-img" alt="CSS-语法规范">
+                        <img src="/medias/featureimages/22.png" class="responsive-img" alt="日常翻车集锦-数组操作">
                         
-                        <span class="card-title">CSS-语法规范</span>
+                        <span class="card-title">日常翻车集锦-数组操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            css语法规范样式格式书写
-用宽松式风格
+                            日常翻车集锦-数组篇​    今天写代码操作数组时，用了几个关于数组的操作，数据一直不是我想要的，一直很困惑，直到我翻开了
 
-error: p {color: red;fond-size:20px;}
-
-right: p {
-  color: red;t
-  font-size: 20px;
-}
-样式大小写书写风格
-使用
+使用的是 Array.filter()  和Array.push()，是不是觉得很迷，这么简单的方法都能出错，哈哈
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CSS/" class="post-category">
-                                    CSS
+                            <a href="/categories/%E6%97%A5%E5%B8%B8%E7%BF%BB%E8%BD%A6/" class="post-category">
+                                    日常翻车
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">CSS基础</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84%E7%AF%87/">
+                        <span class="chip bg-color">数组篇</span>
                     </a>
                     
                 </div>
@@ -834,49 +822,34 @@ right: p {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/15/css-wen-ben-shu-xing/">
+                <a href="/2020/04/16/git-cao-zuo-shi-wu-an-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.png" class="responsive-img" alt="CSS-文本属性">
+                        <img src="/medias/featureimages/11.png" class="responsive-img" alt="Git-操作失误案例">
                         
-                        <span class="card-title">CSS-文本属性</span>
+                        <span class="card-title">Git-操作失误案例</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS文本属性
-可定义文本的外观，文本颜色、对齐文本、装饰文本、文本缩进、行间距等
+                            Git操作失误案例git init 后找不到本地分支
+  进行 git init 命令后，出现了master分支，然后我就傻傻的去查看本地分支git branch -a,但是没有任何输出：
 
-文本颜色
-可以通过color属性定义文本颜色
-
-div {
-    color: red;
-}
-
-
-
-表示
-属性值
-
-
-
-预定义颜色
-red green 
+  就觉得很奇怪，后面查资料才知道，git 分支
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/CSS/" class="post-category">
-                                    CSS
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
@@ -886,8 +859,8 @@ red green
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CSS%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">CSS基础</span>
+                    <a href="/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/">
+                        <span class="chip bg-color">失误案例</span>
                     </a>
                     
                 </div>

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>日常翻车集锦-数组操作</title>
+      <link href="/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/"/>
+      <url>/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="日常翻车集锦-数组篇"><a href="#日常翻车集锦-数组篇" class="headerlink" title="日常翻车集锦-数组篇"></a>日常翻车集锦-数组篇</h1><p>​    今天写代码操作数组时，用了几个关于数组的操作，数据一直不是我想要的，一直很困惑，直到我翻开了</p><p><img src="s9056065.jpg" alt=""></p><p>使用的是 <code>Array.filter()</code>  和<code>Array.push()</code>，是不是觉得很迷，这么简单的方法都能出错，哈哈哈。</p><p>​    使用<code>Array.filter()</code>的时候是为了从一个这样的数据结构中获取里面对象的relys：</p><p><img src="Snipaste_2020-04-17_20-35-08.png" alt=""></p><p>​    我以为返回给我的数据就是单个的relys（本身过滤条件只会返回一条数据），但是返回给我的数据包了一层数组，类似于这样<code>[[]]</code> ，导致我搞了好久。</p><p>​    使用<code>Array.push()</code> ，直接上图</p><p><img src="Snipaste_2020-04-17_20-43-01.png" alt=""></p><p>请求里面的参数，resourceId不是我想要的数据，是因为<code>Array.push()</code>返回值的问题。</p><p><strong>作为奖励，计划把数组的全部操作写一篇文章</strong></p><p><strong>不要问为什么，我就是这么菜</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常翻车 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组篇 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git-操作失误案例</title>
       <link href="/2020/04/16/git-cao-zuo-shi-wu-an-li/"/>
       <url>/2020/04/16/git-cao-zuo-shi-wu-an-li/</url>
@@ -433,7 +458,7 @@
       <link href="/2020/04/15/css-bei-jing/"/>
       <url>/2020/04/15/css-bei-jing/</url>
       
-        <content type="html"><![CDATA[<h1 id="css背景"><a href="#css背景" class="headerlink" title="css背景"></a>css背景</h1><blockquote><p>主要分为背景颜色、背景图片、背景颜色的重复以及背景颜色的定位</p></blockquote><h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color"></a>background-color</h2><blockquote><p>默认是transparent（透明），可以用16进制、RGB以及直接设置颜色来设置</p></blockquote><pre><code>p { background-color: silver }div { background-color: rgb(223,71,177) } body { background-color: #98AB6F }pre { background-color: transparent; } </code></pre><h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><blockquote><p>设置背景图片，使用背景图片是为了更好的控制图片的位置（相对于imag标签），使用url导入</p></blockquote><pre><code>code { background-image: url(&quot;comet.jpg&quot;); }blockquote { background-image: url(&quot;c:\InetPub\MyPixs\comet.jpg&quot;); } br { background-image: url(http://Fred.com/ImageFile/Q.gif); } body { background-image: none; </code></pre><h2 id="backgroung-repeat"><a href="#backgroung-repeat" class="headerlink" title="backgroung-repeat"></a>backgroung-repeat</h2><blockquote><p>设置背景图片的平铺方法，默认为repeat</p></blockquote><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>repeat</td><td>图像在x、y轴平铺</td></tr><tr><td>no-repeat</td><td>图像不平铺</td></tr><tr><td>repeat-x</td><td>图像延x轴平铺</td></tr><tr><td>repeat-y</td><td>图像延y轴平铺</td></tr></tbody></table><pre><code>menu { background: url(&quot;images/aardvark.gif&quot;); background-repeat: repeat-y; } p { background: url(&quot;images/aardvark.gif&quot;); background-repeat: no-repeat; } </code></pre><h2 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a>background-position</h2><blockquote><p>设置背景图片的位置，可以使用具体数值排列、方位排列和混合排列</p></blockquote><h3 id="具体数字排列"><a href="#具体数字排列" class="headerlink" title="具体数字排列"></a>具体数字排列</h3><blockquote><p>具体数值：百分数 | 由浮点数字和单位标识符组成的长度值</p></blockquote><pre class=" language-background-position:20px"><code class="language-background-position:20px">background-position:20px 40px;background-position:20px;</code></pre><p>如果指定两个数值，第一个是x轴，第二个是y轴</p><p>如果只指定一个数值，默认指定为x轴，y轴默认居中</p><p><img src="Snipaste_2020-04-13_09-41-27.png" alt=""></p><h2 id="方位排列"><a href="#方位排列" class="headerlink" title="方位排列"></a>方位排列</h2><blockquote><p>使用top,buttom,left,right,center来设置</p></blockquote><pre><code>background-position: top right;background-position: top;</code></pre><p>如果只指定一个，默认指定为x轴，y轴默认为center</p><h2 id="混合排列"><a href="#混合排列" class="headerlink" title="混合排列"></a>混合排列</h2><blockquote><p>结合数值排列和方位排列</p></blockquote><pre><code>background-position:20px top;</code></pre><p>第一个是x轴数值，第二个是y轴数值，如果指定的是不合法的定位，图片会定位为默认状态（x:0px , y:0px）</p><h2 id="background-attachment"><a href="#background-attachment" class="headerlink" title="background-attachment"></a>background-attachment</h2><blockquote><p>设置背景图片的滚动和固定</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>scroll</td><td>背景图片可滚动</td></tr><tr><td>fixed</td><td>背景图片固定</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h1 id="css背景"><a href="#css背景" class="headerlink" title="css背景"></a>css背景</h1><blockquote><p>主要分为背景颜色、背景图片、背景颜色的重复以及背景颜色的定位</p></blockquote><h2 id="background-color"><a href="#background-color" class="headerlink" title="background-color"></a>background-color</h2><blockquote><p>默认是transparent（透明），可以用16进制、RGB以及直接设置颜色来设置</p></blockquote><pre><code>p { background-color: silver }div { background-color: rgb(223,71,177) } body { background-color: #98AB6F }pre { background-color: transparent; } </code></pre><h2 id="background-image"><a href="#background-image" class="headerlink" title="background-image"></a>background-image</h2><blockquote><p>设置背景图片，使用背景图片是为了更好的控制图片的位置（相对于imag标签），使用url导入</p></blockquote><pre><code>code { background-image: url(&quot;comet.jpg&quot;); }blockquote { background-image: url(&quot;c:\InetPub\MyPixs\comet.jpg&quot;); } br { background-image: url(http://Fred.com/ImageFile/Q.gif); } body { background-image: none; </code></pre><h3 id="设置背景颜色透明度"><a href="#设置背景颜色透明度" class="headerlink" title="设置背景颜色透明度"></a>设置背景颜色透明度</h3><pre><code>background-color: rgba(255, 0, 0,0.3)// a 指的是alpha（透明度），取值在0~1之间</code></pre><h2 id="backgroung-repeat"><a href="#backgroung-repeat" class="headerlink" title="backgroung-repeat"></a>backgroung-repeat</h2><blockquote><p>设置背景图片的平铺方法，默认为repeat</p></blockquote><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>repeat</td><td>图像在x、y轴平铺</td></tr><tr><td>no-repeat</td><td>图像不平铺</td></tr><tr><td>repeat-x</td><td>图像延x轴平铺</td></tr><tr><td>repeat-y</td><td>图像延y轴平铺</td></tr></tbody></table><pre><code>menu { background: url(&quot;images/aardvark.gif&quot;); background-repeat: repeat-y; } p { background: url(&quot;images/aardvark.gif&quot;); background-repeat: no-repeat; } </code></pre><h2 id="background-position"><a href="#background-position" class="headerlink" title="background-position"></a>background-position</h2><blockquote><p>设置背景图片的位置，可以使用具体数值排列、方位排列和混合排列</p></blockquote><h3 id="具体数字排列"><a href="#具体数字排列" class="headerlink" title="具体数字排列"></a>具体数字排列</h3><blockquote><p>具体数值：百分数 | 由浮点数字和单位标识符组成的长度值</p></blockquote><pre class=" language-background-position:20px"><code class="language-background-position:20px">background-position:20px 40px;background-position:20px;</code></pre><p>如果指定两个数值，第一个是x轴，第二个是y轴</p><p>如果只指定一个数值，默认指定为x轴，y轴默认居中</p><p><img src="Snipaste_2020-04-13_09-41-27.png" alt=""></p><h2 id="方位排列"><a href="#方位排列" class="headerlink" title="方位排列"></a>方位排列</h2><blockquote><p>使用top,buttom,left,right,center来设置</p></blockquote><pre><code>background-position: top right;background-position: top;</code></pre><p>如果只指定一个，默认指定为x轴，y轴默认为center</p><h2 id="混合排列"><a href="#混合排列" class="headerlink" title="混合排列"></a>混合排列</h2><blockquote><p>结合数值排列和方位排列</p></blockquote><pre><code>background-position:20px top;</code></pre><p>第一个是x轴数值，第二个是y轴数值，如果指定的是不合法的定位，图片会定位为默认状态（x:0px , y:0px）</p><h2 id="background-attachment"><a href="#background-attachment" class="headerlink" title="background-attachment"></a>background-attachment</h2><blockquote><p>设置背景图片的滚动和固定</p></blockquote><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>scroll</td><td>背景图片可滚动</td></tr><tr><td>fixed</td><td>背景图片固定</td></tr></tbody></table>]]></content>
       
       
       <categories>
