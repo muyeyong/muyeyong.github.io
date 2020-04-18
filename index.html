@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -386,7 +386,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/5.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
 </script>
 
 
@@ -528,6 +528,42 @@
                     
 
                     
+
+                    
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;海南骑行
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                    ></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: 'https://www.bilibili.com/video/BV1Vt411L7nA/',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
 
                     
 
