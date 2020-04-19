@@ -4,13 +4,77 @@
   
     
     <entry>
-      <title>JavaScript-数组</title>
-      <link href="/2020/04/18/javascript-shu-zu/"/>
-      <url>/2020/04/18/javascript-shu-zu/</url>
+      <title>调试-VSCode</title>
+      <link href="/2020/04/19/diao-shi-vscode/"/>
+      <url>/2020/04/19/diao-shi-vscode/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript-怎么跳出Array.forEach()</title>
+      <link href="/2020/04/19/javascript-zen-me-tiao-chu-array-foreach/"/>
+      <url>/2020/04/19/javascript-zen-me-tiao-chu-array-foreach/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>源码-V8sort</title>
+      <link href="/2020/04/19/yuan-ma-v8sort/"/>
+      <url>/2020/04/19/yuan-ma-v8sort/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>算法-数组排序</title>
+      <link href="/2020/04/19/suan-fa-shu-zu-pai-xu/"/>
+      <url>/2020/04/19/suan-fa-shu-zu-pai-xu/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript-数组</title>
+      <link href="/2020/04/18/javascript-shu-zu/"/>
+      <url>/2020/04/18/javascript-shu-zu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><blockquote><p>将数组中的元素转化为字符串连接在一起，可以指定连接符</p></blockquote><p><img src="Snipaste_2020-04-18_18-30-06.png" alt=""></p><p><code>Array.join()</code> 是 <code>String.split()</code>的逆操作</p><h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><blockquote><p>将数组里面的元素逆序，不生成新的数组，只是在原来数组的基础上操作</p></blockquote><p><img src="Snipaste_2020-04-18_18-41-36.png" alt=""></p><h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><blockquote><p>将数组中的元素排序并返回排序后的数组，可自定义排序方法</p></blockquote><ul><li><p>不自定义排序方法，会按照字母顺序排序</p><p><img src="Snipaste_2020-04-19_16-59-37.png" alt=""></p></li><li><p>自定义排序</p><blockquote><p>传入比较函数，比较函数决定了它的两个参数在排序好的数组中的先后顺序。假设第一个参数在前，返回一个小于0的数，第二个参数在前返回一个大于0的数，两值相等返回0</p></blockquote></li></ul><p>举一个极端的例子： </p><p>​    <img src="Snipaste_2020-04-19_17-07-23.png" alt=""></p><p>相当于给数组逆序了，反之反然。</p><p>*<em>想知道sort的内部实现以及为啥可以通过指定比较函数来排序吗，come with me *</em></p><a href="/2020/04/19/yuan-ma-v8sort/" title="来呀，老弟">来呀，老弟</a><h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><blockquote><p>创建并返回一个新的数组</p></blockquote><pre><code> 返回新数组的元素包括调用concat()的原始数组的原始和concat()的每个参数，如果这些元素任何一个自身是数组，则连接的是数组的元素，而不是数组本身。concat()，不会递归扁平化数组的数组。</code></pre><p><img src="Snipaste_2020-04-19_19-01-24.png" alt=""></p><h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><blockquote><p>返回指定数组的片段或子数组，不修改原来的数组</p></blockquote><p>​    它的两个参数指定了片段或子数组开始和结束的位置，返回的元素包含第一个参数指定的位置和所有到但不包含第二个参数指定的位置之间的所有元素。如果只指定一个参数，返回的数组包含开始位置到数组结尾的所有元素。如果指定的位置是负数，则表示相对数组中最后一个元素的位（最后一个元素的位置是-1）</p><p><img src="Snipaste_2020-04-19_19-13-29.png" alt=""></p><h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><blockquote><p>在数组中插入或删除元素，会修改数组本身</p></blockquote><p>​    第一个参数指定插入/删除位置，第二个参数指定删除元素的个数，如果忽略的话会删除从指定位置到数组结尾的元素，返回一个由删除元素组成的数组，如果没有，返回空数组。</p><p><img src="Snipaste_2020-04-19_20-26-29.png" alt=""></p><p>​    插入元素的话，除了指定前两个参数外，还可以指定若干个其它元素，作为插入元素。</p><p><img src="Snipaste_2020-04-19_20-29-33.png" alt=""></p><h3 id="push-和-pop"><a href="#push-和-pop" class="headerlink" title="push() 和 pop()"></a>push() 和 pop()</h3><blockquote><p>push() 和 pop()允许将数组当中栈来使用，修改原来的数组</p></blockquote><p>​    push()方法在数组的尾部添加一个或多个元素，返回数组新的长度，pop()删除数组的最后一个元素，返回它删除的值。</p><p><img src="Snipaste_2020-04-19_19-19-42.png" alt=""></p><h3 id="unshift-和-shift"><a href="#unshift-和-shift" class="headerlink" title="unshift() 和 shift()"></a>unshift() 和 shift()</h3><blockquote><p>类似于pop() 和 push()，只不过 unshift() 和 shift()是在数组头部操作的</p></blockquote><p> <img src="Snipaste_2020-04-19_19-37-22.png" alt=""></p><p>​    有木有发现很神奇的一点，unshift 在加入元素的时候不是一个一个加的，是一坨一坨加的</p><p><strong>问题来了，创建数组的时候可以指定数组大小 ,例如<code>new Array(3)</code> ，向数组加入元素超过数组本身大小会怎么办？？</strong></p><p>​    0202年了，<del>肯定会自动扩展嘛</del>。</p><p><img src="Snipaste_2020-04-19_19-35-55.png" alt=""></p><p>​    打扰了，默默的报个错就完了，没那么多花里胡哨的。</p><h3 id="toString-和-toLocaleString"><a href="#toString-和-toLocaleString" class="headerlink" title="toString() 和 toLocaleString()"></a>toString() 和 toLocaleString()</h3><blockquote><p>将数组转换成字符串</p></blockquote><p>​    输出用逗号分隔的字符串列表，不包含方括号和其他形式的包裹数组值得分隔符。</p><p><img src="Snipaste_2020-04-19_19-56-22.png" alt=""></p><p><code>toLocaleString</code>是toString的本地化实现</p><p><img src="Snipaste_2020-04-19_19-58-35.png" alt=""></p><h2 id="ECMAScript5中的数组方法"><a href="#ECMAScript5中的数组方法" class="headerlink" title="ECMAScript5中的数组方法"></a>ECMAScript5中的数组方法</h2><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><blockquote><p> 从头到尾遍历数组，对每个元素使用指定函数</p></blockquote><p>指定函数<code>function(value,index,array){}</code>可以包含三个参数，后面两个可以省略。</p><p><img src="Snipaste_2020-04-19_20-45-42.png" alt=""></p><p><strong>forEach()无法在所有元素遍历完之前停止遍历，凡事都有个例外，欲知后事如何，且看这篇文章</strong></p><h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><h3 id="every-和-some"><a href="#every-和-some" class="headerlink" title="every() 和 some()"></a>every() 和 some()</h3><h3 id="reduce-和-reduceRight"><a href="#reduce-和-reduceRight" class="headerlink" title="reduce() 和 reduceRight()"></a>reduce() 和 reduceRight()</h3><h3 id="indexOf-和-lastIndexOf"><a href="#indexOf-和-lastIndexOf" class="headerlink" title="indexOf() 和 lastIndexOf()"></a>indexOf() 和 lastIndexOf()</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数组 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -396,7 +460,7 @@
       <link href="/2020/04/15/css-he-zi-mo-xing/"/>
       <url>/2020/04/15/css-he-zi-mo-xing/</url>
       
-        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote><p>padding同border一样，可以设置上下左右内边距，padding的不同写法。</p><table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>padding: 15px</td><td>一个数值，设定了<code>上下左右</code>的内边距</td></tr><tr><td>padding: 15px 15px</td><td>两个数值，设定的是<code>上下</code> 和 <code>左右</code> 的内边距</td></tr><tr><td>padding: 15px 20px 34px</td><td>三个数值，设定的是<code>上</code> <code>左右</code> <code>下</code>的内边距</td></tr><tr><td>padding: 15px 23px 12px 23px</td><td>四个数值，设定的是<code>上</code>  <code>右</code>  <code>下</code>  <code>左</code>，顺时针方向设定内边距</td></tr></tbody></table><p>可能的值：</p><p><img src="Snipaste_2020-04-16_19-38-22.png" alt=""></p><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>​    <strong>内边距也会影响盒子的实际大小，会把盒子撑大</strong></p><p>​    <strong>解决办法</strong>： 设置盒子大小的时候减去内边距</p><p>​    <strong>应用</strong>： 解决盒子之间的距离问题</p><p>​    <img src="Snipaste_2020-04-16_19-20-55.png" alt=""></p><p>没有使用内边距，由于文字长度的原因，文字之间的距离不相等。</p><p><img src="Snipaste_2020-04-16_19-53-35.png" alt=""></p><p>使用了内边距就可以解决这样的问题。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote><p>padding同border一样，可以设置上下左右内边距，padding的不同写法。</p><table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>padding: 15px</td><td>一个数值，设定了<code>上下左右</code>的内边距</td></tr><tr><td>padding: 15px 15px</td><td>两个数值，设定的是<code>上下</code> 和 <code>左右</code> 的内边距</td></tr><tr><td>padding: 15px 20px 34px</td><td>三个数值，设定的是<code>上</code> <code>左右</code> <code>下</code>的内边距</td></tr><tr><td>padding: 15px 23px 12px 23px</td><td>四个数值，设定的是<code>上</code>  <code>右</code>  <code>下</code>  <code>左</code>，顺时针方向设定内边距</td></tr></tbody></table><p>可能的值：</p><p><img src="Snipaste_2020-04-16_19-38-22.png" alt=""></p><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>​    <strong>内边距也会影响盒子的实际大小，会把盒子撑大</strong></p><p>​    <strong>解决办法</strong>： 设置盒子大小的时候减去内边距</p><p>​    <strong>应用</strong>： 解决盒子之间的距离问题</p><p>​    <img src="Snipaste_2020-04-16_19-20-55.png" alt=""></p><p>没有使用内边距，由于文字长度的原因，文字之间的距离不相等。</p><p><img src="Snipaste_2020-04-16_19-53-35.png" alt=""></p><p>使用了内边距就可以解决这样的问题。</p><h2 id="外边距-margin"><a href="#外边距-margin" class="headerlink" title="外边距(margin)"></a>外边距(margin)</h2><blockquote><p>控制盒子与盒子之间的距离</p></blockquote><p>没有使用margin</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-00-52.png" alt=""></p><p>使用了margin</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-01-59.png" alt=""></p><h3 id="margin的写法"><a href="#margin的写法" class="headerlink" title="margin的写法"></a>margin的写法</h3><blockquote><p>margin跟padding一样有种写法，遵循的规则也一样</p></blockquote><h2 id="margin的典型应用-块级元素水平居中"><a href="#margin的典型应用-块级元素水平居中" class="headerlink" title="margin的典型应用-块级元素水平居中"></a>margin的典型应用-块级元素水平居中</h2><blockquote><p>盒子默认位置是靠左显示，设置水平居中需要满足两个条件</p><blockquote><p>1: 必须指定盒子的宽度</p><p>2：左右外边距需要指定为auto</p></blockquote></blockquote><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-27-20.png" alt=""></p><p>设置水平居中的写法有三种：</p><ul><li>margin-left : auto, margin-right : auto</li><li>margin : auto</li><li><strong>margin : 0 auto</strong></li></ul><p>最后一种最常用</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-15-37.png" alt=""></p><h2 id="行内元素跟行内块元素的水平居中"><a href="#行内元素跟行内块元素的水平居中" class="headerlink" title="行内元素跟行内块元素的水平居中"></a>行内元素跟行内块元素的水平居中</h2><blockquote><p>把他们看为文字类型一样，使用<code>text-align = ecnter</code></p></blockquote><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-20-33.png" alt=""></p><h2 id="外边距的合并"><a href="#外边距的合并" class="headerlink" title="外边距的合并"></a>外边距的合并</h2><blockquote><p>当两个垂直外边距相遇时，它们将形成一个外边距，合并后的外边距等于发生合并外边距的高度的较大者</p></blockquote><h3 id="元素相互独立时的合并"><a href="#元素相互独立时的合并" class="headerlink" title="元素相互独立时的合并"></a>元素相互独立时的合并</h3><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-31-15.png" alt=""></p><h3 id="元素包含时的合并"><a href="#元素包含时的合并" class="headerlink" title="元素包含时的合并"></a>元素包含时的合并</h3><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-31-50.png" alt=""></p><h3 id="外边距的自身合并"><a href="#外边距的自身合并" class="headerlink" title="外边距的自身合并"></a>外边距的自身合并</h3><p>​    假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-33-08.png" alt=""></p><p>​    如果这个外边距遇到另一个元素的外边距，它还会发生合并：</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-33-36.png" alt=""></p><h2 id="清除元素的内外边距"><a href="#清除元素的内外边距" class="headerlink" title="清除元素的内外边距"></a>清除元素的内外边距</h2><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-21-50.png" alt=""></p><p> 元素会默认带上内外边距，使用通配符选择器去清除</p><pre><code>* {    padding : 0;    margin : 0;}</code></pre>]]></content>
       
       
       <categories>

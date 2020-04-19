@@ -437,12 +437,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                <span class="chip bg-color">数组</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-18
+                    2020-04-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    967
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -487,7 +500,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><blockquote>
+<p>将数组中的元素转化为字符串连接在一起，可以指定连接符</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-18_18-30-06.png" alt=""></p>
+<p><code>Array.join()</code> 是 <code>String.split()</code>的逆操作</p>
+<h3 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h3><blockquote>
+<p>将数组里面的元素逆序，不生成新的数组，只是在原来数组的基础上操作</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-18_18-41-36.png" alt=""></p>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h3><blockquote>
+<p>将数组中的元素排序并返回排序后的数组，可自定义排序方法</p>
+</blockquote>
+<ul>
+<li><p>不自定义排序方法，会按照字母顺序排序</p>
+<p><img src="Snipaste_2020-04-19_16-59-37.png" alt=""></p>
+</li>
+<li><p>自定义排序</p>
+<blockquote>
+<p>传入比较函数，比较函数决定了它的两个参数在排序好的数组中的先后顺序。假设第一个参数在前，返回一个小于0的数，第二个参数在前返回一个大于0的数，两值相等返回0</p>
+</blockquote>
+</li>
+</ul>
+<p>举一个极端的例子： </p>
+<p>​    <img src="Snipaste_2020-04-19_17-07-23.png" alt=""></p>
+<p>相当于给数组逆序了，反之反然。</p>
+<p>*<em>想知道sort的内部实现以及为啥可以通过指定比较函数来排序吗，come with me *</em></p>
+<a href="/2020/04/19/yuan-ma-v8sort/" title="来呀，老弟">来呀，老弟</a>
+
+<h3 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h3><blockquote>
+<p>创建并返回一个新的数组</p>
+</blockquote>
+<pre><code> 返回新数组的元素包括调用concat()的原始数组的原始和concat()的每个参数，如果这些元素任何一个自身是数组，则连接的是数组的元素，而不是数组本身。concat()，不会递归扁平化数组的数组。</code></pre><p><img src="Snipaste_2020-04-19_19-01-24.png" alt=""></p>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><blockquote>
+<p>返回指定数组的片段或子数组，不修改原来的数组</p>
+</blockquote>
+<p>​    它的两个参数指定了片段或子数组开始和结束的位置，返回的元素包含第一个参数指定的位置和所有到但不包含第二个参数指定的位置之间的所有元素。如果只指定一个参数，返回的数组包含开始位置到数组结尾的所有元素。如果指定的位置是负数，则表示相对数组中最后一个元素的位（最后一个元素的位置是-1）</p>
+<p><img src="Snipaste_2020-04-19_19-13-29.png" alt=""></p>
+<h3 id="splice"><a href="#splice" class="headerlink" title="splice()"></a>splice()</h3><blockquote>
+<p>在数组中插入或删除元素，会修改数组本身</p>
+</blockquote>
+<p>​    第一个参数指定插入/删除位置，第二个参数指定删除元素的个数，如果忽略的话会删除从指定位置到数组结尾的元素，返回一个由删除元素组成的数组，如果没有，返回空数组。</p>
+<p><img src="Snipaste_2020-04-19_20-26-29.png" alt=""></p>
+<p>​    插入元素的话，除了指定前两个参数外，还可以指定若干个其它元素，作为插入元素。</p>
+<p><img src="Snipaste_2020-04-19_20-29-33.png" alt=""></p>
+<h3 id="push-和-pop"><a href="#push-和-pop" class="headerlink" title="push() 和 pop()"></a>push() 和 pop()</h3><blockquote>
+<p>push() 和 pop()允许将数组当中栈来使用，修改原来的数组</p>
+</blockquote>
+<p>​    push()方法在数组的尾部添加一个或多个元素，返回数组新的长度，pop()删除数组的最后一个元素，返回它删除的值。</p>
+<p><img src="Snipaste_2020-04-19_19-19-42.png" alt=""></p>
+<h3 id="unshift-和-shift"><a href="#unshift-和-shift" class="headerlink" title="unshift() 和 shift()"></a>unshift() 和 shift()</h3><blockquote>
+<p>类似于pop() 和 push()，只不过 unshift() 和 shift()是在数组头部操作的</p>
+</blockquote>
+<p> <img src="Snipaste_2020-04-19_19-37-22.png" alt=""></p>
+<p>​    有木有发现很神奇的一点，unshift 在加入元素的时候不是一个一个加的，是一坨一坨加的</p>
+<p><strong>问题来了，创建数组的时候可以指定数组大小 ,例如<code>new Array(3)</code> ，向数组加入元素超过数组本身大小会怎么办？？</strong></p>
+<p>​    0202年了，<del>肯定会自动扩展嘛</del>。</p>
+<p><img src="Snipaste_2020-04-19_19-35-55.png" alt=""></p>
+<p>​    打扰了，默默的报个错就完了，没那么多花里胡哨的。</p>
+<h3 id="toString-和-toLocaleString"><a href="#toString-和-toLocaleString" class="headerlink" title="toString() 和 toLocaleString()"></a>toString() 和 toLocaleString()</h3><blockquote>
+<p>将数组转换成字符串</p>
+</blockquote>
+<p>​    输出用逗号分隔的字符串列表，不包含方括号和其他形式的包裹数组值得分隔符。</p>
+<p><img src="Snipaste_2020-04-19_19-56-22.png" alt=""></p>
+<p><code>toLocaleString</code>是toString的本地化实现</p>
+<p><img src="Snipaste_2020-04-19_19-58-35.png" alt=""></p>
+<h2 id="ECMAScript5中的数组方法"><a href="#ECMAScript5中的数组方法" class="headerlink" title="ECMAScript5中的数组方法"></a>ECMAScript5中的数组方法</h2><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><blockquote>
+<p> 从头到尾遍历数组，对每个元素使用指定函数</p>
+</blockquote>
+<p>指定函数<code>function(value,index,array){}</code>可以包含三个参数，后面两个可以省略。</p>
+<p><img src="Snipaste_2020-04-19_20-45-42.png" alt=""></p>
+<p><strong>forEach()无法在所有元素遍历完之前停止遍历，凡事都有个例外，欲知后事如何，且看这篇文章</strong></p>
+
+
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><h3 id="every-和-some"><a href="#every-和-some" class="headerlink" title="every() 和 some()"></a>every() 和 some()</h3><h3 id="reduce-和-reduceRight"><a href="#reduce-和-reduceRight" class="headerlink" title="reduce() 和 reduceRight()"></a>reduce() 和 reduceRight()</h3><h3 id="indexOf-和-lastIndexOf"><a href="#indexOf-和-lastIndexOf" class="headerlink" title="indexOf() 和 lastIndexOf()"></a>indexOf() 和 lastIndexOf()</h3>
             </div>
             <hr/>
 
@@ -549,7 +635,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E7%BB%84/">
+                                    <span class="chip bg-color">数组</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -737,18 +827,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/18/javascript-shu-zu/">
+                <a href="/2020/04/19/suan-fa-shu-zu-pai-xu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.png" class="responsive-img" alt="JavaScript-数组">
+                        <img src="/medias/featureimages/0.png" class="responsive-img" alt="算法-数组排序">
                         
-                        <span class="card-title">JavaScript-数组</span>
+                        <span class="card-title">算法-数组排序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -758,9 +847,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -769,7 +858,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1002,7 +1090,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">6.6k</span>&nbsp;字
             
             
             
