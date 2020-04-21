@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-19
+                    2020-04-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    967
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -571,9 +571,100 @@
 <p>指定函数<code>function(value,index,array){}</code>可以包含三个参数，后面两个可以省略。</p>
 <p><img src="Snipaste_2020-04-19_20-45-42.png" alt=""></p>
 <p><strong>forEach()无法在所有元素遍历完之前停止遍历，凡事都有个例外，欲知后事如何，且看这篇文章</strong></p>
+{% post_link JavaScript-怎么跳出Array-forEach %}
 
+<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><blockquote>
+<p>调用数组的每一个元素传递给指定函数，并返回一个新数组</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-20_10-32-52.png" alt=""></p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><blockquote>
+<p>返回的数组元素是调用的数组的子集，传递的函数是用来逻辑判断的，返回true 或 false，如果返回的是true 或能转换成true的值，那么传递给判定函数的元素就是这个子集的成员，不改变原数组</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-20_10-38-09.png" alt=""></p>
+<h3 id="every-和-some"><a href="#every-和-some" class="headerlink" title="every() 和 some()"></a>every() 和 some()</h3><blockquote>
+<p>对数组元素应用指定的函数进行判定，返回true 或 false</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-20_11-22-17.png" alt=""></p>
+<p>​    一旦<code>every()</code> 和 <code>some()</code>确认返回什么值（true or false），就会停止遍历数组</p>
+<h3 id="reduce-和-reduceRight"><a href="#reduce-和-reduceRight" class="headerlink" title="reduce() 和 reduceRight()"></a>reduce() 和 reduceRight()</h3><blockquote>
+<p>使用指定函数将数组元素进行组合，生成单个值，称为注入跟折叠</p>
+</blockquote>
+<p>​    <code>reduce()</code>需要两个两个参数。第一个是执行化简的函数，化简函数是运用某种方法将两个值合并或化简为一个值，并返回化简后的值。第二个参数（可选）是传递给函数的初始值。</p>
+<p><img src="Snipaste_2020-04-20_17-19-19.png" alt=""></p>
+<p>​    两者返回值都是一样，但第一个有初始化值，第二个没有初始值，有初始值的时候，第一个参数就是初始值（第一个reduce第一次调用的参数是<code>x=0</code> <code>y=1</code> ），没有初始值的时候会使用数组的第一个元素作为初始值（第二个Reduce第一次调用的参数<code>x=1</code> <code>y=2</code>，就是数组的第一二个元素）。</p>
+<p>​    <code>reduceRight()</code>原理跟<code>reduce</code>一样，只不过它按照数组索引从高到低处理数组元素。</p>
+<h3 id="indexOf-和-lastIndexOf"><a href="#indexOf-和-lastIndexOf" class="headerlink" title="indexOf() 和 lastIndexOf()"></a>indexOf() 和 lastIndexOf()</h3><blockquote>
+<p>搜索整个数组中具有给定值的元素，返回找到第一个元素的索引或没有找到返回-1</p>
+</blockquote>
+<p><code>indecOf()</code>  : 从数组头部开始搜索</p>
+<p><code>lastIndexOf()</code>:从数组尾部进行搜索</p>
+<p>​    可以接收两个参数，第一个是待搜索的元素，第二个是搜索的起始位置（可以为负数）</p>
+<p><img src="Snipaste_2020-04-20_17-49-41.png" alt=""></p>
+<h2 id="ECMAScript6-数组的扩展"><a href="#ECMAScript6-数组的扩展" class="headerlink" title="ECMAScript6-数组的扩展"></a>ECMAScript6-数组的扩展</h2><h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符(...)"></a>扩展运算符(<code>...</code>)</h3><blockquote>
+<p>将数组分解为逗号分隔的参数序列</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-21_13-59-35.png" alt=""></p>
+<p><img src="Snipaste_2020-04-21_14-08-02.png" alt=""></p>
+<p><strong>扩展运算符只有在函数调用的时候才能放在圆括号里面</strong></p>
+<p>​    <strong>应用</strong></p>
+<p>复制数组： </p>
+<pre><code>let arr = [1,2,3,4]
+//写法一
+let arr2 = [...arr]
+//写法二
+let [...arr3] = arr</code></pre><p>合并数组：</p>
+<pre><code>let arr1 = [1,2,3,4]
+let arr2 = [5,6,7,8]
+//合并
+let arr3 = [...arr1,arr2]</code></pre><p>与解构赋值的结合：</p>
+<pre><code>let list = [1,2,3,4,5,6]
 
-<h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><h3 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h3><h3 id="every-和-some"><a href="#every-和-some" class="headerlink" title="every() 和 some()"></a>every() 和 some()</h3><h3 id="reduce-和-reduceRight"><a href="#reduce-和-reduceRight" class="headerlink" title="reduce() 和 reduceRight()"></a>reduce() 和 reduceRight()</h3><h3 id="indexOf-和-lastIndexOf"><a href="#indexOf-和-lastIndexOf" class="headerlink" title="indexOf() 和 lastIndexOf()"></a>indexOf() 和 lastIndexOf()</h3>
+let [first , ...rest] = list //其实也就相当于复制数组的第二种写法</code></pre><p>可以将字符串变成数组：</p>
+<pre><code>console.log(...&#39;str&#39;)// [&#39;s&#39;,&#39;t&#39;,&#39;r&#39;]</code></pre><h2 id="Array-form"><a href="#Array-form" class="headerlink" title="Array.form()"></a>Array.form()</h2><blockquote>
+<p>将类数组对象和可遍历对象转化成真正的数组</p>
+</blockquote>
+<p>所谓类似数组的对象，本质特征只有一点，即必须有<code>length</code>属性，常见的类数组对象是数组内部的<code>arguments</code> 和 DOM操作返回的NodeList 节点。</p>
+<pre><code>
+let arrayLike = {
+ &#39;0&#39;:&#39;0&#39;,
+ &#39;1&#39;:&#39;1&#39;
+ &#39;2&#39;:&#39;2&#39;
+ lenght: 3
+}
+//ES5
+[].slice.call(arrayLike); //[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]
+
+//ES6
+Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><code>Array.form()</code>可以接收第二个参数，作用类似于数组的<code>map()</code>，对每个元素进行处理后返回。</p>
+<p><img src="Snipaste_2020-04-21_14-51-18.png" alt=""></p>
+<h2 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h2><blockquote>
+<p>将一组值转换成数组</p>
+</blockquote>
+<p><code>Array.of()</code>是为了弥补<code>Array()</code>行为不一致的问题</p>
+<p><img src="Snipaste_2020-04-21_14-57-36.png" alt=""></p>
+<p>参数不一样，<code>Array()</code>表现得不一样</p>
+<h2 id="find-和-findIndex"><a href="#find-和-findIndex" class="headerlink" title="find() 和 findIndex()"></a>find() 和 findIndex()</h2><blockquote>
+<p>find：找到符合条件的第一个数组成员，没有找到返回undefine</p>
+<p>findexIndex：找到符合条件的数组成员的下表，没有找到返回-1</p>
+</blockquote>
+<p><img src="Snipaste_2020-04-21_15-09-34.png" alt=""></p>
+<p>回调函数可以接收三个值：元素本身、元素下标、数组本身</p>
+<h2 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h2><blockquote>
+<p>对数组进行填充</p>
+</blockquote>
+<ul>
+<li><p>待填充的数组没有值</p>
+<p><img src="Snipaste_2020-04-21_15-14-31.png" alt=""></p>
+</li>
+<li><p>待填充的数组有值</p>
+<p><img src="Snipaste_2020-04-21_15-16-20.png" alt=""></p>
+</li>
+</ul>
+<p>会把原有的值进行覆盖</p>
+<h2 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h2><blockquote>
+<p>判断数组中是否包含某个值，返回true 或 false</p>
+</blockquote>
+<pre><code>[1,2,3,NaN].includes(NaN,1)//第一个参数是待判断的值，第二个参数可选，指定搜索起点。</code></pre>
             </div>
             <hr/>
 
@@ -1090,7 +1181,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">6.6k</span>&nbsp;字
+                class="white-color">7.5k</span>&nbsp;字
             
             
             
