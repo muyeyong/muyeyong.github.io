@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2k
                 </div>
                 
 
@@ -664,7 +664,26 @@ Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><co
 <h2 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h2><blockquote>
 <p>判断数组中是否包含某个值，返回true 或 false</p>
 </blockquote>
-<pre><code>[1,2,3,NaN].includes(NaN,1)//第一个参数是待判断的值，第二个参数可选，指定搜索起点。</code></pre>
+<pre><code>[1,2,3,NaN].includes(NaN,1)//第一个参数是待判断的值，第二个参数可选，指定搜索起点。</code></pre><h2 id="flat"><a href="#flat" class="headerlink" title="flat()"></a>flat()</h2><blockquote>
+<p>拉平数组，一维化</p>
+</blockquote>
+<p>​    在vscode中用，有点问题</p>
+<p><img src="Snipaste_2020-04-21_17-16-57.png" alt=""></p>
+<p>自己试试写，就是一个简单的递归</p>
+<pre><code>function flat(arr) {
+  let result = [];
+  if (Object.prototype.toString.call(arr) === &#39;[object Array]&#39;) {
+    arr.forEach(item =&gt; {
+      if (Object.prototype.toString.call(item) === &#39;[object Array]&#39;) {
+        result = result.concat(flat(item))
+      } else {
+        result.push(item);
+      }
+    })
+  }
+  return result;
+}</code></pre><p><img src="Snipaste_2020-04-21_17-09-50.png" alt=""></p>
+
             </div>
             <hr/>
 
@@ -1181,7 +1200,7 @@ Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><co
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;字
+                class="white-color">7.8k</span>&nbsp;字
             
             
             

@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -437,12 +437,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+                                <span class="chip bg-color">小技巧</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-19
+                    2020-04-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    152
                 </div>
                 
 
@@ -487,7 +500,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="JavaScript-怎么跳出Array-forEach"><a href="#JavaScript-怎么跳出Array-forEach" class="headerlink" title="JavaScript-怎么跳出Array.forEach()"></a>JavaScript-怎么跳出Array.forEach()</h1><blockquote>
+<p>forEach()会遍历完整个数组，不会中途退出</p>
+</blockquote>
+<h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><pre><code>function foreach(a, f, t) {
+  try {
+    a.forEach(f, t)
+  }
+  catch (e) {
+    if (e === foreach.break) return;
+    else throw e;
+  }
+}
+
+foreach.break = new Error(&#39;StopInteration&#39;);
+
+arr = [1, 2, 3, 4, 5]
+
+foreach(arr, x =&gt; { if (x === 3) throw foreach.break; else console.log(x) })
+
+//输入 1,2</code></pre><h2 id="使用forEach的第二个参数"><a href="#使用forEach的第二个参数" class="headerlink" title="使用forEach的第二个参数"></a>使用forEach的第二个参数</h2><pre><code>[1, 2, 3, 4].forEach(x =&gt; {
+  if (this.break == true) {
+    return;
+  }
+  if (x === 2) this.break = true;
+  console.log(x)
+}, {})</code></pre><h2 id="改变数组本身"><a href="#改变数组本身" class="headerlink" title="改变数组本身"></a>改变数组本身</h2><pre><code>arr = [1, 2, 3, 4, 5]
+
+arr.forEach((v, index) =&gt; {
+  if (v &gt; 2) {
+    arr.splice(index, arr.length - index)
+  }
+  console.log(v)
+})
+
+//输出 1,2,3</code></pre><h2 id="放大招了"><a href="#放大招了" class="headerlink" title="放大招了"></a>放大招了</h2><p><strong>用some() ,for循环不香吗？？</strong></p>
+
             </div>
             <hr/>
 
@@ -549,7 +597,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+                                    <span class="chip bg-color">小技巧</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -986,7 +1038,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.5k</span>&nbsp;字
+                class="white-color">7.8k</span>&nbsp;字
             
             
             
