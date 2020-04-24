@@ -4,6 +4,106 @@
   
     
     <entry>
+      <title>软件资源-下载神器IDM</title>
+      <link href="/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/"/>
+      <url>/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/</url>
+      
+        <content type="html"><![CDATA[<p>IDM下载：</p><p><a href="https://muyeyong.lanzous.com/ibvwclc" target="_blank" rel="noopener">https://muyeyong.lanzous.com/ibvwclc</a></p><p>油猴(tampermonkey)插件下载：</p><p><a href="https://muyeyong.lanzous.com/ibw442d" target="_blank" rel="noopener">https://muyeyong.lanzous.com/ibw442d</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件资源 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 下载神器IDM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快捷化-HTML快速填充</title>
+      <link href="/2020/04/24/kuai-jie-hua-html-kuai-su-tian-chong/"/>
+      <url>/2020/04/24/kuai-jie-hua-html-kuai-su-tian-chong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="HTML代码快速填充"><a href="#HTML代码快速填充" class="headerlink" title="HTML代码快速填充"></a>HTML代码快速填充</h1><p>​    使用Emmet语法批量生成HTML标签时，可以使用 <code>Shift + Alt + 鼠标左键</code> 就可以批量填充内容。</p><p><img src="Snipaste_2020-04-24_17-53-48.png" alt=""></p><p><img src="Snipaste_2020-04-24_17-54-08.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 快捷化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML代码快速填充 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PS-基本操作</title>
+      <link href="/2020/04/24/ps-ji-ben-cao-zuo/"/>
+      <url>/2020/04/24/ps-ji-ben-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="PS基本操作"><a href="#PS基本操作" class="headerlink" title="PS基本操作"></a>PS基本操作</h1><h2 id="打开标尺"><a href="#打开标尺" class="headerlink" title="打开标尺"></a>打开标尺</h2><p><code>Ctr + R</code> : 打开或关闭视图</p><h2 id="视图放大缩小"><a href="#视图放大缩小" class="headerlink" title="视图放大缩小"></a>视图放大缩小</h2><p><code>Ctr + +</code>:   放大视图</p><p><code>Ctr + -</code>: 缩小视图</p><h2 id="拖动视图"><a href="#拖动视图" class="headerlink" title="拖动视图"></a>拖动视图</h2><p><code>按住空格鼠标会自动变成小手，就可以进行拖动</code>                        </p><h2 id="测量视图大小"><a href="#测量视图大小" class="headerlink" title="测量视图大小"></a>测量视图大小</h2><p><img src="Snipaste_2020-04-24_17-08-29.png" alt=""></p><p>点击就可以对视图进行测量大小</p><h2 id="取色"><a href="#取色" class="headerlink" title="取色"></a>取色</h2><p><img src="Snipaste_2020-04-24_17-09-33.png" alt=""></p><p>点击就可以取色</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> PS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基本操作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS实战-小米商品展示</title>
+      <link href="/2020/04/24/css-shi-zhan-xiao-mi-shang-pin-zhan-shi/"/>
+      <url>/2020/04/24/css-shi-zhan-xiao-mi-shang-pin-zhan-shi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS实战-小米商品展示"><a href="#CSS实战-小米商品展示" class="headerlink" title="CSS实战-小米商品展示"></a>CSS实战-小米商品展示</h1><h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h2><p><img src="Snipaste_2020-04-24_17-14-40.png" alt=""></p><h2 id="使用技能"><a href="#使用技能" class="headerlink" title="使用技能"></a>使用技能</h2><p>​    1. PS的基本操作（测量视图的大小、取色）</p><p>​    2. margin、padding的使用</p><pre><code>3. 居中操作（块级元素居中、行内元素居中、图片居中） 4. 字体属性的应用 5. 行内元素 和 块级元素 的转换</code></pre><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol><li><p>先把图片截下来（选取效果图的第一个图片进行操作）</p><p>使用<code>Snipaste</code> 截取图片</p></li><li><p>分析构造</p><p><img src="Snipaste_2020-04-24_17-19-10.png" alt=""></p></li></ol><p>可以分为四个盒子</p><pre><code>     第一个盒子： 使用了图片，图片需要水平居中</code></pre><p>​        二、三、四个盒子：都是对文字的操作</p><p>​        整体： 鼠标放上去会变成手，需要加上a链接，需要去除a链接的默认样式</p><ol start="3"><li>编码</li></ol><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;  &lt;meta charset="UTF-8"&gt;  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;  &lt;title&gt;小米商品展示&lt;/title&gt;  &lt;style&gt;    * {      padding: 0;      margin: 0;    }    a {      text-decoration: none;      color: #333;    }    body {      background-color: #f5f5f5;    }    .product-father {      display: block;      width: 235px;      height: 300px;      margin: 100px auto;      background-color: #fff;    }    .product {      padding: 20px 0;      height: 260px;    }    .product .figure-img {      margin: 0 37px 18px 37px;    }    .product .figure-img img {      width: 160px;      height: 160px;    }    .product h4 {      font-size: 14px;      font-weight: 400;      text-align: center;      margin-bottom: 6px    }    .product .decs {      font-size: 12px;      text-align: center;      color: #c2b0b0;      padding-bottom: 17px;    }    .product .buttom {      text-align: center;      font-size: 14px;    }    .product .buttom .left {      color: #ff6700;    }    .product .buttom .right {      color: #c2b0b0;      margin-left: 8px;      text-decoration: line-through;    }  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;  &lt;!-- shift + alt + 鼠标左键 --&gt;  &lt;a href="#" class="product-father"&gt;    &lt;div class="product"&gt;      &lt;div class="figure-img"&gt;        &lt;img src="./imags/earphone.jpg" alt="耳机"&gt;      &lt;/div&gt;      &lt;h4&gt;小米真无线蓝牙耳机Air 2&lt;/h4&gt;      &lt;div class="decs"&gt;智能真无线，轻松舒适戴&lt;/div&gt;      &lt;div class="buttom"&gt;        &lt;span class='left'&gt;369&lt;/span&gt; &lt;span class="right"&gt;399&lt;/span&gt;      &lt;/div&gt;    &lt;/div&gt;  &lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>首先需要先消除每个元素的内外边距</li><li>如果没有指定元素的宽或高，margin padding  不会撑大盒子</li><li>注意HTML的语义化</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS实战 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> padding margin 应用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>调试-VSCode</title>
       <link href="/2020/04/19/diao-shi-vscode/"/>
       <url>/2020/04/19/diao-shi-vscode/</url>
