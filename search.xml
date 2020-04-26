@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>CSS-阴影</title>
+      <link href="/2020/04/26/css-yin-ying/"/>
+      <url>/2020/04/26/css-yin-ying/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-圆角边框</title>
+      <link href="/2020/04/26/css-yuan-jiao-bian-kuang/"/>
+      <url>/2020/04/26/css-yuan-jiao-bian-kuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS圆角边框"><a href="#CSS圆角边框" class="headerlink" title="CSS圆角边框"></a>CSS圆角边框</h1><blockquote><p>盒子不仅仅有矩形，还可以设置圆角</p></blockquote><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-26_19-36-43.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件资源-下载神器IDM</title>
       <link href="/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/"/>
       <url>/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/</url>
@@ -108,9 +158,21 @@
       <link href="/2020/04/19/diao-shi-vscode/"/>
       <url>/2020/04/19/diao-shi-vscode/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="VSCode调试"><a href="#VSCode调试" class="headerlink" title="VSCode调试"></a>VSCode调试</h1><h2 id="在nodejs中调试"><a href="#在nodejs中调试" class="headerlink" title="在nodejs中调试"></a>在nodejs中调试</h2><ol><li>点击图标</li></ol><p><img src="Snipaste_2020-04-26_18-04-19.png" alt=""></p><ol start="2"><li>编辑或新建配置文件</li></ol><p><img src="Snipaste_2020-04-26_18-05-46.png" alt=""></p><ol start="3"><li>点击编辑的图标</li></ol><p>​    进入编辑配置文件的文件（没有配置文件会新建）</p><ol start="4"><li>编辑配置文件</li></ol><p><img src="Snipaste_2020-04-26_18-09-49.png" alt=""></p><p><img src="Snipaste_2020-04-26_18-12-20.png" alt=""></p><ol start="5"><li><p>进行调试</p><p>单击<code>F5</code>进行调试，在代码的左侧<code>鼠标右键单击</code>添加断点</p><p><img src="Snipaste_2020-04-26_18-15-20.png" alt=""></p><p><img src="Snipaste_2020-04-26_18-14-39.png" alt=""></p></li></ol><h2 id="在Chrome中调试"><a href="#在Chrome中调试" class="headerlink" title="在Chrome中调试"></a>在Chrome中调试</h2><ol><li>下载<code>Debugger for Chrome</code> 插件</li></ol><p><img src="Snipaste_2020-04-26_18-18-20.png" alt=""></p><ol start="2"><li><p>编辑配置文件</p><p>​    点击添加配置的时候，有两种选择</p><p><img src="Snipaste_2020-04-26_18-23-11.png" alt=""></p><blockquote><p>attach:</p><p>​    会跟踪你已经运行的程序</p><p>launch:</p><p>​    会创建一个新的程序，并以一个新的用户打开新的窗口</p></blockquote></li></ol><p><img src="Snipaste_2020-04-26_18-35-53.png" alt=""></p><ol start="3"><li><p>进行调试</p><p>我已经在本地启动了项目</p><p><img src="Snipaste_2020-04-26_18-38-21.png" alt=""></p><p>我用<code>launch</code>模式进行调试，<code>F5</code>选择对应配置</p><p><img src="Snipaste_2020-04-26_18-40-30.png" alt=""></p></li></ol><p>可以进行调试：</p><p><img src="Snipaste_2020-04-26_18-41-33.png" alt=""></p><h2 id="留坑待填"><a href="#留坑待填" class="headerlink" title="留坑待填"></a>留坑待填</h2><p>​    我使用<code>attach</code> 模式去调试，但是失败了</p><p><img src="Snipaste_2020-04-26_17-54-07.png" alt=""></p><p>报了一个这个错，试了很多方法还是不行</p><p>更多详细配置可以看官方文档：<a href="https://github.com/Microsoft/vscode-chrome-debug">https://github.com/Microsoft/vscode-chrome-debug</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 调试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode </tag>
+            
+        </tags>
       
     </entry>
     
@@ -146,9 +208,21 @@
       <link href="/2020/04/19/yuan-ma-v8sort/"/>
       <url>/2020/04/19/yuan-ma-v8sort/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 源码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> V8排序 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -159,9 +233,21 @@
       <link href="/2020/04/19/suan-fa-shu-zu-pai-xu/"/>
       <url>/2020/04/19/suan-fa-shu-zu-pai-xu/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 排序算法 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -572,7 +658,7 @@
       <link href="/2020/04/15/css-he-zi-mo-xing/"/>
       <url>/2020/04/15/css-he-zi-mo-xing/</url>
       
-        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote><p>padding同border一样，可以设置上下左右内边距，padding的不同写法。</p><table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>padding: 15px</td><td>一个数值，设定了<code>上下左右</code>的内边距</td></tr><tr><td>padding: 15px 15px</td><td>两个数值，设定的是<code>上下</code> 和 <code>左右</code> 的内边距</td></tr><tr><td>padding: 15px 20px 34px</td><td>三个数值，设定的是<code>上</code> <code>左右</code> <code>下</code>的内边距</td></tr><tr><td>padding: 15px 23px 12px 23px</td><td>四个数值，设定的是<code>上</code>  <code>右</code>  <code>下</code>  <code>左</code>，顺时针方向设定内边距</td></tr></tbody></table><p>可能的值：</p><p><img src="Snipaste_2020-04-16_19-38-22.png" alt=""></p><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>​    <strong>内边距也会影响盒子的实际大小，会把盒子撑大</strong></p><p>​    <strong>解决办法</strong>： 设置盒子大小的时候减去内边距</p><p>​    <strong>应用</strong>： 解决盒子之间的距离问题</p><p>​    <img src="Snipaste_2020-04-16_19-20-55.png" alt=""></p><p>没有使用内边距，由于文字长度的原因，文字之间的距离不相等。</p><p><img src="Snipaste_2020-04-16_19-53-35.png" alt=""></p><p>使用了内边距就可以解决这样的问题。</p><h2 id="外边距-margin"><a href="#外边距-margin" class="headerlink" title="外边距(margin)"></a>外边距(margin)</h2><blockquote><p>控制盒子与盒子之间的距离</p></blockquote><p>没有使用margin</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-00-52.png" alt=""></p><p>使用了margin</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-01-59.png" alt=""></p><h3 id="margin的写法"><a href="#margin的写法" class="headerlink" title="margin的写法"></a>margin的写法</h3><blockquote><p>margin跟padding一样有种写法，遵循的规则也一样</p></blockquote><h2 id="margin的典型应用-块级元素水平居中"><a href="#margin的典型应用-块级元素水平居中" class="headerlink" title="margin的典型应用-块级元素水平居中"></a>margin的典型应用-块级元素水平居中</h2><blockquote><p>盒子默认位置是靠左显示，设置水平居中需要满足两个条件</p><blockquote><p>1: 必须指定盒子的宽度</p><p>2：左右外边距需要指定为auto</p></blockquote></blockquote><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-27-20.png" alt=""></p><p>设置水平居中的写法有三种：</p><ul><li>margin-left : auto, margin-right : auto</li><li>margin : auto</li><li><strong>margin : 0 auto</strong></li></ul><p>最后一种最常用</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-15-37.png" alt=""></p><h2 id="行内元素跟行内块元素的水平居中"><a href="#行内元素跟行内块元素的水平居中" class="headerlink" title="行内元素跟行内块元素的水平居中"></a>行内元素跟行内块元素的水平居中</h2><blockquote><p>把他们看为文字类型一样，使用<code>text-align = ecnter</code></p></blockquote><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-20-33.png" alt=""></p><h2 id="外边距的合并"><a href="#外边距的合并" class="headerlink" title="外边距的合并"></a>外边距的合并</h2><blockquote><p>当两个垂直外边距相遇时，它们将形成一个外边距，合并后的外边距等于发生合并外边距的高度的较大者</p></blockquote><h3 id="元素相互独立时的合并"><a href="#元素相互独立时的合并" class="headerlink" title="元素相互独立时的合并"></a>元素相互独立时的合并</h3><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-31-15.png" alt=""></p><h3 id="元素包含时的合并"><a href="#元素包含时的合并" class="headerlink" title="元素包含时的合并"></a>元素包含时的合并</h3><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-31-50.png" alt=""></p><h3 id="外边距的自身合并"><a href="#外边距的自身合并" class="headerlink" title="外边距的自身合并"></a>外边距的自身合并</h3><p>​    假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-33-08.png" alt=""></p><p>​    如果这个外边距遇到另一个元素的外边距，它还会发生合并：</p><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_14-33-36.png" alt=""></p><h2 id="清除元素的内外边距"><a href="#清除元素的内外边距" class="headerlink" title="清除元素的内外边距"></a>清除元素的内外边距</h2><p><img src="CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/Snipaste_2020-04-18_11-21-50.png" alt=""></p><p> 元素会默认带上内外边距，使用通配符选择器去清除</p><pre><code>* {    padding : 0;    margin : 0;}</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="css盒子模型"><a href="#css盒子模型" class="headerlink" title="css盒子模型"></a>css盒子模型</h1><blockquote><p>盒子模型包含四个部分：内容(centent)、内边距(padding)、边框(border)和外边距(margin)</p></blockquote><p><img src="Snipaste_2020-04-15_08-44-07.png" alt=""></p><h2 id="边框-border"><a href="#边框-border" class="headerlink" title="边框(border)"></a>边框(border)</h2><table><thead><tr><th>属性</th><th>说明</th></tr></thead><tbody><tr><td>border-style</td><td>设置边框的样式，常用 dotted:点线 dashed：虚线 solid：实线</td></tr><tr><td>border-width</td><td>设置边框的宽度，一般用像素点设置</td></tr><tr><td>border-color</td><td>设置边框的颜色</td></tr></tbody></table><p><img src="Snipaste_2020-04-15_10-16-34.png" alt=""></p><p>表格有自己的边框，单元格也有自己的边框，如果两个叠加在一起会造成边框比较宽，可以使用<code>border-collapse</code>设置表格行和单元格的行是否合并。</p><table><thead><tr><th>属性</th><th>属性值</th></tr></thead><tbody><tr><td>border-collapse</td><td><strong>separate</strong>：边框独立(标准html)  <strong>collapse</strong>：相邻边框被合并</td></tr></tbody></table><ul><li><p>每条边框可以分别设置</p><blockquote><p>通过指定top left buttom right 设置单个边框的样式</p></blockquote><p><img src="Snipaste_2020-04-15_10-29-20.png" alt=""></p></li><li><p>border的复合写法</p><blockquote><p>border: color style size,顺序没有严格要求</p></blockquote><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>border会影响盒子实际大小</strong></p></li></ul><p><img src="Snipaste_2020-04-15_10-31-47.png" alt=""></p><p>像这种带边框的盒子，边框大小会影响盒子实际大小</p><p>解决方案：</p><pre><code>   1. 量盒子宽度的时候不要把边框算进去            2. 对盒子大小进行调整，减去边框的宽度</code></pre><h2 id="内边距-padding"><a href="#内边距-padding" class="headerlink" title="内边距(padding)"></a>内边距(padding)</h2><blockquote><p>内边距设置的是内容与边框之间的距离</p></blockquote><p>padding同border一样，可以设置上下左右内边距，padding的不同写法。</p><table><thead><tr><th>写法</th><th>说明</th></tr></thead><tbody><tr><td>padding: 15px</td><td>一个数值，设定了<code>上下左右</code>的内边距</td></tr><tr><td>padding: 15px 15px</td><td>两个数值，设定的是<code>上下</code> 和 <code>左右</code> 的内边距</td></tr><tr><td>padding: 15px 20px 34px</td><td>三个数值，设定的是<code>上</code> <code>左右</code> <code>下</code>的内边距</td></tr><tr><td>padding: 15px 23px 12px 23px</td><td>四个数值，设定的是<code>上</code>  <code>右</code>  <code>下</code>  <code>左</code>，顺时针方向设定内边距</td></tr></tbody></table><p>可能的值：</p><p><img src="Snipaste_2020-04-16_19-38-22.png" alt=""></p><h3 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h3><p>​    <strong>内边距也会影响盒子的实际大小，会把盒子撑大</strong></p><p>​    <strong>解决办法</strong>： 设置盒子大小的时候减去内边距</p><p>​    <strong>应用</strong>： 解决盒子之间的距离问题</p><p>​    <img src="Snipaste_2020-04-16_19-20-55.png" alt=""></p><p>没有使用内边距，由于文字长度的原因，文字之间的距离不相等。</p><p><img src="Snipaste_2020-04-16_19-53-35.png" alt=""></p><p>使用了内边距就可以解决这样的问题。</p><h2 id="外边距-margin"><a href="#外边距-margin" class="headerlink" title="外边距(margin)"></a>外边距(margin)</h2><blockquote><p>控制盒子与盒子之间的距离</p></blockquote><p>没有使用margin</p><p><img src="Snipaste_2020-04-18_11-00-52.png" alt=""></p><p>使用了margin</p><p>![]Snipaste_2020-04-18_11-01-59.png)</p><h3 id="margin的写法"><a href="#margin的写法" class="headerlink" title="margin的写法"></a>margin的写法</h3><blockquote><p>margin跟padding一样有种写法，遵循的规则也一样</p></blockquote><h2 id="margin的典型应用-块级元素水平居中"><a href="#margin的典型应用-块级元素水平居中" class="headerlink" title="margin的典型应用-块级元素水平居中"></a>margin的典型应用-块级元素水平居中</h2><blockquote><p>盒子默认位置是靠左显示，设置水平居中需要满足两个条件</p><blockquote><p>1: 必须指定盒子的宽度</p><p>2：左右外边距需要指定为auto</p></blockquote></blockquote><p><img src="Snipaste_2020-04-18_11-27-20.png" alt=""></p><p>设置水平居中的写法有三种：</p><ul><li>margin-left : auto, margin-right : auto</li><li>margin : auto</li><li><strong>margin : 0 auto</strong></li></ul><p>最后一种最常用</p><p><img src="Snipaste_2020-04-18_11-15-37.png" alt=""></p><h2 id="行内元素跟行内块元素的水平居中"><a href="#行内元素跟行内块元素的水平居中" class="headerlink" title="行内元素跟行内块元素的水平居中"></a>行内元素跟行内块元素的水平居中</h2><blockquote><p>把他们看为文字类型一样，使用<code>text-align = ecnter</code></p></blockquote><p><img src="Snipaste_2020-04-18_11-20-33.png" alt=""></p><h2 id="外边距的合并"><a href="#外边距的合并" class="headerlink" title="外边距的合并"></a>外边距的合并</h2><blockquote><p>当两个垂直外边距相遇时，它们将形成一个外边距，合并后的外边距等于发生合并外边距的高度的较大者</p></blockquote><h3 id="元素相互独立时的合并"><a href="#元素相互独立时的合并" class="headerlink" title="元素相互独立时的合并"></a>元素相互独立时的合并</h3><p><img src="Snipaste_2020-04-18_14-31-15.png" alt=""></p><h3 id="元素包含时的合并"><a href="#元素包含时的合并" class="headerlink" title="元素包含时的合并"></a>元素包含时的合并</h3><p><img src="Snipaste_2020-04-18_14-31-50.png" alt=""></p><h3 id="外边距的自身合并"><a href="#外边距的自身合并" class="headerlink" title="外边距的自身合并"></a>外边距的自身合并</h3><p>​    假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并</p><p><img src="Snipaste_2020-04-18_14-33-08.png" alt=""></p><p>​    如果这个外边距遇到另一个元素的外边距，它还会发生合并：</p><p><img src="Snipaste_2020-04-18_14-33-36.png" alt=""></p><h2 id="清除元素的内外边距"><a href="#清除元素的内外边距" class="headerlink" title="清除元素的内外边距"></a>清除元素的内外边距</h2><p><img src="Snipaste_2020-04-18_11-21-50.png" alt=""></p><p> 元素会默认带上内外边距，使用通配符选择器去清除</p><pre><code>* {    padding : 0;    margin : 0;}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>

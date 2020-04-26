@@ -437,12 +437,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/VSCode/">
+                                <span class="chip bg-color">VSCode</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%B0%83%E8%AF%95/" class="post-category">
+                                调试
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-19
+                    2020-04-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    292
                 </div>
                 
 
@@ -487,7 +500,80 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="VSCode调试"><a href="#VSCode调试" class="headerlink" title="VSCode调试"></a>VSCode调试</h1><h2 id="在nodejs中调试"><a href="#在nodejs中调试" class="headerlink" title="在nodejs中调试"></a>在nodejs中调试</h2><ol>
+<li>点击图标</li>
+</ol>
+<p><img src="Snipaste_2020-04-26_18-04-19.png" alt=""></p>
+<ol start="2">
+<li>编辑或新建配置文件</li>
+</ol>
+<p><img src="Snipaste_2020-04-26_18-05-46.png" alt=""></p>
+<ol start="3">
+<li>点击编辑的图标</li>
+</ol>
+<p>​    进入编辑配置文件的文件（没有配置文件会新建）</p>
+<ol start="4">
+<li>编辑配置文件</li>
+</ol>
+<p><img src="Snipaste_2020-04-26_18-09-49.png" alt=""></p>
+<p><img src="Snipaste_2020-04-26_18-12-20.png" alt=""></p>
+<ol start="5">
+<li><p>进行调试</p>
+<p>单击<code>F5</code>进行调试，在代码的左侧<code>鼠标右键单击</code>添加断点</p>
+<p><img src="Snipaste_2020-04-26_18-15-20.png" alt=""></p>
+<p><img src="Snipaste_2020-04-26_18-14-39.png" alt=""></p>
+</li>
+</ol>
+<h2 id="在Chrome中调试"><a href="#在Chrome中调试" class="headerlink" title="在Chrome中调试"></a>在Chrome中调试</h2><ol>
+<li>下载<code>Debugger for Chrome</code> 插件</li>
+</ol>
+<p><img src="Snipaste_2020-04-26_18-18-20.png" alt=""></p>
+<ol start="2">
+<li><p>编辑配置文件</p>
+<p>​    点击添加配置的时候，有两种选择</p>
+<p><img src="Snipaste_2020-04-26_18-23-11.png" alt=""></p>
+<blockquote>
+<p>attach:</p>
+<p>​    会跟踪你已经运行的程序</p>
+<p>launch:</p>
+<p>​    会创建一个新的程序，并以一个新的用户打开新的窗口</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="Snipaste_2020-04-26_18-35-53.png" alt=""></p>
+<ol start="3">
+<li><p>进行调试</p>
+<p>我已经在本地启动了项目</p>
+<p><img src="Snipaste_2020-04-26_18-38-21.png" alt=""></p>
+<p>我用<code>launch</code>模式进行调试，<code>F5</code>选择对应配置</p>
+<p><img src="Snipaste_2020-04-26_18-40-30.png" alt=""></p>
+</li>
+</ol>
+<p>可以进行调试：</p>
+<p><img src="Snipaste_2020-04-26_18-41-33.png" alt=""></p>
+<h2 id="留坑待填"><a href="#留坑待填" class="headerlink" title="留坑待填"></a>留坑待填</h2><p>​    我使用<code>attach</code> 模式去调试，但是失败了</p>
+<p><img src="Snipaste_2020-04-26_17-54-07.png" alt=""></p>
+<p>报了一个这个错，试了很多方法还是不行</p>
+<p>更多详细配置可以看官方文档：<a href="https://github.com/Microsoft/vscode-chrome-debug">https://github.com/Microsoft/vscode-chrome-debug</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -549,7 +635,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/VSCode/">
+                                    <span class="chip bg-color">VSCode</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1021,7 +1111,7 @@ forEach()会遍历完整个数组，不会中途退出
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">8.6k</span>&nbsp;字
+                class="white-color">9.2k</span>&nbsp;字
             
             
             
