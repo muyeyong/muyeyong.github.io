@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-26
+                    2020-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    72
+                    430
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -501,9 +501,106 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="CSS圆角边框"><a href="#CSS圆角边框" class="headerlink" title="CSS圆角边框"></a>CSS圆角边框</h1><blockquote>
-<p>盒子不仅仅有矩形，还可以设置圆角</p>
+<p>盒子不仅仅有矩形，还可以设置圆角，通过<code>border-radius</code>设置</p>
 </blockquote>
 <p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-26_19-36-43.png" alt=""></p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><blockquote>
+<p>属性值： 长度单位 或 百分比，用属性值来设置边框圆角半径</p>
+</blockquote>
+<ul>
+<li><p>一个参数</p>
+<blockquote>
+<p>设置四个角的圆角半径</p>
+</blockquote>
+<pre><code> .nav1 {
+      height: 300px;
+      width: 300px;
+      background-color: pink;
+      line-height: 300px;
+      text-align: center;
+      margin: 100px auto;
+      border-radius: 20px;
+    }</code></pre></li>
+</ul>
+<p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-46-00.png" alt=""></p>
+<ul>
+<li><p>两个参数</p>
+<blockquote>
+<p>设置<code>左上角、右下角</code> 和 <code>右上角、左下角</code>的边框半径</p>
+</blockquote>
+<pre><code>  .nav2 {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: red;
+      margin: 100px auto;
+      border-radius: 20px 40px;
+    }</code></pre></li>
+</ul>
+<p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-49-42.png" alt=""></p>
+<ul>
+<li><p>三个参数</p>
+<blockquote>
+<p>设置<code>左上角</code>  <code>右上角、左下角</code> <code>右下角</code> 的边框半径</p>
+</blockquote>
+<pre><code>.nav3 {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: lightblue;
+      margin: 100px auto;
+      border-radius: 20px 40px 60px;
+    }</code></pre></li>
+</ul>
+<p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-52-25.png" alt=""></p>
+<ul>
+<li><p>四个参数</p>
+<blockquote>
+<p>按顺时针方向设置每个角的圆角边框</p>
+</blockquote>
+<pre><code>.nav4 {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: purple;
+      margin: 100px auto;
+      border-radius: 20px 40px 60px 80px;
+    }</code></pre></li>
+</ul>
+<p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-55-07.png" alt=""></p>
+<ul>
+<li><p>单独设置每个角的圆角边框</p>
+<pre><code>.nav5 {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: pink;
+      margin: 100px auto;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 70px;
+    }</code></pre><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_10-00-22.png" alt=""></p>
+</li>
+</ul>
+<h2 id="圆角边框原理"><a href="#圆角边框原理" class="headerlink" title="圆角边框原理"></a>圆角边框原理</h2><blockquote>
+<p>是时候展示真正的技术了，上图</p>
+</blockquote>
+<p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_10-06-21.png" alt=""></p>
+<p>​    以第三个div为例，代码如下</p>
+<pre><code>.nav3 {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      background-color: lightblue;
+      margin: 100px auto;
+      border-radius: 20px 40px 60px;
+    }</code></pre><p>​    它的圆角边框的半径分别是: <code>左上：20px 右上 左下：40px 右下：60px</code> ，想象一下（看图），有三个半径为 20px 、40px、60px的圆跟盒子的四个角相切，很不是就明白了。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -792,10 +889,35 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            阴影盒子阴影
+box-shadow设置盒子的阴影
+
+
+
+
+
+值
+属性值
+说明
+
+
+
+h-shadow
+长度值
+必需，水平阴影的位置
+
+
+v-shadow
+长度值
+必需，垂直阴影的位置
+
+
+blur
+长度值
+可选，设置阴影的模糊度
+
+
+col
                         
                     </div>
                     <div class="publish-info">
@@ -1057,7 +1179,7 @@ https://muyeyong.lanzous.com/ibw442d
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.2k</span>&nbsp;字
+                class="white-color">10.4k</span>&nbsp;字
             
             
             

@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-26
+                    2020-04-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    353
                 </div>
                 
 
@@ -500,7 +500,93 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h1><h2 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h2><blockquote>
+<p>box-shadow设置盒子的阴影</p>
+</blockquote>
+<p><img src="yinying3.gif" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h-shadow</td>
+<td>长度值</td>
+<td>必需，水平阴影的位置</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td>长度值</td>
+<td>必需，垂直阴影的位置</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>长度值</td>
+<td>可选，设置阴影的模糊度</td>
+</tr>
+<tr>
+<td>color</td>
+<td>颜色值</td>
+<td>可选，设置阴影的颜色</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>阴影在边框外，即阴影向外扩散,指定inset阴影在盒子内</td>
+<td>可选</td>
+</tr>
+</tbody></table>
+<h2 id="水平、垂直阴影位置解释"><a href="#水平、垂直阴影位置解释" class="headerlink" title="水平、垂直阴影位置解释"></a>水平、垂直阴影位置解释</h2><pre><code> .nav {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      margin: 100px auto;
+      background-color: pink;
+      text-align: center;
+      box-shadow: 10px 20px black;
+    }</code></pre><p><img src="yinying1.gif" alt=""></p>
+<p><img src="Snipaste_2020-04-27_11-36-53.png" alt=""></p>
+<h3 id="blur-属性解释"><a href="#blur-属性解释" class="headerlink" title="blur 属性解释"></a>blur 属性解释</h3><pre><code>.nav {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      margin: 100px auto;
+      background-color: pink;
+      text-align: center;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);
+    }</code></pre><p><img src="yinying2.gif" alt=""></p>
+<p><code>blur</code>越大越模糊，越小越清晰</p>
+<h3 id="关于inset"><a href="#关于inset" class="headerlink" title="关于inset"></a>关于<code>inset</code></h3><p>​    使用 <code>inset</code> 关键字会使得阴影落在盒子内部，这样看起来就像是内容被压低了。 此时阴影会在边框之内 (即使是透明边框）、背景之上、内容之下。</p>
+<p><img src="Snipaste_2020-04-27_13-52-17.png" alt=""></p>
+<h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><blockquote>
+<p>text-shadow，设置文字阴影，可以有两三个<code>lenght</code>参数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>取值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>设置阴影颜色</td>
+</tr>
+<tr>
+<td>offset-x  offset-y</td>
+<td>以文字中心为中标原点，设置<code>xy</code>轴的偏移</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>阴影模糊度</td>
+</tr>
+</tbody></table>
+<pre><code> span {
+      text-shadow: pink 10px 10px 10px;
+    }</code></pre><p><img src="Snipaste_2020-04-27_13-51-10.png" alt=""></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -772,33 +858,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/26/css-yin-ying/">
+                <a href="/2020/04/27/css-fu-dong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.png" class="responsive-img" alt="CSS-阴影">
+                        <img src="/medias/featureimages/12.png" class="responsive-img" alt="CSS-浮动">
                         
-                        <span class="card-title">CSS-阴影</span>
+                        <span class="card-title">CSS-浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            CSS浮动（float）什么是浮动
+float属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘
+
+语法：
+选择器{ float:属性值 }
+
+
+属性值
+说明
+
+
+
+none
+元素不浮动
+
+
+left
+元素
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -811,7 +910,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -843,13 +941,19 @@
                     <div class="summary block-with-text">
                         
                             CSS圆角边框
-盒子不仅仅有矩形，还可以设置圆角
+盒子不仅仅有矩形，还可以设置圆角，通过border-radius设置
 
 
+基本使用
+属性值： 长度单位 或 百分比，用属性值来设置边框圆角半径
 
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if
+
+一个参数
+
+设置四个角的圆角半径
+
+ .nav1 {
+      heigh
                         
                     </div>
                     <div class="publish-info">
@@ -1057,7 +1161,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.2k</span>&nbsp;字
+                class="white-color">10.4k</span>&nbsp;字
             
             
             

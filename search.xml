@@ -4,11 +4,86 @@
   
     
     <entry>
+      <title>CSS-定位</title>
+      <link href="/2020/04/27/css-ding-wei/"/>
+      <url>/2020/04/27/css-ding-wei/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-传统网页布局方式</title>
+      <link href="/2020/04/27/css-chuan-tong-wang-ye-bu-ju-fang-shi/"/>
+      <url>/2020/04/27/css-chuan-tong-wang-ye-bu-ju-fang-shi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="传统网页的布局方式"><a href="#传统网页的布局方式" class="headerlink" title="传统网页的布局方式"></a>传统网页的布局方式</h1><h2 id="普通流"><a href="#普通流" class="headerlink" title="普通流"></a>普通流</h2><p>​    普通流就是按照<code>元素的显示模式</code>进行排列，块级元素就独占一行，行内元素和行内块元素能排列在同一行的话就排列在同一行。</p><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><a href="/2020/04/27/css-fu-dong/" title="CSS-浮动">CSS-浮动</a><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><a href="/2020/04/27/css-ding-wei/" title="CSS-定位">CSS-定位</a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-浮动</title>
+      <link href="/2020/04/27/css-fu-dong/"/>
+      <url>/2020/04/27/css-fu-dong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS浮动（float）"><a href="#CSS浮动（float）" class="headerlink" title="CSS浮动（float）"></a>CSS浮动（float）</h1><h2 id="什么是浮动"><a href="#什么是浮动" class="headerlink" title="什么是浮动"></a>什么是浮动</h2><blockquote><p>float属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘</p></blockquote><p>语法：</p><pre><code>选择器{ float:属性值 }</code></pre><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>none</td><td>元素不浮动</td></tr><tr><td>left</td><td>元素左浮动</td></tr><tr><td>right</td><td>元素右浮动</td></tr></tbody></table><p>​    普通流：</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-19-40.png" alt=""></p><p>使用浮动：</p><p>​    <img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-21-34.png" alt=""></p><h2 id="浮动特性"><a href="#浮动特性" class="headerlink" title="浮动特性"></a>浮动特性</h2><ul><li><p>脱离标准流（脱标）</p><p>不会按标准流来排列，会把原来的位置空出来</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-34-26.png" alt=""></p><p>​    第一个盒子使用了<code>左浮动</code>，第二个盒子是标准流排列，第一个盒子把第二个遮住了，是因为第一个盒子使用了浮动，把原来的位置空出来了，第二个盒子就从第一个盒子空出来的位置进行排列，但第一个盒子使用的是左浮动，就把第二个盒子覆盖了。</p></li><li><p>具有行内元素的特性</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-46-43.png" alt=""></p><p>会像行内元素一样，在同一行并排显示，之间不会有空隙</p></li></ul><h2 id="浮动元素经常搭配标准流的父元素"><a href="#浮动元素经常搭配标准流的父元素" class="headerlink" title="浮动元素经常搭配标准流的父元素"></a>浮动元素经常搭配标准流的父元素</h2><blockquote><p>纵行显示找标准流，横排显示找浮动</p></blockquote><p>​    <img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_17-06-50.png" alt=""></p><p>​    一个大的标准流父元素包含若干个浮动元素</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS-阴影</title>
       <link href="/2020/04/26/css-yin-ying/"/>
       <url>/2020/04/26/css-yin-ying/</url>
       
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h1><h2 id="盒子阴影"><a href="#盒子阴影" class="headerlink" title="盒子阴影"></a>盒子阴影</h2><blockquote><p>box-shadow设置盒子的阴影</p></blockquote><p><img src="yinying3.gif" alt=""></p><table><thead><tr><th>值</th><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>h-shadow</td><td>长度值</td><td>必需，水平阴影的位置</td></tr><tr><td>v-shadow</td><td>长度值</td><td>必需，垂直阴影的位置</td></tr><tr><td>blur</td><td>长度值</td><td>可选，设置阴影的模糊度</td></tr><tr><td>color</td><td>颜色值</td><td>可选，设置阴影的颜色</td></tr><tr><td>inset</td><td>阴影在边框外，即阴影向外扩散,指定inset阴影在盒子内</td><td>可选</td></tr></tbody></table><h2 id="水平、垂直阴影位置解释"><a href="#水平、垂直阴影位置解释" class="headerlink" title="水平、垂直阴影位置解释"></a>水平、垂直阴影位置解释</h2><pre><code> .nav {      height: 300px;      width: 300px;      line-height: 300px;      margin: 100px auto;      background-color: pink;      text-align: center;      box-shadow: 10px 20px black;    }</code></pre><p><img src="yinying1.gif" alt=""></p><p><img src="Snipaste_2020-04-27_11-36-53.png" alt=""></p><h3 id="blur-属性解释"><a href="#blur-属性解释" class="headerlink" title="blur 属性解释"></a>blur 属性解释</h3><pre><code>.nav {      height: 300px;      width: 300px;      line-height: 300px;      margin: 100px auto;      background-color: pink;      text-align: center;      box-shadow: 5px 5px 5px rgba(0, 0, 0, .6);    }</code></pre><p><img src="yinying2.gif" alt=""></p><p><code>blur</code>越大越模糊，越小越清晰</p><h3 id="关于inset"><a href="#关于inset" class="headerlink" title="关于inset"></a>关于<code>inset</code></h3><p>​    使用 <code>inset</code> 关键字会使得阴影落在盒子内部，这样看起来就像是内容被压低了。 此时阴影会在边框之内 (即使是透明边框）、背景之上、内容之下。</p><p><img src="Snipaste_2020-04-27_13-52-17.png" alt=""></p><h2 id="文字阴影"><a href="#文字阴影" class="headerlink" title="文字阴影"></a>文字阴影</h2><blockquote><p>text-shadow，设置文字阴影，可以有两三个<code>lenght</code>参数</p></blockquote><table><thead><tr><th>取值</th><th>说明</th></tr></thead><tbody><tr><td>color</td><td>设置阴影颜色</td></tr><tr><td>offset-x  offset-y</td><td>以文字中心为中标原点，设置<code>xy</code>轴的偏移</td></tr><tr><td>blur</td><td>阴影模糊度</td></tr></tbody></table><pre><code> span {      text-shadow: pink 10px 10px 10px;    }</code></pre><p><img src="Snipaste_2020-04-27_13-51-10.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -33,7 +108,7 @@
       <link href="/2020/04/26/css-yuan-jiao-bian-kuang/"/>
       <url>/2020/04/26/css-yuan-jiao-bian-kuang/</url>
       
-        <content type="html"><![CDATA[<h1 id="CSS圆角边框"><a href="#CSS圆角边框" class="headerlink" title="CSS圆角边框"></a>CSS圆角边框</h1><blockquote><p>盒子不仅仅有矩形，还可以设置圆角</p></blockquote><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-26_19-36-43.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="CSS圆角边框"><a href="#CSS圆角边框" class="headerlink" title="CSS圆角边框"></a>CSS圆角边框</h1><blockquote><p>盒子不仅仅有矩形，还可以设置圆角，通过<code>border-radius</code>设置</p></blockquote><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-26_19-36-43.png" alt=""></p><h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><blockquote><p>属性值： 长度单位 或 百分比，用属性值来设置边框圆角半径</p></blockquote><ul><li><p>一个参数</p><blockquote><p>设置四个角的圆角半径</p></blockquote><pre><code> .nav1 {      height: 300px;      width: 300px;      background-color: pink;      line-height: 300px;      text-align: center;      margin: 100px auto;      border-radius: 20px;    }</code></pre></li></ul><p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-46-00.png" alt=""></p><ul><li><p>两个参数</p><blockquote><p>设置<code>左上角、右下角</code> 和 <code>右上角、左下角</code>的边框半径</p></blockquote><pre><code>  .nav2 {      height: 300px;      width: 300px;      line-height: 300px;      text-align: center;      background-color: red;      margin: 100px auto;      border-radius: 20px 40px;    }</code></pre></li></ul><p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-49-42.png" alt=""></p><ul><li><p>三个参数</p><blockquote><p>设置<code>左上角</code>  <code>右上角、左下角</code> <code>右下角</code> 的边框半径</p></blockquote><pre><code>.nav3 {      height: 300px;      width: 300px;      line-height: 300px;      text-align: center;      background-color: lightblue;      margin: 100px auto;      border-radius: 20px 40px 60px;    }</code></pre></li></ul><p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-52-25.png" alt=""></p><ul><li><p>四个参数</p><blockquote><p>按顺时针方向设置每个角的圆角边框</p></blockquote><pre><code>.nav4 {      height: 300px;      width: 300px;      line-height: 300px;      text-align: center;      background-color: purple;      margin: 100px auto;      border-radius: 20px 40px 60px 80px;    }</code></pre></li></ul><p>  <img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_09-55-07.png" alt=""></p><ul><li><p>单独设置每个角的圆角边框</p><pre><code>.nav5 {      height: 300px;      width: 300px;      line-height: 300px;      text-align: center;      background-color: pink;      margin: 100px auto;      border-top-left-radius: 10px;      border-top-right-radius: 30px;      border-bottom-right-radius: 50px;      border-bottom-left-radius: 70px;    }</code></pre><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_10-00-22.png" alt=""></p></li></ul><h2 id="圆角边框原理"><a href="#圆角边框原理" class="headerlink" title="圆角边框原理"></a>圆角边框原理</h2><blockquote><p>是时候展示真正的技术了，上图</p></blockquote><p><img src="CSS-%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86/Snipaste_2020-04-27_10-06-21.png" alt=""></p><p>​    以第三个div为例，代码如下</p><pre><code>.nav3 {      height: 300px;      width: 300px;      line-height: 300px;      text-align: center;      background-color: lightblue;      margin: 100px auto;      border-radius: 20px 40px 60px;    }</code></pre><p>​    它的圆角边框的半径分别是: <code>左上：20px 右上 左下：40px 右下：60px</code> ，想象一下（看图），有三个半径为 20px 、40px、60px的圆跟盒子的四个角相切，很不是就明白了。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
