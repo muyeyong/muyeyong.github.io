@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>CSS实战-快报</title>
+      <link href="/2020/04/28/css-shi-zhan-kuai-bao/"/>
+      <url>/2020/04/28/css-shi-zhan-kuai-bao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS实战-快报"><a href="#CSS实战-快报" class="headerlink" title="CSS实战-快报"></a>CSS实战-快报</h1><p>实现效果：</p><p><img src="CSS%E5%AE%9E%E6%88%98-%E5%BF%AB%E6%8A%A5/Snipaste_2020-04-28_16-32-33.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS实战 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快报 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>React-生命周期加载顺序引发的思考</title>
+      <link href="/2020/04/28/react-sheng-ming-zhou-qi-jia-zai-shun-xu-yin-fa-de-si-kao/"/>
+      <url>/2020/04/28/react-sheng-ming-zhou-qi-jia-zai-shun-xu-yin-fa-de-si-kao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="React生命周期加载顺序引发的思考"><a href="#React生命周期加载顺序引发的思考" class="headerlink" title="React生命周期加载顺序引发的思考"></a>React生命周期加载顺序引发的思考</h1><p>​    在写毕业设计的时候用到了<code>componentWillMount(已经不推荐使用了)</code>  和<code>componentDidMount</code>两个生命周期，<code>componentWillMount</code>  里面写了请求， <code>componentDidMount</code>里面也写了请求（<del>原谅我的骚操作</del>），而<code>componentDidMount</code>里面的请求依赖<code>componentWillMount</code>里面的请求（<del>是不是很骚</del>），但是<code>componentDidMount</code>并没有接收到<code>componentWillMount</code>请求来的数据，我就有点纳闷，按照加载顺序不应该是这样的，模拟一下当时的情况：</p><p><img src="Snipaste_2020-04-28_11-47-24.png" alt=""></p><p>​    它会按生命周期的顺序加载，但不会同步等待完成在进行另一个生命周期，还有请求数据的话，一般放到<code>componentDidMount</code>里面去执行，问题来了，为什么要放在<code>componentDitMount</code>里面去请求数据。</p><p>​    React16以后采用了 <code>Fiber</code> 架构，一次更新过程被分为很多的片段，不在是一开始更新就不能停止的状态，会存在一个更新片段还没更新完，就被另一个优先级更高的片段取代，导致优先级相对较低的片段的更新任务完全废止，直到下一次被调用。</p><pre><code>采用fiber的原因以及优先级的解释：    React的渲染分为两个阶段：        调度阶段： 更新数据，生成虚拟DOM，根据diff算法查出需要更新的真实DOM，放入更新队列        渲染阶段： 将更新队列的数据一次性更新到真实DOM上    调度阶段是不可控的，整个阶段的主线程都被占用，这个阶段用户的操作得不到反馈，只有当React中的同步更新完成之后主线程才会被释放。    fiber会让我们获得以下权限：        1：暂停运行的任务        2：恢复并继续执行任务        3：确定优先级    fiber创建了自己的堆栈帧，而没有使用JavaScript的堆栈帧，就可以使上述的权限成为可能，将调度任务拆分成一小段并设定执行时间。    优先级的确定：        文本框输入 &gt; 本次调度结束需完成的任务 &gt; 动画过渡 &gt; 交互反馈 &gt; 数据更新 &gt; 不会显示但以防将来会显示的任务</code></pre><p>调度阶段的生命周期：</p><ul><li>componentWillMount</li><li>componentWillReceiveProps</li><li>shouldComponentUpdate</li><li>componentWillUpdate</li><li>render</li></ul><p>渲染阶段的生命周期：</p><ul><li><p>componentDidMount</p></li><li><p>componentDidUpdate</p></li><li><p>componentWillUnmount</p><p>由于调度阶段的更新任务可能被打断重新开始，所以调度阶段的生命周期可能会执行多次。</p></li></ul><p>补一张最新的生命周期图：</p><p><img src="Snipaste_2020-04-28_15-11-30.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> React </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生命周期 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS-定位</title>
       <link href="/2020/04/27/css-ding-wei/"/>
       <url>/2020/04/27/css-ding-wei/</url>
@@ -58,7 +108,7 @@
       <link href="/2020/04/27/css-fu-dong/"/>
       <url>/2020/04/27/css-fu-dong/</url>
       
-        <content type="html"><![CDATA[<h1 id="CSS浮动（float）"><a href="#CSS浮动（float）" class="headerlink" title="CSS浮动（float）"></a>CSS浮动（float）</h1><h2 id="什么是浮动"><a href="#什么是浮动" class="headerlink" title="什么是浮动"></a>什么是浮动</h2><blockquote><p>float属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘</p></blockquote><p>语法：</p><pre><code>选择器{ float:属性值 }</code></pre><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>none</td><td>元素不浮动</td></tr><tr><td>left</td><td>元素左浮动</td></tr><tr><td>right</td><td>元素右浮动</td></tr></tbody></table><p>​    普通流：</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-19-40.png" alt=""></p><p>使用浮动：</p><p>​    <img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-21-34.png" alt=""></p><h2 id="浮动特性"><a href="#浮动特性" class="headerlink" title="浮动特性"></a>浮动特性</h2><ul><li><p>脱离标准流（脱标）</p><p>不会按标准流来排列，会把原来的位置空出来</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-34-26.png" alt=""></p><p>​    第一个盒子使用了<code>左浮动</code>，第二个盒子是标准流排列，第一个盒子把第二个遮住了，是因为第一个盒子使用了浮动，把原来的位置空出来了，第二个盒子就从第一个盒子空出来的位置进行排列，但第一个盒子使用的是左浮动，就把第二个盒子覆盖了。</p></li><li><p>具有行内元素的特性</p><p><img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_16-46-43.png" alt=""></p><p>会像行内元素一样，在同一行并排显示，之间不会有空隙</p></li></ul><h2 id="浮动元素经常搭配标准流的父元素"><a href="#浮动元素经常搭配标准流的父元素" class="headerlink" title="浮动元素经常搭配标准流的父元素"></a>浮动元素经常搭配标准流的父元素</h2><blockquote><p>纵行显示找标准流，横排显示找浮动</p></blockquote><p>​    <img src="CSS-%E6%B5%AE%E5%8A%A8/Snipaste_2020-04-27_17-06-50.png" alt=""></p><p>​    一个大的标准流父元素包含若干个浮动元素</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="CSS浮动（float）"><a href="#CSS浮动（float）" class="headerlink" title="CSS浮动（float）"></a>CSS浮动（float）</h1><h2 id="什么是浮动"><a href="#什么是浮动" class="headerlink" title="什么是浮动"></a>什么是浮动</h2><blockquote><p>float属性用于创建浮动框，将其移动到一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘</p></blockquote><p>语法：</p><pre><code>选择器{ float:属性值 }</code></pre><table><thead><tr><th>属性值</th><th>说明</th></tr></thead><tbody><tr><td>none</td><td>元素不浮动</td></tr><tr><td>left</td><td>元素左浮动</td></tr><tr><td>right</td><td>元素右浮动</td></tr></tbody></table><p>​    普通流：</p><p><img src="Snipaste_2020-04-27_16-19-40.png" alt=""></p><p>使用浮动：</p><p>​    <img src="Snipaste_2020-04-27_16-21-34.png" alt=""></p><h2 id="浮动特性"><a href="#浮动特性" class="headerlink" title="浮动特性"></a>浮动特性</h2><ul><li><p>脱离标准流（脱标）</p><p>不会按标准流来排列，会把原来的位置空出来</p><p><img src="Snipaste_2020-04-27_16-34-26.png" alt=""></p><p>​    第一个盒子使用了<code>左浮动</code>，第二个盒子是标准流排列，第一个盒子把第二个遮住了，是因为第一个盒子使用了浮动，把原来的位置空出来了，第二个盒子就从第一个盒子空出来的位置进行排列，但第一个盒子使用的是左浮动，就把第二个盒子覆盖了。</p></li><li><p>具有行内元素的特性</p><p>![]Snipaste_2020-04-27_16-46-43.png)</p><p>会像行内元素一样，在同一行并排显示，之间不会有空隙</p></li></ul><h2 id="浮动元素经常搭配标准流的父元素"><a href="#浮动元素经常搭配标准流的父元素" class="headerlink" title="浮动元素经常搭配标准流的父元素"></a>浮动元素经常搭配标准流的父元素</h2><blockquote><p>纵行显示找标准流，横排显示找浮动</p></blockquote><p>​    <img src="Snipaste_2020-04-27_17-06-50.png" alt=""></p><p>​    一个大的标准流父元素包含若干个浮动元素</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
