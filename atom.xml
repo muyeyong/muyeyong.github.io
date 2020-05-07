@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-04-28T08:36:25.033Z</updated>
+  <updated>2020-05-07T11:40:07.557Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -17,11 +17,92 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>快捷化-VSCode中React代码块快速生成</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/07/kuai-jie-hua-vscode-zhong-react-dai-ma-kuai-kuai-su-sheng-cheng/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/07/kuai-jie-hua-vscode-zhong-react-dai-ma-kuai-kuai-su-sheng-cheng/</id>
+    <published>2020-05-07T06:55:42.000Z</published>
+    <updated>2020-05-07T11:40:07.557Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VSCode快速生成代码块–以React为例&quot;&gt;&lt;a href=&quot;#VSCode快速生成代码块–以React为例&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="快捷化" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E5%BF%AB%E6%8D%B7%E5%8C%96/"/>
+    
+    
+      <category term="VSCode快捷化" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/VSCode%E5%BF%AB%E6%8D%B7%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-清除浮动</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/07/css-qing-chu-fu-dong/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/07/css-qing-chu-fu-dong/</id>
+    <published>2020-05-07T01:09:12.000Z</published>
+    <updated>2020-05-07T06:53:58.595Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CSS清除浮动&quot;&gt;&lt;a href=&quot;#CSS清除浮动&quot; class=&quot;headerlink&quot; title=&quot;CSS清除浮动&quot;&gt;&lt;/a&gt;CSS清除浮动&lt;/h1&gt;&lt;h2 id=&quot;为什么需要清除浮动&quot;&gt;&lt;a href=&quot;#为什么需要清除浮动&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/CSS/"/>
+    
+    
+      <category term="CSS基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/CSS%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nodejs-mongoDB异步取数据</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/29/nodejs-mongodb-yi-bu-qu-shu-ju/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/29/nodejs-mongodb-yi-bu-qu-shu-ju/</id>
+    <published>2020-04-29T05:58:09.000Z</published>
+    <updated>2020-04-29T11:55:17.593Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;nodejs-mongoDB异步获取数据&quot;&gt;&lt;a href=&quot;#nodejs-mongoDB异步获取数据&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/nodejs/"/>
+    
+    
+      <category term="mongoDb异步取数据" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/mongoDb%E5%BC%82%E6%AD%A5%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS实战-快报</title>
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/28/css-shi-zhan-kuai-bao/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/28/css-shi-zhan-kuai-bao/</id>
     <published>2020-04-28T07:58:10.000Z</published>
-    <updated>2020-04-28T08:36:25.033Z</updated>
+    <updated>2020-04-29T11:55:56.598Z</updated>
     
     <summary type="html">
     
@@ -134,7 +215,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/27/css-fu-dong/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/27/css-fu-dong/</id>
     <published>2020-04-27T06:07:39.000Z</published>
-    <updated>2020-04-28T00:54:18.498Z</updated>
+    <updated>2020-05-07T01:29:15.500Z</updated>
     
     <summary type="html">
     
@@ -486,98 +567,6 @@
     
     
       <category term="数组篇" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%95%B0%E7%BB%84%E7%AF%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git-操作失误案例</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/16/git-cao-zuo-shi-wu-an-li/</id>
-    <published>2020-04-16T11:56:47.000Z</published>
-    <updated>2020-04-16T12:53:47.063Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Git操作失误案例&quot;&gt;&lt;a href=&quot;#Git操作失误案例&quot; class=&quot;headerlink&quot; title=&quot;Git操作失误案例&quot;&gt;&lt;/a&gt;Git操作失误案例&lt;/h1&gt;&lt;h2 id=&quot;git-init-后找不到本地分支&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/Git/"/>
-    
-    
-      <category term="失误案例" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%A4%B1%E8%AF%AF%E6%A1%88%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML-常用标签</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-chang-yong-biao-qian/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-chang-yong-biao-qian/</id>
-    <published>2020-04-15T08:09:10.000Z</published>
-    <updated>2020-04-15T10:37:58.860Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Web常用标签&quot;&gt;&lt;a href=&quot;#Web常用标签&quot; class=&quot;headerlink&quot; title=&quot;Web常用标签&quot;&gt;&lt;/a&gt;Web常用标签&lt;/h1&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;标签名&lt;/th&gt;
-&lt;th
-        
-      
-    
-    </summary>
-    
-    
-      <category term="HTML" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/HTML/"/>
-    
-    
-      <category term="HTML基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/HTML%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML-Web标准</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-web-biao-zhun/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/15/html-web-biao-zhun/</id>
-    <published>2020-04-15T08:08:24.000Z</published>
-    <updated>2020-04-15T10:38:09.026Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;主要包括结构(Structure)、表现(Presentation)和行为(Behavior)三个方面&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;标准&lt;/th&gt;
-&lt;th
-        
-      
-    
-    </summary>
-    
-    
-      <category term="HTML" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/HTML/"/>
-    
-    
-      <category term="HTML基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/HTML%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
