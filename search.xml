@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>PS-切图</title>
+      <link href="/2020/05/08/ps-qie-tu/"/>
+      <url>/2020/05/08/ps-qie-tu/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>快捷化-VSCode终端快捷命令</title>
+      <link href="/2020/05/08/kuai-jie-hua-vscode-zhong-duan-kuai-jie-ming-ling/"/>
+      <url>/2020/05/08/kuai-jie-hua-vscode-zhong-duan-kuai-jie-ming-ling/</url>
+      
+        <content type="html"><![CDATA[<h1 id="VSCode终端快捷命令"><a href="#VSCode终端快捷命令" class="headerlink" title="VSCode终端快捷命令"></a>VSCode终端快捷命令</h1><h2 id="快速调出终端Tab"><a href="#快速调出终端Tab" class="headerlink" title="快速调出终端Tab"></a>快速调出终端Tab</h2><blockquote><p>当终端Tab切换到其它Tab时，终端Tab会消失，可以使用<code>Ctrl + '</code>   快速调出终端Tab</p></blockquote><p><img src="1.gif" alt=""></p><h2 id="终端清屏"><a href="#终端清屏" class="headerlink" title="终端清屏"></a>终端清屏</h2><blockquote><p>使用nodejs调试的时候，输出会在终端显示。终端显示的东西越来越多，看起来很乱，是时候清理一下终端了。</p></blockquote><ul><li><p>清除历史输出</p><p><code>Ctrl + L</code> ，在代码还在运行的使用这个命令是没有用的。</p><p>​    代码停止运行了</p><p><img src="2.gif" alt=""></p></li><li><p>清除全部输出</p><p><code>Ctrl + K</code> ，这个命令需要配置才能使用，在代码运行的时候也是可以使用的。</p><ol><li><p>打开配置文件</p><p><code>Ctrl + Shift + P</code>  打开查询界面，输入 <code>open keyboard Shortcuts</code></p><p><img src="Snipaste_2020-05-08_10-42-09.png" alt=""></p></li><li><p>添加配置</p></li></ol><pre><code>  {    "key": "ctrl+k",    "command": "workbench.action.terminal.clear",    "when": "terminalFocus"  }</code></pre><p>​    保存就可以使用<code>Ctrl + K</code>，干干净净的终端就来了。</p><p><img src="3.gif" alt=""></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 快捷化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> VSCode终端快捷命令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快捷化-VSCode中React代码块快速生成</title>
       <link href="/2020/05/07/kuai-jie-hua-vscode-zhong-react-dai-ma-kuai-kuai-su-sheng-cheng/"/>
       <url>/2020/05/07/kuai-jie-hua-vscode-zhong-react-dai-ma-kuai-kuai-su-sheng-cheng/</url>

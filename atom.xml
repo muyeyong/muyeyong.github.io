@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-05-08T01:39:19.676Z</updated>
+  <updated>2020-05-08T06:40:36.784Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PS-切图</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/08/ps-qie-tu/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/08/ps-qie-tu/</id>
+    <published>2020-05-08T06:40:36.000Z</published>
+    <updated>2020-05-08T06:40:36.784Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>快捷化-VSCode终端快捷命令</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/08/kuai-jie-hua-vscode-zhong-duan-kuai-jie-ming-ling/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/08/kuai-jie-hua-vscode-zhong-duan-kuai-jie-ming-ling/</id>
+    <published>2020-05-08T02:07:53.000Z</published>
+    <updated>2020-05-08T02:46:49.336Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;VSCode终端快捷命令&quot;&gt;&lt;a href=&quot;#VSCode终端快捷命令&quot; class=&quot;headerlink&quot; title=&quot;VSCode终端快捷命令&quot;&gt;&lt;/a&gt;VSCode终端快捷命令&lt;/h1&gt;&lt;h2 id=&quot;快速调出终端Tab&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="快捷化" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E5%BF%AB%E6%8D%B7%E5%8C%96/"/>
+    
+    
+      <category term="VSCode终端快捷命令" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/VSCode%E7%BB%88%E7%AB%AF%E5%BF%AB%E6%8D%B7%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>快捷化-VSCode中React代码块快速生成</title>
@@ -513,60 +567,6 @@
     
     
       <category term="排序算法" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript-数组</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/18/javascript-shu-zu/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/18/javascript-shu-zu/</id>
-    <published>2020-04-18T09:55:08.000Z</published>
-    <updated>2020-04-21T09:17:50.967Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h1&gt;&lt;h2 id=&quot;数组操作&quot;&gt;&lt;a href=&quot;#数组操作&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/JavaScript/"/>
-    
-    
-      <category term="数组" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%95%B0%E7%BB%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日常翻车集锦-数组操作</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/04/17/ri-chang-fan-che-ji-jin-shu-zu-cao-zuo/</id>
-    <published>2020-04-17T12:25:39.000Z</published>
-    <updated>2020-04-17T12:52:04.394Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;日常翻车集锦-数组篇&quot;&gt;&lt;a href=&quot;#日常翻车集锦-数组篇&quot; class=&quot;headerlink&quot; title=&quot;日常翻车集锦-数组篇&quot;&gt;&lt;/a&gt;日常翻车集锦-数组篇&lt;/h1&gt;&lt;p&gt;​   
-        
-      
-    
-    </summary>
-    
-    
-      <category term="日常翻车" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E6%97%A5%E5%B8%B8%E7%BF%BB%E8%BD%A6/"/>
-    
-    
-      <category term="数组篇" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%95%B0%E7%BB%84%E7%AF%87/"/>
     
   </entry>
   
