@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-07
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    841
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -705,11 +705,159 @@
 <td>输出：PHP //或HTML格式</td>
 </tr>
 </tbody></table>
-<h1 id="使用VSCode插件–ES7-React-Redux-GraphQL-React-Native-snippets"><a href="#使用VSCode插件–ES7-React-Redux-GraphQL-React-Native-snippets" class="headerlink" title="使用VSCode插件–ES7 React/Redux/GraphQL/React-Native snippets"></a>使用VSCode插件–ES7 React/Redux/GraphQL/React-Native snippets</h1><p>​    安装这个插件后，使用内置的命令实现快速生成代码块</p>
-<p><img src="3.gif" alt=""></p>
-<p>详情可查看github:<a href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets">https://github.com/dsznajder/vscode-es7-javascript-react-snippets</a></p>
-</li>
+<p>​    项目中常用的用户代码块：</p>
+<pre><code>{
+  // Place your snippets for javascriptreact here. Each snippet is defined under a snippet name and has a prefix, body and 
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+  // same ids are connected.
+  // Example:
+  "Print to console": {
+    "prefix": "log",
+    "body": [
+      "console.log('$1');",
+      "$2"
+    ],
+    "description": "Log output to console"
+  },
+    "db": {
+        "prefix": "db",
+        "body": [
+            "data-behavior=\"$0\""
+        ],
+        "description": "data-behavior"
+    },
+  "input getDerivedStateFromProps": {
+    "prefix": "sfp",
+    "body": [
+      "static getDerivedStateFromProps(props, states) {",
+      "\tconst {  } = props;",
+      "\treturn {",
+      "\t\t...states,",
+      "\t};",
+      "}"
+    ],
+    "description": "input getDerivedStateFromProps"
+  },
+  "const {} = this.props": {
+    "prefix": "cp",
+    "body": [
+      "const { $0 } = this.props;",
+    ],
+    "description": "const {} = this.props"
+  },
+  "create a component": {
+    "prefix": "component",
+    "body": [
+      "import React from 'react';",
+      "import classnames from 'classnames';\n",
+      "class $1 extends React.Component&lt;I$1Props, I$1States&gt; {\n",
+      "\trender() {\n\t\t$0\n\t}\n}\n",
+      "interface I$1Props {\n}\n",
+      "interface I$1States {\n}\n",
+      "export default $1;"
+    ],
+    "description": "create a component"
+  },
+  "create a container": {
+    "prefix": "container",
+    "body": [
+      "import React from 'react';",
+      "import { inject, observer } from 'mobx-react';",
+      "import { $2, I$2Props } from '@business/header/header';\n",
+      "@inject($2)",
+      "@observer",
+      "class $1 extends React.Component&lt;I$1Props, I$1States&gt; {\n",
+      "\trender() {\n\t\t$0\n\t}\n}\n",
+      "interface I$1Props extends I$2Props {\n}\n",
+      "interface I$1States {\n}\n",
+      "export default $1;"
+    ],
+    "description": "create a container"
+  },
+  "create a hoc": {
+    "prefix": "hoc",
+    "body": [
+      "import React from 'react';",
+      "import { observer } from 'mobx-react';\n",
+      "function with$2(WrappedComponent: React.ComponentClass) {\n",
+      "\t@observer",
+      "\tclass $2Wrapper extends React.Component&lt;I$2WrapperProps, {}&gt; {\n",
+      "\t\trender() {",
+      "\t\t\treturn &lt;WrappedComponent {...this.props} /&gt;;",
+      "\t\t}",
+      "\t}",
+      "\treturn $2Wrapper;",
+      "}\n",
+      "interface I$2WrapperProps extends IKeyValueMap {\n",
+      "}\n",
+      "export default with$2;"
+    ],
+    "description": "create a hoc"
+  },
+  "create a intl": {
+    "prefix": "intl",
+    "body": [
+      "&lt;FormattedMessage id=\"$0\" /&gt;"
+    ],
+    "description": "create a intl"
+  },
+  "import a intl": {
+    "prefix": "intlimport",
+    "body": [
+      "import { FormattedMessage } from 'react-intl';"
+    ],
+    "description": "import a intl"
+  },
+  "create classnames": {
+    "prefix": "classnames",
+    "body": [
+      "{classnames(\"\", $1)}"
+    ],
+    "description": "create classnames"
+  },
+  "create a SCU": {
+    "prefix": "SCU",
+    "body": "\nshouldComponentUpdate(nextProps, nextState){\n\t$1\n}\n",
+    "description": "create a SCU"
+  },
+  "create a componentWillReceiveProps": {
+    "prefix": "CWRP",
+    "body": "\ncomponentWillReceiveProps(nextProps, nextState){\n\t$1\n}\n",
+    "description": "create a componentWillReceiveProps"
+  },
+  "create a componentDidMount": {
+    "prefix": "CDM",
+    "body": "\ncomponentDidMount(){\n\t$1\n}\n",
+    "description": "create a ncomponentDidMount"
+  },
+  "create a componentWillUnmount": {
+    "prefix": "CWUM",
+    "body": "\ncomponentWillUnmount(){\n\t$1\n}\n",
+    "description": "create a componentWillUnmount"
+  },
+  "create a component test": {
+    "prefix": "test",
+    "body": [
+      "import React from 'react';",
+      "import { shallow, mount, render } from 'enzyme';",
+      "import renderer from 'react-test-renderer';\n",
+      "describe('$1', () =&gt; {\n\t$0\n});",
+    ],
+    "description": "create a component test"
+  },
+  "create a it test": {
+    "prefix": "it",
+    "body": [
+      "it('$1', () =&gt; {\n\t$0\n});"
+    ],
+  },
+    "description": "create a it test"
+}</code></pre></li>
 </ul>
+<h1 id="使用VSCode插件–ES7-React-Redux-GraphQL-React-Native-snippets"><a href="#使用VSCode插件–ES7-React-Redux-GraphQL-React-Native-snippets" class="headerlink" title="使用VSCode插件–ES7 React/Redux/GraphQL/React-Native snippets"></a>使用VSCode插件–ES7 React/Redux/GraphQL/React-Native snippets</h1><p>  ​    安装这个插件后，使用内置的命令实现快速生成代码块</p>
+<p>  <img src="3.gif" alt=""></p>
+<p>  详情可查看github:<a href="https://github.com/dsznajder/vscode-es7-javascript-react-snippets">https://github.com/dsznajder/vscode-es7-javascript-react-snippets</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1264,7 +1412,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.1k</span>&nbsp;字
+                class="white-color">13.6k</span>&nbsp;字
             
             
             
