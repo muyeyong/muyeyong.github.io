@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-29
+                    2020-05-09
                 </div>
                 
 
@@ -507,16 +507,16 @@
 </blockquote>
 <p>​    接下来就是我的骚操作了：</p>
 <p>​        数据库操作的代码：</p>
-<p><img src="image-20200429192823808.png" alt="image-20200429192823808"></p>
+<p><img src="image-20200429192823808.png" alt=""></p>
 <p>​        请求过程：</p>
-<p>​        <img src="Snipaste_2020-04-29_19-34-40.png" alt=""></p>
+<p><img src="Snipaste_2020-04-29_19-34-40.png" alt=""></p>
 <p><img src="Snipaste_2020-04-29_19-35-57.png" alt=""></p>
 <p>​    首先就算分类下面没有订单，也会返回0，然后我们看数据库那一块代码。</p>
 <p><img src="Snipaste_2020-04-29_19-40-01.png" alt=""></p>
 <p>​    有两个输出，从结果来看，查询还没有结束就已经返回了。是因为异步的原因，那么怎么解决等数据库查询结束后在返回我们需要的数据。</p>
 <p>我的解决方案是使用<code>Async</code> ，首先需要安装<code>npm i anync --save</code>，查看文档</p>
 <pre><code>官方文档：https://github.com/caolan/async
-第三方注释文档：https://github.com/bsspirit/async_demo</code></pre><p>选着合适的api，针对我的使用场景，我选用了 <code>async.eachSeries</code>，一个一个按循序执行。</p>
+第三方注释文档：https://github.com/bsspirit/async_demo</code></pre><p>选择合适的api，针对我的使用场景，我选用了 <code>async.eachSeries</code>，一个一个按循序执行。</p>
 <p>​    改造完的代码：</p>
 <p><img src="Snipaste_2020-04-29_19-52-50.png" alt=""></p>
 <p>现在就没问题了：</p>
