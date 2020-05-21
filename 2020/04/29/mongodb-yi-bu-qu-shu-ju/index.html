@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="软件资源-下载神器IDM, 上帝说我帅的很">
+    <meta name="keywords" content="mongoDB异步取数据, 上帝说我帅的很">
     <meta name="description" content="前端 | React | HTML | CSS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>软件资源-下载神器IDM | 上帝说我帅的很</title>
+    <title>mongoDB异步取数据 | 上帝说我帅的很</title>
     <link rel="icon" type="image/png" href="/popsicle.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="上帝说我帅的很" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">软件资源-下载神器IDM</h1>
+                    <h1 class="description center-align post-title">mongoDB异步取数据</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8IDM/">
-                                <span class="chip bg-color">下载神器IDM</span>
+                            <a href="/tags/mongoDB/">
+                                <span class="chip bg-color">mongoDB</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90/" class="post-category">
-                                软件资源
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
                             </a>
                         
                     </div>
@@ -464,21 +464,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-24
+                    2020-04-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-24
+                    2020-05-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    72
+                    345
                 </div>
                 
 
@@ -500,10 +500,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>IDM下载：</p>
-<p><a href="https://muyeyong.lanzous.com/ibvwclc" target="_blank" rel="noopener">https://muyeyong.lanzous.com/ibvwclc</a></p>
-<p>油猴(tampermonkey)插件下载：</p>
-<p><a href="https://muyeyong.lanzous.com/ibw442d" target="_blank" rel="noopener">https://muyeyong.lanzous.com/ibw442d</a></p>
+                <h1 id="mongoDB异步获取数据"><a href="#mongoDB异步获取数据" class="headerlink" title="mongoDB异步获取数据"></a>mongoDB异步获取数据</h1><blockquote>
+<p>介绍一下背景</p>
+<p><img src="Snipaste_2020-04-29_17-57-16.png" alt=""></p>
+<p>​    这四个订单分类下面有若干订单，我需要统计出来可视化展示，我先获取了分类的唯一标识<code>_id</code>，把它们放入到一个数组中，接下来就是要获取每个分类下面有多少订单数目</p>
+</blockquote>
+<p>​    接下来就是我的骚操作了：</p>
+<p>​        数据库操作的代码：</p>
+<p><img src="image-20200429192823808.png" alt=""></p>
+<p>​        请求过程：</p>
+<p><img src="Snipaste_2020-04-29_19-34-40.png" alt=""></p>
+<p><img src="Snipaste_2020-04-29_19-35-57.png" alt=""></p>
+<p>​    首先就算分类下面没有订单，也会返回0，然后我们看数据库那一块代码。</p>
+<p><img src="Snipaste_2020-04-29_19-40-01.png" alt=""></p>
+<p>​    有两个输出，从结果来看，查询还没有结束就已经返回了。是因为异步的原因，那么怎么解决等数据库查询结束后在返回我们需要的数据。</p>
+<p>我的解决方案是使用<code>Async</code> ，首先需要安装<code>npm i anync --save</code>，查看文档</p>
+<pre><code>官方文档：https://github.com/caolan/async
+第三方注释文档：https://github.com/bsspirit/async_demo</code></pre><p>选择合适的api，针对我的使用场景，我选用了 <code>async.eachSeries</code>，一个一个按循序执行。</p>
+<p>​    改造完的代码：</p>
+<p><img src="Snipaste_2020-04-29_19-52-50.png" alt=""></p>
+<p>现在就没问题了：</p>
+<p><img src="Snipaste_2020-04-29_19-53-50.png" alt=""></p>
+<p>还有其它的解决办法，我后续补充……………………….</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -547,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/">https://github.com/muyeyong/muyeyong.github.io/2020/04/24/ruan-jian-zi-yuan-xia-zai-shen-qi-idm/</a>
+                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/04/29/mongodb-yi-bu-qu-shu-ju/">https://github.com/muyeyong/muyeyong.github.io/2020/04/29/mongodb-yi-bu-qu-shu-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -585,8 +603,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E4%B8%8B%E8%BD%BD%E7%A5%9E%E5%99%A8IDM/">
-                                    <span class="chip bg-color">下载神器IDM</span>
+                                <a href="/tags/mongoDB/">
+                                    <span class="chip bg-color">mongoDB</span>
                                 </a>
                             
                         </div>
@@ -780,37 +798,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/26/css-yuan-jiao-bian-kuang/">
+                <a href="/2020/05/07/css-qing-chu-fu-dong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.png" class="responsive-img" alt="CSS-圆角边框">
+                        <img src="/medias/featureimages/11.png" class="responsive-img" alt="CSS-清除浮动">
                         
-                        <span class="card-title">CSS-圆角边框</span>
+                        <span class="card-title">CSS-清除浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CSS圆角边框
-盒子不仅仅有矩形，还可以设置圆角，通过border-radius设置
-
-
-基本使用
-属性值： 长度单位 或 百分比，用属性值来设置边框圆角半径
-
-
-一个参数
-
-设置四个角的圆角半径
-
- .nav1 {
-      heigh
+                            CSS清除浮动为什么需要清除浮动​    当容器高度为auto的时候，且容器内包含浮动的元素，这种情况下容器不能自动拉伸适应内容的高度，使得内容溢出到容器外面，这种现象称为浮动溢出。
+​    没有使用浮动
+&lt;!DOCTYPE htm
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-26
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-07
                         </span>
                         <span class="publish-author">
                             
@@ -842,35 +849,38 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/24/kuai-jie-hua-html-kuai-su-tian-chong/">
+                <a href="/2020/04/28/css-shi-zhan-kuai-bao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.png" class="responsive-img" alt="快捷化-HTML快速填充">
+                        <img src="/medias/featureimages/10.png" class="responsive-img" alt="CSS实战-快报">
                         
-                        <span class="card-title">快捷化-HTML快速填充</span>
+                        <span class="card-title">CSS实战-快报</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTML代码快速填充​    使用Emmet语法批量生成HTML标签时，可以使用 Shift + Alt + 鼠标左键 就可以批量填充内容。
+                            CSS实战-快报实现效果：
 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
 
-
-        document.querySelectorAll('.github-emo
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BF%AB%E6%8D%B7%E5%8C%96/" class="post-category">
-                                    快捷化
+                            <a href="/categories/CSS%E5%AE%9E%E6%88%98/" class="post-category">
+                                    CSS实战
                                 </a>
                             
                             
@@ -880,8 +890,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTML%E4%BB%A3%E7%A0%81%E5%BF%AB%E9%80%9F%E5%A1%AB%E5%85%85/">
-                        <span class="chip bg-color">HTML代码快速填充</span>
+                    <a href="/tags/%E5%BF%AB%E6%8A%A5/">
+                        <span class="chip bg-color">快报</span>
                     </a>
                     
                 </div>
@@ -1066,7 +1076,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.9k</span>&nbsp;字
+                class="white-color">15.3k</span>&nbsp;字
             
             
             
