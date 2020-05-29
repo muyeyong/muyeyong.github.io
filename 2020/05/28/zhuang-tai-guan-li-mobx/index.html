@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-28
+                    2020-05-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    959
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 
@@ -656,94 +656,8 @@ when(
       quantity--;
     }
     this.modified = new Date();
-  };</code></pre><p>源码：</p>
-<pre><code>//App.js
-import React from "react";
-import "./styles.css";
-import { inject, observer } from "mobx-react";
-@inject("store")
-@observer
-class App extends React.Component {
-  render() {
-    const { store } = this.props;
-
-    return (
-      &lt;React.Fragment&gt;
-        {store.items &amp;&amp;
-          store.items.map((item, idx) =&gt; {
-            return &lt;p key={item + idx}&gt;{item + idx}&lt;/p&gt;;
-          })}
-        &lt;button onClick={() =&gt; store.addItem("shoes", 2)}&gt;添加2双鞋子&lt;/button&gt;
-        &lt;button onClick={() =&gt; store.addItem("tshirt", 1)}&gt;添加1件衬衫&lt;/button&gt;
-        &lt;p&gt;我是total &amp;nbsp;  &amp;nbsp;{store.total}&lt;/p&gt;
-
-        &lt;button onClick={() =&gt; store.disposer()}&gt;清除自动输出&lt;/button&gt;
-      &lt;/React.Fragment&gt;
-    );
-  }
-}
-
-export default App;
-</code></pre><pre><code>//CarStore.js
-import { observable, action, computed, autorun, when, reaction } from "mobx";
-
-export default class Cart {
-  constructor() {
-    reaction(
-      () =&gt; {
-        let shoesNumber = 0;
-        this.items.forEach(item =&gt; {
-          if (item === "shoes") shoesNumber++;
-        });
-        return shoesNumber;
-      },
-      shoesNumber =&gt; {
-        console.log("收到鞋子啦。。。。。" + shoesNumber);
-      }
-    );
-    when(
-      () =&gt; this.items.some(item =&gt; item === "shoes"),
-      () =&gt; {
-        console.log("第一次收到鞋子");
-      }
-    );
-  }
-
-  @observable modified = new Date();
-  @observable items = [];
-
-  n = observable.box(1);
-  disposer = autorun(() =&gt; console.log("我是autorun  " + this.items.length));
-
-  @computed get total() {
-    return this.items.length;
-  }
-
-  @action
-  addItem = (name, quantity) =&gt; {
-    while (quantity &gt; 0) {
-      this.items.push(name);
-      quantity--;
-    }
-    this.modified = new Date();
-  };
-}
-</code></pre><pre><code>//index.js
-import React from "react";
-import ReactDOM from "react-dom";
-import { Provider } from "mobx-react";
-import store from "./CartStore";
-
-import App from "./App";
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  &lt;Provider store={new store()}&gt;
-    &lt;App /&gt;
-  &lt;/Provider&gt;,
-  rootElement
-);
-</code></pre><h2 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h2><h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><blockquote>
+  };</code></pre><p>在线示例： <a href="https://codesandbox.io/s/github/muyeyong/codesandbox" target="_blank" rel="noopener">https://codesandbox.io/s/github/muyeyong/codesandbox</a></p>
+<h2 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h2><h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><blockquote>
 <p>可以用来使用 React 的<code>context</code>机制来传递 store 给子组件。参见<a href="https://github.com/mobxjs/mobx-react#provider-experimental"><code>mobx-react</code> 文档</a>。</p>
 </blockquote>
 <h3 id="inject"><a href="#inject" class="headerlink" title="inject"></a>inject</h3><blockquote>
@@ -1302,7 +1216,7 @@ observable(value)value可以是objext、array或map ，observable将其转换成
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.3k</span>&nbsp;字
+                class="white-color">17k</span>&nbsp;字
             
             
             
