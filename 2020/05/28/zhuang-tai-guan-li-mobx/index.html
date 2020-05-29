@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    959
+                    1k
                 </div>
                 
 
@@ -581,7 +581,10 @@ todos.shift();
 <h3 id="observable-classProperty-value"><a href="#observable-classProperty-value" class="headerlink" title="@observable classProperty = value;"></a>@observable classProperty = value;</h3><p>ES7或TS类属性中使用装饰器模式</p>
 <pre><code>@observable number = 0;
 @observable map = new Map();
-@onservable arr = [];</code></pre><p><strong>observable声明的是被观察者，需要观察者的存在才有意义</strong> </p>
+@onservable arr = [];</code></pre><h3 id="observer"><a href="#observer" class="headerlink" title="@observer"></a>@observer</h3><blockquote>
+<p><code>observer</code> 函数/装饰器可以用来将 React 组件转变成响应式组件。 它用 <code>mobx.autorun</code> 包装了组件的 render 函数以确保任何组件渲染中使用的数据变化时都可以强制刷新组件。 <code>observer</code> 是由单独的 <code>mobx-react</code> 包提供的。</p>
+</blockquote>
+<p><strong>observable声明的是被观察者，需要观察者的存在才有意义</strong> </p>
 <h2 id="观察者"><a href="#观察者" class="headerlink" title="观察者"></a>观察者</h2><blockquote>
 <p>1: computed</p>
 <p>2：autorun</p>
@@ -657,6 +660,7 @@ when(
     }
     this.modified = new Date();
   };</code></pre><p>在线示例： <a href="https://codesandbox.io/s/github/muyeyong/codesandbox" target="_blank" rel="noopener">https://codesandbox.io/s/github/muyeyong/codesandbox</a></p>
+<p>MoBx中文文档：<a href="https://cn.mobx.js.org/" target="_blank" rel="noopener">https://cn.mobx.js.org/</a></p>
 <h2 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h2><h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><blockquote>
 <p>可以用来使用 React 的<code>context</code>机制来传递 store 给子组件。参见<a href="https://github.com/mobxjs/mobx-react#provider-experimental"><code>mobx-react</code> 文档</a>。</p>
 </blockquote>
@@ -1216,7 +1220,7 @@ observable(value)value可以是objext、array或map ，observable将其转换成
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17k</span>&nbsp;字
+                class="white-color">17.1k</span>&nbsp;字
             
             
             
