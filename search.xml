@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>静态模块打包工具-webpack</title>
+      <link href="/2020/06/01/jing-tai-mo-kuai-da-bao-gong-ju-webpack/"/>
+      <url>/2020/06/01/jing-tai-mo-kuai-da-bao-gong-ju-webpack/</url>
+      
+        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>自动化构建工具-Gulp</title>
+      <link href="/2020/06/01/zi-dong-hua-gou-jian-gong-ju-gulp/"/>
+      <url>/2020/06/01/zi-dong-hua-gou-jian-gong-ju-gulp/</url>
+      
+        <content type="html"><![CDATA[<h1 id="自动化构建工具-Gulp"><a href="#自动化构建工具-Gulp" class="headerlink" title="自动化构建工具-Gulp"></a>自动化构建工具-Gulp</h1><blockquote><p>在Javascript的开发过程中，经常会遇到一些重复性的任务，比如合并文件、压缩代码、检查语法错误、将Sass代码转成CSS代码等等。通常，我们需要使用不同的工具，来完成不同的任务，既重复劳动又非常耗时。grunt，gulp都是为了解决这个问题而发明的工具，可以帮助我们自动管理和运行各种任务，很多人认为，在操作上，它要比Grunt简单。</p></blockquote><h2 id="task"><a href="#task" class="headerlink" title="task"></a>task</h2><blockquote><p>异步的 javascript 函数，可以接收一个回调函数作为参数</p></blockquote><h3 id="组合任务"><a href="#组合任务" class="headerlink" title="组合任务"></a>组合任务</h3><blockquote><p>series() 和 parallel()</p></blockquote><h2 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h2><blockquote><p>暴露 <code>src()</code> 和 <code>dest()</code> 方法处理计算机存放的文件</p></blockquote><p><code>sec()</code>: 接收glob参数，读取文件，产生流，产生的流因该从任务中返回并发出异步完成的信号</p><p><code>stream</code>: 提供的主要API <code>.pipe()</code> ，用于连接准换流 或 可写流</p><p><code>dest()</code>: 接收输出目录作为参数，并且产生一个Node流，通常作为终止流</p><h2 id="Glob"><a href="#Glob" class="headerlink" title="Glob"></a>Glob</h2><blockquote><p>glob 是由普通字符和/或通配字符组成的字符串，用于匹配文件路径。可以利用一个或多个 glob 在文件系统中定位文件。</p></blockquote><h3 id="字符串片段-与-分隔符"><a href="#字符串片段-与-分隔符" class="headerlink" title="字符串片段 与 分隔符"></a>字符串片段 与 分隔符</h3><p>字符串片段（segment）是指两个分隔符之间的所有字符组成的字符串。在 glob 中，分隔符永远是 <code>/</code> 字符 - 不区分操作系统 - 即便是在采用 <code>\\</code> 作为分隔符的 Windows 操作系统中。在 glob 中，<code>\\</code> 字符被保留作为转义符使用。</p><h3 id="特殊字符："><a href="#特殊字符：" class="headerlink" title="特殊字符： *"></a>特殊字符： *</h3><p>在一个字符串片段中匹配任意数量的字符，包括零个匹配。对于匹配单级目录下的文件很有用。</p><p>下面这个 glob 能够匹配类似 <code>index.js</code> 的文件，但是不能匹配类似 <code>scripts/index.js</code> 或 <code>scripts/nested/index.js</code> 的文件。</p><pre class=" language-js"><code class="language-js"><span class="token string">'*.js'</span></code></pre><h3 id="特殊字符：-1"><a href="#特殊字符：-1" class="headerlink" title="特殊字符： **"></a>特殊字符： **</h3><p>在多个字符串片段中匹配任意数量的字符，包括零个匹配。 对于匹配嵌套目录下的文件很有用。请确保适当地限制带有两个星号的 glob 的使用，以避免匹配大量不必要的目录。</p><p>下面这个 glob 被适当地限制在 <code>scripts/</code> 目录下。它将匹配类似 <code>scripts/index.js</code>、<code>scripts/nested/index.js</code> 和 <code>scripts/nested/twice/index.js</code> 的文件。</p><pre class=" language-js"><code class="language-js"><span class="token string">'scripts/**/*.js'</span></code></pre><h3 id="特殊字符：-取反"><a href="#特殊字符：-取反" class="headerlink" title="特殊字符： !(取反)"></a>特殊字符： !(取反)</h3><p>由于 glob 匹配时是按照每个 glob 在数组中的位置依次进行匹配操作的，所以 glob 数组中的取反（negative）glob 必须跟在一个非取反（non-negative）的 glob 后面。第一个 glob 匹配到一组匹配项，然后后面的取反 glob 删除这些匹配项中的一部分。如果取反 glob 只是由普通字符组成的字符串，则执行效率是最高的。</p><h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><p> node流 ？ 转换流？</p><h2 id="文件监控"><a href="#文件监控" class="headerlink" title="文件监控"></a>文件监控</h2><blockquote><p>gulp api 中的 <code>watch()</code> 方法利用文件系统的监控程序（file system watcher）将 <a href="https://www.gulpjs.com.cn/docs/getting-started/explaining-globs" target="_blank" rel="noopener">globs</a> 与 <a href="https://www.gulpjs.com.cn/docs/getting-started/creating-tasks" target="_blank" rel="noopener">任务（task）</a> 进行关联。它对匹配 glob 的文件进行监控，如果有文件被修改了就执行关联的任务（task）。如果被执行的任务（task）没有触发 <a href="https://www.gulpjs.com.cn/docs/getting-started/async-completion" target="_blank" rel="noopener">异步完成</a> 信号，它将永远不会再次运行了。</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 自动化构建工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Gulp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>从零开始-搭建React脚手架</title>
+      <link href="/2020/05/29/cong-ling-kai-shi-da-jian-react-jiao-shou-jia/"/>
+      <url>/2020/05/29/cong-ling-kai-shi-da-jian-react-jiao-shou-jia/</url>
+      
+        <content type="html"><![CDATA[<h1 id="从零开始-React脚手架搭建"><a href="#从零开始-React脚手架搭建" class="headerlink" title="从零开始-React脚手架搭建"></a>从零开始-React脚手架搭建</h1><p>目标：</p><ul><li>识别<code>TSX</code>文件</li><li><code>tree shaking</code> 摇树优化 删除掉无用代码T</li><li>识别 <code>async / await</code>和 箭头函数</li><li><code>PWA</code>功能，热刷新，安装后立即接管浏览器 离线后仍让可以访问网站 还可以在手机上添加网站到桌面使用</li><li><code>preload</code> 预加载资源 <code>prefetch</code>按需请求资源</li><li><code>CSS</code>模块化，不怕命名冲突</li><li>小图片的<code>base64</code>处理</li><li>文件后缀省掉<code>jsx js json</code>等</li><li>实现React懒加载，按需加载 ， 代码分割 并且支持服务端渲染</li><li>支持<code>less sass stylus</code>等预处理</li><li><code>code spliting</code> 优化首屏加载时间 不让一个文件体积过大</li><li>加入<code>dns-prefetch</code>和<code>preload</code>预请求必要的资源，加快首屏渲染。</li><li>加入<code>prerender</code>，极大加快首屏渲染速度。</li><li>提取公共代码，打包成一个<code>chunk</code></li><li>每个<code>chunk</code>有对应的<code>chunkhash</code>,每个文件有对应的<code>contenthash</code>,方便浏览器区别缓存</li><li>图片压缩</li><li><code>CSS</code>压缩</li><li>增加<code>CSS</code>前缀 兼容各种浏览器</li><li>对于各种不同文件打包输出指定文件夹下</li><li>缓存<code>babel</code>的编译结果，加快编译速度</li><li>每个入口文件，对应一个<code>chunk</code>，打包出来后对应一个文件 也是<code>code spliting</code></li><li>删除<code>HTML</code>文件的注释等无用内容</li><li>每次编译删除旧的打包代码</li><li>将<code>CSS</code>文件单独抽取出来</li><li>让babel不仅缓存编译结果，还在第一次编译后开启多线程编译，极大加快构建速度</li><li>等等….</li></ul><p>疑问：</p><ol><li><p>package.json</p><ul><li>dependencies 和 devDependencies 区别</li></ul></li><li><p>npm 命令 和 npm 全局安装 和 本地安装的区别</p></li></ol><p>神经病报错：</p><p>​    npm i -g webpack webpack-cli</p><p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_15-21-22.png" alt=""></p><p>提示我 webpack-cli，然而当我运行 <code>webpack --config ./build/webpack.base.js --mode=development</code> 的时候有报错 no found webpack-cli，不懂就上google，一顿操作猛如虎，代码运行就是error，嘤嘤嘤，最后我就把<code>C:\Users\admin\AppData\Roaming\npm</code> 这个路径下的这两个文件给删掉<img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_15-25-14.png" alt=""></p><p>出现了新报错，真开心。。。。</p><p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_15-26-29.png" alt=""></p><p>React 里面使用 TS</p><p>​    报错识别不了，react （参考文章） <a href="https://juejin.im/post/5bab4d59f265da0aec22629b" target="_blank" rel="noopener">https://juejin.im/post/5bab4d59f265da0aec22629b</a></p><p>​    <img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_15-43-40.png" alt=""></p><p>Connot find module ‘typescript’</p><p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_16-41-30.png" alt=""></p><p>虽然在全局安装了 <code>typescript</code> ，但是本地没有安装</p><p>files’ list in config file ‘tsconfig.json’ is empty</p><p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-05-29_16-50-51.png" alt=""></p><p>​    解决： 没有配置 <code>tsconfig.json</code> 文件  <code>tsconfig.json</code> 文件的配置?</p><p>运行打包命令<code>webpack --config ./build/webpack.base.js --mode=development</code> 报错</p><p> <img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-06-01_11-47-36.png" alt=""></p><p>解决： <img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-06-01_11-48-09.png" alt=""></p><p>extensions 没有配置 .ts .tsx     resolve -&gt;extensions 的作用？？</p><p>使用 <code>gulp</code> 作为项目工程化的流程管理工具</p><p>搭建开发服务器</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 从零开始 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> React脚手架搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>状态管理-mobx</title>
       <link href="/2020/05/28/zhuang-tai-guan-li-mobx/"/>
       <url>/2020/05/28/zhuang-tai-guan-li-mobx/</url>
