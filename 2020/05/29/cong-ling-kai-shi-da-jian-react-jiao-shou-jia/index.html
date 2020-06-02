@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-01
+                    2020-06-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    689
+                    987
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -502,32 +502,58 @@
             <div id="articleContent">
                 <h1 id="从零开始-React脚手架搭建"><a href="#从零开始-React脚手架搭建" class="headerlink" title="从零开始-React脚手架搭建"></a>从零开始-React脚手架搭建</h1><p>目标：</p>
 <ul>
-<li>识别<code>TSX</code>文件</li>
-<li><code>tree shaking</code> 摇树优化 删除掉无用代码T</li>
-<li>识别 <code>async / await</code>和 箭头函数</li>
-<li><code>PWA</code>功能，热刷新，安装后立即接管浏览器 离线后仍让可以访问网站 还可以在手机上添加网站到桌面使用</li>
-<li><code>preload</code> 预加载资源 <code>prefetch</code>按需请求资源</li>
-<li><code>CSS</code>模块化，不怕命名冲突</li>
-<li>小图片的<code>base64</code>处理</li>
-<li>文件后缀省掉<code>jsx js json</code>等</li>
-<li>实现React懒加载，按需加载 ， 代码分割 并且支持服务端渲染</li>
-<li>支持<code>less sass stylus</code>等预处理</li>
-<li><code>code spliting</code> 优化首屏加载时间 不让一个文件体积过大</li>
-<li>加入<code>dns-prefetch</code>和<code>preload</code>预请求必要的资源，加快首屏渲染。</li>
-<li>加入<code>prerender</code>，极大加快首屏渲染速度。</li>
-<li>提取公共代码，打包成一个<code>chunk</code></li>
-<li>每个<code>chunk</code>有对应的<code>chunkhash</code>,每个文件有对应的<code>contenthash</code>,方便浏览器区别缓存</li>
-<li>图片压缩</li>
-<li><code>CSS</code>压缩</li>
-<li>增加<code>CSS</code>前缀 兼容各种浏览器</li>
-<li>对于各种不同文件打包输出指定文件夹下</li>
-<li>缓存<code>babel</code>的编译结果，加快编译速度</li>
-<li>每个入口文件，对应一个<code>chunk</code>，打包出来后对应一个文件 也是<code>code spliting</code></li>
-<li>删除<code>HTML</code>文件的注释等无用内容</li>
-<li>每次编译删除旧的打包代码</li>
-<li>将<code>CSS</code>文件单独抽取出来</li>
-<li>让babel不仅缓存编译结果，还在第一次编译后开启多线程编译，极大加快构建速度</li>
-<li>等等….</li>
+<li><p>识别<code>TSX</code>文件</p>
+</li>
+<li><p><code>tree shaking</code> 摇树优化 删除掉无用代码T</p>
+</li>
+<li><p>识别 <code>async / await</code>和 箭头函数</p>
+</li>
+<li><p><code>PWA</code>功能，热刷新，安装后立即接管浏览器 离线后仍让可以访问网站 还可以在手机上添加网站到桌面使用</p>
+</li>
+<li><p><code>preload</code> 预加载资源 <code>prefetch</code>按需请求资源</p>
+</li>
+<li><p><code>CSS</code>模块化，不怕命名冲突</p>
+</li>
+<li><p>小图片的<code>base64</code>处理</p>
+</li>
+<li><p>文件后缀省掉<code>jsx js json</code>等</p>
+</li>
+<li><p>实现React懒加载，按需加载 ， 代码分割 并且支持服务端渲染</p>
+</li>
+<li><p>支持<code>less sass stylus</code>等预处理</p>
+</li>
+<li><p><code>code spliting</code> 优化首屏加载时间 不让一个文件体积过大</p>
+</li>
+<li><p>加入<code>dns-prefetch</code>和<code>preload</code>预请求必要的资源，加快首屏渲染。</p>
+</li>
+<li><p>加入<code>prerender</code>，极大加快首屏渲染速度。</p>
+</li>
+<li><p>提取公共代码，打包成一个<code>chunk</code></p>
+</li>
+<li><p>每个<code>chunk</code>有对应的<code>chunkhash</code>,每个文件有对应的<code>contenthash</code>,方便浏览器区别缓存</p>
+</li>
+<li><p>图片压缩</p>
+</li>
+<li><p><code>CSS</code>压缩</p>
+</li>
+<li><p>增加<code>CSS</code>前缀 兼容各种浏览器</p>
+</li>
+<li><p>对于各种不同文件打包输出指定文件夹下</p>
+</li>
+<li><p>缓存<code>babel</code>的编译结果，加快编译速度</p>
+</li>
+<li><p>每个入口文件，对应一个<code>chunk</code>，打包出来后对应一个文件 也是<code>code spliting</code></p>
+</li>
+<li><p>删除<code>HTML</code>文件的注释等无用内容</p>
+</li>
+<li><p>每次编译删除旧的打包代码</p>
+</li>
+<li><p>将<code>CSS</code>文件单独抽取出来</p>
+</li>
+<li><p>让babel不仅缓存编译结果，还在第一次编译后开启多线程编译，极大加快构建速度</p>
+</li>
+<li><p>webpack监听文件自动增量编译</p>
+</li>
 </ul>
 <p>疑问：</p>
 <ol>
@@ -558,9 +584,38 @@
 <p> <img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-06-01_11-47-36.png" alt=""></p>
 <p>解决： <img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-06-01_11-48-09.png" alt=""></p>
 <p>extensions 没有配置 .ts .tsx     resolve -&gt;extensions 的作用？？</p>
+<p>nodejs 里面的流？</p>
 <p>使用 <code>gulp</code> 作为项目工程化的流程管理工具</p>
 <p>搭建开发服务器</p>
-<script>
+<p>​    </p>
+<h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><p>​    不要管具体实现，关注业务，那跟插件有什么区别？</p>
+<p>​    实现具体业务的中间件怎么实现？ </p>
+<p>​    </p>
+<p>gulp dev : 对于使用 ts tsx </p>
+<p>​    读取合并 所有 tsconfig</p>
+<p>​    读取合并所有 webpackconfig</p>
+<p>​    起服务器运行</p>
+<hr>
+<p>​    上面的这些是我遇到的一些问题和疑惑，还没彻底解决，<code>2020/06/02</code>  经过两天的时间写了一个基础（0.0.1）的版本<code>webpack + gulp</code> ，实现了</p>
+<ul>
+<li><p><code>webpack</code> 不同环境的配置（基础、测试和生产环境）</p>
+</li>
+<li><p><code>webpack</code> 对不同文件的处理</p>
+</li>
+<li><p><code>webpack</code> 监听文件变更自动增量编译 </p>
+</li>
+<li><p><code>gulp</code>作为流程管理</p>
+</li>
+<li><p>对TS的支持</p>
+</li>
+</ul>
+<h2 id="安装NodeJs"><a href="#安装NodeJs" class="headerlink" title="安装NodeJs"></a>安装NodeJs</h2><p>​    nodejs下载： <a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
+<p>​    下载对应版本，windows安装完后会自动配好环境变量，命令行<code>node -v</code> 查看node版本，没有自动配环境变量需要手动配置。</p>
+<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B-%E6%90%AD%E5%BB%BAReact%E8%84%9A%E6%89%8B%E6%9E%B6/Snipaste_2020-06-02_17-56-19.png" alt=""></p>
+<h2 id="npm项目初始化"><a href="#npm项目初始化" class="headerlink" title="npm项目初始化"></a>npm项目初始化</h2><p>新建文件夹，初始化项目</p>
+<pre><code>mkdir webpack20200601 &amp;&amp; cd webpack20200601
+npm init -y</code></pre><p>初始化后会生成<code>package.json</code> 文件</p>
+<h2 id="webpack搭建自动开发环境"><a href="#webpack搭建自动开发环境" class="headerlink" title="webpack搭建自动开发环境"></a>webpack搭建自动开发环境</h2><h3 id="基础搭建"><a href="#基础搭建" class="headerlink" title="基础搭建"></a>基础搭建</h3><h3 id="使用开发服务器"><a href="#使用开发服务器" class="headerlink" title="使用开发服务器"></a>使用开发服务器</h3><h2 id="使用Gulp作为流程管理"><a href="#使用Gulp作为流程管理" class="headerlink" title="使用Gulp作为流程管理"></a>使用Gulp作为流程管理</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1110,7 +1165,7 @@ observable(value)value可以是objext、array或map ，observable将其转换成
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.7k</span>&nbsp;字
+                class="white-color">19k</span>&nbsp;字
             
             
             
