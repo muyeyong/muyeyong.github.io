@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-26
+                    2020-06-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    829
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -500,7 +500,230 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <p>自己平时的算法练习：<a href="https://github.com/muyeyong/-algorithm-javascript">https://github.com/muyeyong/-algorithm-javascript</a></p>
+<pre><code>
+let arr = [8, 34, 1, 9, 354, 2, 3, 6]
+
+//冒泡排序
+
+function bubbleSort(arr) {
+  for (let i = 0; i &lt; arr.length; i++) {
+    for (let j = 0; j &lt; arr.length - i - 1; j++) {
+      if (arr[j] &gt; arr[j + 1]) {
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+}
+// bubbleSort(arr)
+// console.log(arr)
+
+//插入排序
+
+let arr1 = [3, 4, 1, 8]
+function insertSort(arr) {
+  if (arr.length &lt;= 1) return;
+  for (let i = 1; i &lt; arr.length; i++) {
+    let flagIndex = i - 1;
+    for (let j = 0; j &lt; i; j++) {
+      if (arr[j] &gt; arr[i]) {
+        flagIndex = j;
+        break;
+      }
+    }
+    if (arr[flagIndex] &lt;= arr[i]) continue;
+    let temp = arr[i];
+    for (let k = i - 1; k &gt;= flagIndex; k--) {
+      arr[k + 1] = arr[k];
+    }
+    arr[flagIndex] = temp;
+  }
+}
+
+function insertSort1(arr) {
+  if (arr.length &lt;= 1) return;
+  for (let i = 1; i &lt; arr.length; i++) {
+    let temp = arr[i];
+    let j = i - 1;
+    for (; j &gt;= 0; j--) {
+      if (arr[j] &gt; temp) arr[j + 1] = arr[j];
+      else break;
+    }
+    arr[j + 1] = temp;
+  }
+}
+
+// insertSort(arr1)
+// console.log(arr1)
+
+// insertSort1(arr1)
+// console.log(arr1)
+
+//选择排序
+
+function selectSort(arr) {
+  if (arr.length &lt;= 0) return;
+  for (let i = 0; i &lt; arr.length; i++) {
+    let minIndex = i;
+    for (let j = i + 1; j &lt; arr.length; j++) {
+      if (arr[j] &lt; arr[minIndex]) minIndex = j;
+    }
+    let temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+  }
+}
+
+// selectSort(arr)
+// console.log(arr)
+
+// 归并排序
+// 利用哨兵简化merge过程
+
+const mergeArr = (left, right) =&gt; {
+  let temp = []
+  let leftIndex = 0
+  let rightIndex = 0
+  // 判断2个数组中元素大小，依次插入数组
+  while (left.length &gt; leftIndex &amp;&amp; right.length &gt; rightIndex) {
+    if (left[leftIndex] &lt;= right[rightIndex]) {
+      temp.push(left[leftIndex])
+      leftIndex++
+    } else {
+      temp.push(right[rightIndex])
+      rightIndex++
+    }
+  }
+  // 合并 多余数组
+  return temp.concat(left.slice(leftIndex)).concat(right.slice(rightIndex))
+}
+const mergeSort = (arr) =&gt; {
+  if (arr.length &lt;= 1) return arr;
+  let middle = Math.floor(arr.length / 2);
+  let leftArr = arr.slice(0, middle);
+  let rightArr = arr.slice(middle);
+  return mergeArr(mergeSort(leftArr), mergeSort(rightArr))
+}
+
+console.log(mergeSort([1, 4, 6, 2, 89]))
+
+
+//快速排序
+const swap = (arr, i, j) =&gt; {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+const partition = (arr, left, right, pivot) =&gt; {
+  let value = arr[pivot];
+  let i = left;
+  for (let j = left; j &lt; right; j++) {
+    if (arr[j] &lt; value) {
+      swap(arr, i, j);
+      i++;
+    }
+  }
+  swap(arr, i, pivot);
+  return i;
+}
+
+
+const quickSort = (arr, left, right) =&gt; {
+  if (left &lt; right) {
+    let pivot = right
+    let partitionIndex = partition(arr, left, right, pivot)
+    quickSort(arr, left, partitionIndex - 1 &lt; left ? left : partitionIndex - 1)
+    quickSort(arr, partitionIndex + 1 &gt; right ? right : partitionIndex + 1, right)
+  }
+}
+
+const testArr = []
+let i = 0
+while (i &lt; 10) {
+  testArr.push(Math.floor(Math.random() * 1000));
+  i++;
+}
+console.log('sort before...', testArr)
+quickSort(testArr, 0, testArr.length - 1);
+console.log('sort after....', testArr);
+
+const partition = (arr) =&gt; {
+  let value = arr[arr.lenght - 1];
+  let i = 0;
+  for (let j = 0; j &lt; arr.lenght - 1; j++) {
+    if (arr[j] &lt; value) {
+      swap(arr, i, j);
+      i++;
+    }
+  }
+  swap(arr, i, arr.lenght - 1);
+  return i;
+}
+
+const quickSort = (arr) =&gt; {
+  if (arr.lenght &lt;= 1) return;
+  let i = partition(arr);
+  quickSort(arr.slice(0, i - 1 &gt; 0 ? i - 1 : 0));
+  quickSort(arr.slice(i + 1 &gt; arr.lenght ? arr.lenght : i + 1));
+}
+
+const testArr = []
+let i = 0
+while (i &lt; 10) {
+  testArr.push(Math.floor(Math.random() * 1000))
+  i++
+}
+console.log('sort before...', testArr)
+quickSort(testArr);
+console.log('sort after....', testArr);
+
+
+
+const swap = (arr, i, j) =&gt; {
+  const temp = arr[i]
+  arr[i] = arr[j]
+  arr[j] = temp
+}
+
+// 获取 pivot 交换完后的index
+const partition = (arr, pivot, left, right) =&gt; {
+  const pivotVal = arr[pivot]
+  let startIndex = left
+  for (let i = left; i &lt; right; i++) {
+    if (arr[i] &lt; pivotVal) {
+      swap(arr, i, startIndex)
+      startIndex++
+    }
+  }
+  swap(arr, startIndex, pivot)
+  return startIndex
+}
+
+const quickSort = (arr, left, right) =&gt; {
+  if (left &lt; right) {
+    console.log(arr)
+    let pivot = right
+    let partitionIndex = partition(arr, pivot, left, right)
+    quickSort(arr, left, partitionIndex - 1 &lt; left ? left : partitionIndex - 1)
+    quickSort(arr, partitionIndex + 1 &gt; right ? right : partitionIndex + 1, right)
+  }
+
+}
+
+
+const testArr = []
+let i = 0
+while (i &lt; 10) {
+  testArr.push(Math.floor(Math.random() * 1000))
+  i++
+}
+console.log('unsort', testArr)
+quickSort(testArr, 0, testArr.length - 1);
+console.log('sort', testArr)</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1056,7 +1279,7 @@ reverse()
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">20.3k</span>&nbsp;字
+                class="white-color">21.1k</span>&nbsp;字
             
             
             
