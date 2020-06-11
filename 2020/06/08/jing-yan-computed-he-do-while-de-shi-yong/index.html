@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-10
+                    2020-06-11
                 </div>
                 
 
@@ -502,12 +502,12 @@
             <div id="articleContent">
                 <h1 id="computed和do-while的使用"><a href="#computed和do-while的使用" class="headerlink" title="computed和do-while的使用"></a>computed和do-while的使用</h1><p>​    这几天一直在改上次live上出的bug（在此表扬下写bug小能手），今天在测试的时候又遇到了一点问题，在此记录一下。</p>
 <h2 id="computed的使用"><a href="#computed的使用" class="headerlink" title="computed的使用"></a>computed的使用</h2><p>​    我们现在用的前端框架是<code>KO</code>（KnockOut，老项目在使用，新项目使用的是React），我要吐槽一下<code>ko</code>(上古框架)，使用<code>ko</code>需要先绑定，当前端页面特别复杂的时候，什么<code>parent</code>、<code>root</code>这些层级结构，让你傻傻分不清，例如下面这个：</p>
-<p><img src="%E7%BB%8F%E9%AA%8C-computed%E5%92%8Cdo-while%E7%9A%84%E4%BD%BF%E7%94%A8/Snipaste_2020-06-08_19-49-36.png" alt=""></p>
+<p><img src="Snipaste_2020-06-08_19-49-36.png" alt=""></p>
 <p>​    parent根本就没有一点语义话的感觉，回到正题。</p>
 <p>​    <code>React</code>里面有可计算属性<code>computed</code>，<code>ko</code>里面也有，通过其它的值去计算当前需要的值。</p>
 <p>​    先介绍一下背景：</p>
 <p><img src="Snipaste_2020-06-10_10-04-24.png" alt=""></p>
-<p><img src="%E7%BB%8F%E9%AA%8C-computed%E5%92%8Cdo-while%E7%9A%84%E4%BD%BF%E7%94%A8/Snipaste_2020-06-10_10-01-11.png" alt=""></p>
+<p><img src="Snipaste_2020-06-10_10-01-11.png" alt=""></p>
 <p>具体的关系如下图：</p>
 <p><img src="Snipaste_2020-06-10_10-13-17.png" alt=""></p>
 <p>现在看起来一切还正常，但是当你选了这个人又不想给他发消息的话，可以将他从发送列表中删除，例如下面这样。</p>
