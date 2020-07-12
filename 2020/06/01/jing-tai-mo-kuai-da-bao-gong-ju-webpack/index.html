@@ -437,12 +437,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/webpack/">
+                                <span class="chip bg-color">webpack</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9D%99%E6%80%81%E6%A8%A1%E5%9D%97%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
+                                静态模块打包工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-01
+                    2020-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    9 分
                 </div>
                 
 
@@ -487,25 +500,145 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+                <h1 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h1><h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><pre><code>npm  init –y //初始化npm
+npm install –-save-dev webpack webpack-cli //安装webpack，webpack-cli是命令行运行//webpack
+npm install –-save-dev lodash</code></pre><p>Webpack打包资源的管理：</p>
+<p> （1）：打包入口，对不同资源的打包</p>
+<p> （2）：打包输出，bundle、chunk的概念</p>
+<p> （3）：开发</p>
+<p> （3.1）：使用服务器</p>
+<p> （3.2）：模块热替换</p>
+<p> （3.3）：构建不同的环境</p>
+<p> （3.4）：tree shaking</p>
+<p>（3.5）：代码分离</p>
+<p>（3.6）：懒加载</p>
+<p>（3.7）：缓存</p>
+<h2 id="四个核心概念："><a href="#四个核心概念：" class="headerlink" title="四个核心概念："></a>四个核心概念：</h2><p> 入口（entry）：</p>
+<p> 指示 webpack 应该使用哪个模块，来作为构建其内部<em>依赖图</em>的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的</p>
+<p> Entry接受三种形式的值：字符串、数组和对象</p>
+<p>对象entry：</p>
+<p><img src="1.png" alt="img"></p>
+<p>对象中的每一对属性，都代表一个入口文件。</p>
+<p> Key可以是字符串，对应output.filename配置中的[name],也可以是路径字符串，webpack会自动生成路径目录，并将路径的最后一个作为[name]。</p>
+<p> value如果是字符串，而且必须是合理的noderequire函数参数字符串。比如<strong>文件路径</strong>：’./app.js’(require(‘./app.js’))；比如<strong>安装的npm模块</strong>：’lodash’(require(‘lodash’))。</p>
+<p> value如果是数组，则数组中元素需要是上面描述的合理字符串值。数组中的文件一般是没有相互依赖关系的，但是又处于某些原因需要将它们打包在一起。</p>
+<p> 对于多入口，会建立彼此完全分离、互相独立的依赖图。</p>
+<p>字符串entry：</p>
+<p><img src="2.png" alt="img"></p>
+<p>数组entry：</p>
+<p><img src="3.png" alt="img"></p>
+<p>字符串/字符串数组：</p>
+<p>如果传入一个字符串或字符串数组，chunk 会被命名为 <code>main</code></p>
+<p>出口（output）：</p>
+<p> Output属性告诉webpack在哪里输出它所创建的bundles，以及如何命名这些文件，默认值为./dist。</p>
+<p> 可以存在多个入口，但只指定一个输出配置。</p>
+<p> output.path只是指示输出的目录，对应一个<strong>绝对路径</strong></p>
+<p><strong>明确chunk、bundle和module的概念</strong></p>
+<p> <strong>Webpack把每一个文件看成一个module，对入口module进行递归式打包，chunk是webpack的打包过程，是一堆module的集合，bundle是最终输出的打包文件。Chunk是过程量，bundle是结果量。</strong></p>
+<p><strong>设定</strong> <strong>HtmlWebpackPlugin</strong></p>
+<pre><code>npm install --save-dev html-webpack-plugin</code></pre><h2 id="清理-dist-文件夹"><a href="#清理-dist-文件夹" class="headerlink" title="清理 /dist 文件夹"></a>清理 /dist 文件夹</h2><blockquote>
+<p>npm install clean-webpack-plugin –save-dev</p>
+</blockquote>
+<p><strong>注：在</strong>webpack-dev-server上运行，clean-webpack-plugin会把dist文件夹里面的内容全部清除，但webpack（build）的时候只会删除为使用的。</p>
+<p>尝试补坑：<a href="https://blog.csdn.net/qq_44698161/article/details/102903521（注意clean" target="_blank" rel="noopener">https://blog.csdn.net/qq_44698161/article/details/102903521（注意clean</a> 和 copy plugins使用的顺序）webpack打包顺序？</p>
+<p> 或者根据不同的环境配置使用clean-webpack-plugin</p>
+<p>Loader：</p>
+<p> Loader让webpack能够去处理那些非javascript文件（webpack自生只能理解javascript）。Loader可以将所有类型的文件转换成webpack能够处理的有效模块，再利用webpack进行打包。</p>
+<p>在 webpack 的配置中 <strong>loader</strong> 有两个目标：</p>
+<ol>
+<li>test 属性，用于标识出应该被对应的 loader 进行转换的某个或某些文件。</li>
+<li>use 属性，表示进行转换时，应该使用哪个 loader。</li>
+</ol>
+<p>每个规则可以分为三部分 - 条件(condition)，结果(result)和嵌套规则(nested rule)</p>
+<h3 id="Rule-条件"><a href="#Rule-条件" class="headerlink" title="Rule 条件"></a><strong>Rule</strong> <strong>条件</strong></h3><p> 条件有两种输入值：</p>
+<ol>
+<li>resource：请求文件的绝对路径。它已经根据 <a href="https://www.webpackjs.com/configuration/resolve" target="_blank" rel="noopener">resolve 规则</a>解析。</li>
+<li>issuer: 被请求资源(requested the resource)的模块文件的绝对路径。是导入时的位置。</li>
+</ol>
+<p>例如: 从 app.js 导入 ‘./style.css’，resource 是 /path/to/style.css. issuer 是 /path/to/app.js。</p>
+<p>在规则中，属性 <a href="https://www.webpackjs.com/configuration/module/#rule-test" target="_blank" rel="noopener">test</a>, <a href="https://www.webpackjs.com/configuration/module/#rule-include" target="_blank" rel="noopener">include</a>, <a href="https://www.webpackjs.com/configuration/module/#rule-exclude" target="_blank" rel="noopener">exclude</a> 和 <a href="https://www.webpackjs.com/configuration/module/#rule-resource" target="_blank" rel="noopener">resource</a> 对 resource 匹配，并且属性 <a href="https://www.webpackjs.com/configuration/module/#rule-issuer" target="_blank" rel="noopener">issuer</a>(这个选项可以用来将 loader 应用到一个特定模块或一组模块的依赖中) 对 issuer 匹配。</p>
+<p>当使用多个条件时，所有条件都匹配</p>
+<h3 id="Rule-结果"><a href="#Rule-结果" class="headerlink" title="Rule 结果"></a>Rule 结果</h3><p>规则结果只在规则条件匹配时使用。</p>
+<p>规则有两种输入值：</p>
+<p>1． 应用的 loader：应用在 resource 上的 loader 数组。</p>
+<ol>
+<li>Parser 选项：用于为模块创建解析器的选项对象。</li>
+</ol>
+<p>这些属性会影响 loader：<code>loader</code>, <code>options</code>, <code>use</code>。</p>
+<h3 id="嵌套的-Rule"><a href="#嵌套的-Rule" class="headerlink" title="嵌套的 Rule"></a>嵌套的 Rule</h3><p>可以使用属性 <code>rules</code> 和 <code>oneOf</code> 指定嵌套规则。</p>
+<p>这些规则用于在规则条件(rule condition)匹配时进行取值。</p>
+<p><em>压缩和优化你的图像。查看</em> <em><a href="https://github.com/tcoopman/image-webpack-loader">image-webpack-loader</a></em> <em>和</em> <em><a href="https://www.webpackjs.com/loaders/url-loader" target="_blank" rel="noopener">url-loader</a>**，以了解更多关于如果增强加载处理图片功能。</em></p>
+<p>插件（plugins）</p>
+<p> 插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。</p>
+<p> 想要使用一个插件，你只需要 require() 它，然后把它添加到 plugins 数组中。多数插件可以通过选项(option)自定义。你也可以在一个配置文件中因为不同目的而多次使用同一个插件，这时需要通过使用 new 操作符来创建它的一个实例。</p>
+<p><img src="4.png" alt="img"></p>
+<p>模式：</p>
+<p> 通过选择 <code>development</code> 或 <code>production</code> 之中的一个，来设置 <code>mode</code> 参数，你可以启用相应模式下的 webpack 内置的优化</p>
+<h3 id="Devtool"><a href="#Devtool" class="headerlink" title="Devtool"></a>Devtool</h3><p>此选项控制是否生成，以及如何生成 source map。</p>
+<p><img src="5.png" alt="img"></p>
+<h3 id="解析（resolve）"><a href="#解析（resolve）" class="headerlink" title="解析（resolve）"></a>解析（resolve）</h3><pre><code>resolver 是一个库(library)，用于帮助找到模块的绝对路径。一个模块可以作为另一个模块的依赖模块，然后被后者引用，如下：
+
+import foo from &#39;path/to/module&#39;
+
+// 或者
+
+require(&#39;path/to/module&#39;)
+resolve.alias</code></pre><p> 创建 <code>import</code> 或 <code>require</code> 的别名，来确保模块引入变得更简单，也可以在给定对象的键后的末尾添加 <code>$</code>，以表示精准匹配：</p>
+<pre><code>alias: {
+
+ xyz$: path.resolve(__dirname, &#39;path/to/file.js&#39;)
+
+}</code></pre><p>这将产生以下结果：</p>
+<pre><code>import Test1 from &#39;xyz&#39;; // 精确匹配，所以 path/to/file.js 被解析和导入
+
+import Test2 from &#39;xyz/file.js&#39;; // 非精确匹配，触发普通解析</code></pre><h3 id="resolve-extensions："><a href="#resolve-extensions：" class="headerlink" title="resolve.extensions："></a>resolve.extensions：</h3><p>自动解析确定的扩展。默认值为：</p>
+<pre><code>extensions: [&quot;.js&quot;, &quot;.json&quot;]</code></pre><p>能够使用户在引入模块时不带扩展：</p>
+<pre><code>import File from &#39;../path/to/file&#39;</code></pre><h3 id="resolve-modules"><a href="#resolve-modules" class="headerlink" title="resolve.modules"></a><code>resolve.modules</code></h3><p>告诉 webpack 解析模块时应该搜索的目录。</p>
+<h3 id="开发中-Server-devServer"><a href="#开发中-Server-devServer" class="headerlink" title="开发中 Server(devServer)"></a>开发中 Server(devServer)</h3><pre><code>npm install --save-dev webpack-dev-server</code></pre><p>每次要编译代码时，手动运行 <code>npm run build</code> 就会变得很麻烦。webpack 中有几个不同的选项，可以帮助你在代码发生变化后自动编译代码。<code>webpack-dev-server</code> 为你提供了一个简单的 web 服务器，并且能够实时重新加载(live reloading)。</p>
+<p>webpack-dev-server主要是启动了一个使用express的Http服务器。它的作用<strong>主要是用来伺服资源文件</strong>。此外这个Http服务器和client使用了websocket通讯协议，原始文件作出改动后，webpack-dev-server会实时的编译，但是最后的编译的文件并没有输出到目标文件夹。</p>
+<p><strong>你启动**</strong>webpack-dev-server<strong><em>\</em>后，你在目标文件夹中是看不到编译后的文件的**</strong>,<strong><em>\</em>实时编译后的文件都保存到了内存当中。</strong></p>
+<p>webpack-dev-server支持2种自动刷新的方式：</p>
+<p>1.Iframe mode</p>
+<p>2.inline mode</p>
+<pre><code>compress: true//启用gzip压缩
+contentBase: path.join(__dirname, &quot;public&quot;)//告诉服务器从哪里提供内容
+                    hot: true//启用热替换
+                    lazy: true//dev-server只有在请求的时候才编译包
+publicPath: &quot;/assets/&quot;          </code></pre><p>HTML不会热更新。只有js，css这些被webpack管理的模块化东西才会热更新。</p>
+<p><a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a>：实时调整 react 组件</p>
+<p><strong>tree shaking</strong></p>
+<p>tree shaking 是一个术语，通常用于描述移除 JavaScript 上下文中的未引用代码(dead-code)。它依赖于 ES2015 模块系统中的<a href="http://exploringjs.com/es6/ch_modules.html#static-module-structure" target="_blank" rel="noopener">静态结构特性</a>，例如 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank" rel="noopener">import</a> 和 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export" target="_blank" rel="noopener">export</a>。</p>
+<p>在一个纯粹的 ESM 模块世界中，识别出哪些文件有副作用很简单。然而，我们的项目无法达到这种纯度，所以，此时有必要向 webpack 的 compiler 提供提示哪些代码是“纯粹部分”。</p>
+<p>这种方式是通过 package.json 的 “sideEffects” 属性来实现的。</p>
+<pre><code>{
+
+ &quot;name&quot;: &quot;your-project&quot;,
+
+ &quot;sideEffects&quot;: false
+
+}</code></pre><p>（实验失败，了解）</p>
+<p><strong>生产环境配置</strong></p>
+<p>配置不同环境的webpack</p>
+<pre><code>npm install --save-dev webpack-merge</code></pre><p>使用 merge，修改npm scripts</p>
+<p><strong>代码分离</strong></p>
+<p>代码分离是 webpack 中最引人注目的特性之一。此特性能够把代码分离到不同的 bundle 中，然后可以按需加载或并行加载这些文件。代码分离可以用于获取更小的 bundle，以及控制资源加载优先级，如果使用合理，会极大影响加载时间。</p>
+<p>有三种常用的代码分离方法：</p>
+<p>· 入口起点：使用 <a href="https://www.webpackjs.com/configuration/entry-context" target="_blank" rel="noopener">entry</a> 配置手动地分离代码。</p>
+<p>如果入口 chunks 之间包含重复的模块，那些重复模块都会被引入到各个 bundle 中。</p>
+<p>这种方法不够灵活，并且不能将核心应用程序逻辑进行动态拆分代码。</p>
+<p>· 防止重复：</p>
+<p><a href="https://webpack.js.org/plugins/split-chunks-plugin/" target="_blank" rel="noopener">SplitChunks</a>插件(webpack 4.x以前使用CommonsChunkPlugin)允许我们将公共依赖项提取到现有的entry chunk或全新的代码块中。</p>
+<p>· 动态导入(懒加载)：通过模块的内联函数调用来分离代码。</p>
+<p>import()</p>
+<p>import() 不同于 import，该方法为了动态加载模块而引入的新语法</p>
+<p>import() 返回结果是 Promise</p>
+<p><strong>缓存</strong></p>
+<p>webpack 会生成一个可部署的 /dist 目录，然后把打包后的内容放置在此目录中。只要 /dist 目录中的内容部署到服务器上，客户端（通常是浏览器）就能够访问网站此服务器的网站及其资源。而最后一步获取资源是比较耗费时间的，这就是为什么浏览器使用一种名为 <a href="https://searchstorage.techtarget.com/definition/cache" target="_blank" rel="noopener">缓存</a> 的技术。可以通过命中缓存，以降低网络流量，使网站加载速度更快，然而，如果我们在部署新版本时不更改资源的文件名，浏览器可能会认为它没有被更新，就会使用它的缓存版本。由于缓存的存在，当你需要获取新的代码时，就会显得很棘手。</p>
+<p> <strong>输出文件的文件名(Output Filenames)</strong></p>
+<p> 通过使用 <code>output.filename</code> 进行<a href="https://www.webpackjs.com/configuration/output#output-filename" target="_blank" rel="noopener">文件名替换</a>，可以确保浏览器获取到修改后的文件。<code>[hash]</code> 替换可以用于在文件名中包含一个构建相关(build-specific)的 hash，但是更好的方式是使用 <code>[chunkhash]</code> 替换。</p>
+<hr>
+<p>以上内容是以前练习使用webpack总结的，以后还会更新。</p>
+
             </div>
             <hr/>
 
@@ -567,7 +700,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/webpack/">
+                                    <span class="chip bg-color">webpack</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1030,7 +1167,7 @@ computed的使用​    我们现在用的前端框架是KO（KnockO
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.1k</span>&nbsp;字
+                class="white-color">30.2k</span>&nbsp;字
             
             
             

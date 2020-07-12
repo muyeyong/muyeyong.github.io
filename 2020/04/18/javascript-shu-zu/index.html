@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">数组</span>
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">基础</span>
                             </a>
                         
                     </div>
@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-21
+                    2020-06-16
                 </div>
                 
 
@@ -620,22 +620,22 @@ let arr3 = [...arr1,arr2]</code></pre><p>与解构赋值的结合：</p>
 <pre><code>let list = [1,2,3,4,5,6]
 
 let [first , ...rest] = list //其实也就相当于复制数组的第二种写法</code></pre><p>可以将字符串变成数组：</p>
-<pre><code>console.log(...&#39;str&#39;)// [&#39;s&#39;,&#39;t&#39;,&#39;r&#39;]</code></pre><h2 id="Array-form"><a href="#Array-form" class="headerlink" title="Array.form()"></a>Array.form()</h2><blockquote>
+<pre><code>console.log(...'str')// ['s','t','r']</code></pre><h2 id="Array-form"><a href="#Array-form" class="headerlink" title="Array.form()"></a>Array.form()</h2><blockquote>
 <p>将类数组对象和可遍历对象转化成真正的数组</p>
 </blockquote>
 <p>所谓类似数组的对象，本质特征只有一点，即必须有<code>length</code>属性，常见的类数组对象是数组内部的<code>arguments</code> 和 DOM操作返回的NodeList 节点。</p>
 <pre><code>
 let arrayLike = {
- &#39;0&#39;:&#39;0&#39;,
- &#39;1&#39;:&#39;1&#39;
- &#39;2&#39;:&#39;2&#39;
+ '0':'0',
+ '1':'1'
+ '2':'2'
  lenght: 3
 }
 //ES5
-[].slice.call(arrayLike); //[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]
+[].slice.call(arrayLike); //['1','2','3']
 
 //ES6
-Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><code>Array.form()</code>可以接收第二个参数，作用类似于数组的<code>map()</code>，对每个元素进行处理后返回。</p>
+Array.form(arrayLike);//['1','2','3']</code></pre><p><code>Array.form()</code>可以接收第二个参数，作用类似于数组的<code>map()</code>，对每个元素进行处理后返回。</p>
 <p><img src="Snipaste_2020-04-21_14-51-18.png" alt=""></p>
 <h2 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h2><blockquote>
 <p>将一组值转换成数组</p>
@@ -672,9 +672,9 @@ Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><co
 <p>自己试试写，就是一个简单的递归</p>
 <pre><code>function flat(arr) {
   let result = [];
-  if (Object.prototype.toString.call(arr) === &#39;[object Array]&#39;) {
+  if (Object.prototype.toString.call(arr) === '[object Array]') {
     arr.forEach(item =&gt; {
-      if (Object.prototype.toString.call(item) === &#39;[object Array]&#39;) {
+      if (Object.prototype.toString.call(item) === '[object Array]') {
         result = result.concat(flat(item))
       } else {
         result.push(item);
@@ -683,7 +683,25 @@ Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><co
   }
   return result;
 }</code></pre><p><img src="Snipaste_2020-04-21_17-09-50.png" alt=""></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -746,8 +764,8 @@ Array.form(arrayLike);//[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;]</code></pre><p><co
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">数组</span>
+                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">基础</span>
                                 </a>
                             
                         </div>
@@ -1218,7 +1236,7 @@ function bub
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.1k</span>&nbsp;字
+                class="white-color">30.2k</span>&nbsp;字
             
             
             

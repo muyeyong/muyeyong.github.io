@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-27
+                    2020-07-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -500,25 +500,138 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+                <h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS-定位"></a>CSS-定位</h1><h2 id="为什么需要定位？"><a href="#为什么需要定位？" class="headerlink" title="为什么需要定位？"></a>为什么需要定位？</h2><p>实现标准流和浮动都无法实现的效果。浮动可以让多个块级盒子一行没有缝隙排列显示，经常用于横向排列盒子。定位则是可以让盒子自由的在某个盒子内移动位置或固定到某个位置，并且可以压住其他盒子。</p>
+<h2 id="定位的组成"><a href="#定位的组成" class="headerlink" title="定位的组成"></a>定位的组成</h2><blockquote>
+<p>将盒子固定在某个位置</p>
+</blockquote>
+<p>定位 = 定位模式 + 边偏移</p>
+<p>定位模式用于指定一个元素在文档中的定位方式。边偏移则决定该元素的最终位置。</p>
+<h3 id="定位模式"><a href="#定位模式" class="headerlink" title="定位模式"></a>定位模式</h3><p>定位模式决定元素的定位方式，它通过CSS的position属性来设置，其值可以分为四个：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>语义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td>静态定位</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>相对定位</td>
+</tr>
+<tr>
+<td>absolute</td>
+<td>绝对定位</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>固定定位</td>
+</tr>
+</tbody></table>
+<h3 id="边偏移"><a href="#边偏移" class="headerlink" title="边偏移"></a>边偏移</h3><p>边偏移就是定位盒子移动的最终位置。有top、bottom、left 和 right 4个属性。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>语义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>top</td>
+<td>顶端偏移量，相对其父元素上边线的距离</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>底部偏移量，相对其父元素下边线的距离</td>
+</tr>
+<tr>
+<td>left</td>
+<td>左侧偏移量，相对其父元素左边线的距离</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右侧偏移量，相对其父元素右边线的距离</td>
+</tr>
+</tbody></table>
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h2 id="静态定位（static）"><a href="#静态定位（static）" class="headerlink" title="静态定位（static）"></a>静态定位（static）</h2><p>静态定位是元素的默认定位方式，无定位的意思。</p>
+<p>语法：</p>
+<pre><code>选择器 { position: static;}        </code></pre><ul>
+<li>静态定位按照标准流特性摆放位置，它没有边偏移</li>
+<li>静态定位在布局中很少使用</li>
+</ul>
+<h3 id="相对定位（relative）"><a href="#相对定位（relative）" class="headerlink" title="相对定位（relative）"></a>相对定位（relative）</h3><p>相对定位是元素在移动位置的时候，是相对于它的原来位置来说的。</p>
+<p>语法：</p>
+<pre><code>选择器 {position: relative;}</code></pre><p>相对定位的特点：</p>
+<ol>
+<li>它相对于自己原来的位置来移动的</li>
+<li>原来在标准流的位置继续占有，后面的盒子任然以标准流的方式对待它（不脱标，继续保留原来的位置）</li>
+</ol>
+<p>最典型的应用是给绝对定位当<code>爹</code> </p>
+<p>没有使用定位前：</p>
+<p><img src="Snipaste_2020-07-09_16-14-14.png" alt=""></p>
+<p>使用了定位：</p>
+<p><img src="Snipaste_2020-07-09_16-16-26.png" alt=""></p>
+<p>虽然 div1 离开了最初的位置，但是 div2 没有到改变自己的位置，div1的位置继续保留，没有脱标。</p>
+<h3 id="绝对定位（absolute）"><a href="#绝对定位（absolute）" class="headerlink" title="绝对定位（absolute）"></a>绝对定位（absolute）</h3><p>绝对定位是元素在移动位置的时候，是相对它的祖先元素来说的</p>
+<p>语法：</p>
+<pre><code>选择器 { position: absolute; }</code></pre><p>绝对定位的特点：</p>
+<ol>
+<li>如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位（Document文档）</li>
+<li>如果祖先元素有定位（相对、绝对、固定定位），则以最近一级有定位祖先元素为参考点移动位置</li>
+<li>绝对定位不在占有原先的位置（脱标）</li>
+</ol>
+<h3 id="子绝父相"><a href="#子绝父相" class="headerlink" title="子绝父相"></a>子绝父相</h3><blockquote>
+<p>子级是绝对定位的话，父级要用相对定位</p>
+</blockquote>
+<ol>
+<li>子级绝对定位，不会占有位置，可以放到父盒子里面的任何一个位置，不会影响其他的兄弟盒子。</li>
+<li>父盒子需要加定位限制子盒子在父盒子内显示。</li>
+<li>父盒子布局的时候，需要占有位置，因此父亲只能是相对定位。</li>
+</ol>
+<p>当然子绝父相不是永远不变的，如果父元素不需要占有位置，子绝父绝也会遇到。</p>
+<p>示例：</p>
+<p>​    父盒子没有使用定位，子盒子就相对浏览器定位</p>
+<p><img src="Snipaste_2020-07-12_15-26-20.png" alt=""></p>
+<p>父盒子使用定位后：</p>
+<p><img src="Snipaste_2020-07-12_15-37-06.png" alt=""></p>
+<h3 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h3><p>固定定位元素固定于浏览器可视区的位置。主要使用场景：可以在浏览器页面滚动时元素的位置不发生变化。</p>
+<p>语法：</p>
+<pre><code>选择器 { position: fixed;}</code></pre><p>固定定位的特点：</p>
+<ol>
+<li>以浏览器的可视窗口为参照点移动元素<ul>
+<li>跟父元素没有任何关系</li>
+<li>不随滚动条滚动</li>
+</ul>
+</li>
+<li>固定定位不占有原先的位置（脱标）</li>
+</ol>
+<h4 id="小技巧-固定在版心右侧的位置"><a href="#小技巧-固定在版心右侧的位置" class="headerlink" title="小技巧-固定在版心右侧的位置"></a>小技巧-固定在版心右侧的位置</h4><ol>
+<li>让固定定位的盒子left:50%.走到浏览器可视区域的一半</li>
+<li>让固定定位的盒子margin-left：版心宽度的一半距离. 多走版心宽度的一半</li>
+</ol>
+<h3 id="粘性定位（sticky）"><a href="#粘性定位（sticky）" class="headerlink" title="粘性定位（sticky）"></a>粘性定位（sticky）</h3><p>粘性定位可以被认为是相对定位和固定定位的混合。</p>
+<p>语法：</p>
+<pre><code>选择器 { position: sticky;top: 10px;}</code></pre><p>特点：</p>
+<ul>
+<li>以浏览器的可视窗户口为参照点移动元素（固定定位的特点）</li>
+<li>占有原先的位置（相对定位的特点）</li>
+<li>必须添加 top、left、right、bottom其中的一个才有效</li>
+</ul>
+<p>跟页面滚动搭配使用。兼容性差、IE不支持。</p>
+<p>最右边的那个盒子就是<code>sticky</code>的效果</p>
+<p><img src="1.gif" alt=""></p>
+<h3 id="定位叠放次序（z-index）"><a href="#定位叠放次序（z-index）" class="headerlink" title="定位叠放次序（z-index）"></a>定位叠放次序（z-index）</h3><p>在使用定位布局时，可能会出现盒子盒子重叠的情况。此时，可以使用z-indx来控制盒子的前后次序（z轴）</p>
+<p>语法：</p>
+<pre><code>选择器{z-index : 1;} </code></pre><ul>
+<li>数值可以是整数、负数或零，默认为auto，数值越大，盒子越靠上</li>
+<li>如果属性值相同，则按照书写顺序，后来者居上</li>
+<li>数字后面不能加单位</li>
+<li>只用定位的盒子才有 z-index 属性</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -1049,7 +1162,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.1k</span>&nbsp;字
+                class="white-color">30.2k</span>&nbsp;字
             
             
             

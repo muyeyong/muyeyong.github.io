@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-28
+                    2020-07-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    695
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -517,12 +517,15 @@
     优先级的确定：
         文本框输入 &gt; 本次调度结束需完成的任务 &gt; 动画过渡 &gt; 交互反馈 &gt; 数据更新 &gt; 不会显示但以防将来会显示的任务</code></pre><p>调度阶段的生命周期：</p>
 <ul>
-<li>componentWillMount</li>
-<li>componentWillReceiveProps</li>
+<li>construct</li>
+<li>getDerivedStateFromProps</li>
 <li>shouldComponentUpdate</li>
-<li>componentWillUpdate</li>
 <li>render</li>
+<li><del>componentWillMount</del></li>
+<li><del>componentWillReceiveProps</del></li>
+<li><del>componentWillUpdate</del></li>
 </ul>
+<p><strong>加删除线的生命周期是准备废弃的</strong></p>
 <p>渲染阶段的生命周期：</p>
 <ul>
 <li><p>componentDidMount</p>
@@ -533,27 +536,34 @@
 <p>由于调度阶段的更新任务可能被打断重新开始，所以调度阶段的生命周期可能会执行多次。</p>
 </li>
 </ul>
+<p>纵向分析的话，生命周期分为三个阶段：</p>
+<ol>
+<li>挂载阶段</li>
+</ol>
+<ul>
+<li>constructor: 构造函数，最先被执行,我们通常在构造函数里初始化state对象或者给自定义方法绑定this</li>
+<li>getDerivedStateFromProps: <code>static getDerivedStateFromProps(nextProps, prevState)</code>,这是个静态方法,当我们接收到新的属性想去修改我们state，可以使用getDerivedStateFromProps</li>
+<li>render: render函数是纯函数，只返回需要渲染的东西，不应该包含其它的业务逻辑,可以返回原生的DOM、React组件、Fragment、Portals、字符串和数字、Boolean和null等内容</li>
+<li>componentDidMount: 组件装载之后调用，此时我们可以获取到DOM节点并操作，比如对canvas，svg的操作，服务器请求，订阅都可以写在这个里面，但是记得在componentWillUnmount中取消订阅</li>
+</ul>
+<ol>
+<li>更新阶段<ul>
+<li>getDerivedStateFromProps: 此方法在更新个挂载阶段都可能会调用</li>
+<li>shouldComponentUpdate: <code>shouldComponentUpdate(nextProps, nextState)</code>,有两个参数nextProps和nextState，表示新的属性和变化之后的state，返回一个布尔值，true表示会触发重新渲染，false表示不会触发重新渲染，默认返回true,我们通常利用此生命周期来优化React程序性能</li>
+<li>render: 更新阶段也会触发此生命周期</li>
+<li>getSnapshotBeforeUpdate: <code>getSnapshotBeforeUpdate(prevProps, prevState)</code>,这个方法在render之后，componentDidUpdate之前调用，有两个参数prevProps和prevState，表示之前的属性和之前的state，这个函数有一个返回值，会作为第三个参数传给componentDidUpdate，如果你不想要返回值，可以返回null，此生命周期必须与componentDidUpdate搭配使用</li>
+<li>componentDidUpdate: <code>componentDidUpdate(prevProps, prevState, snapshot)</code>,该方法在getSnapshotBeforeUpdate方法之后被调用，有三个参数prevProps，prevState，snapshot，表示之前的props，之前的state，和snapshot。第三个参数是getSnapshotBeforeUpdate返回的,如果触发某些回调函数时需要用到 DOM 元素的状态，则将对比或计算的过程迁移至 getSnapshotBeforeUpdate，然后在 componentDidUpdate 中统一触发回调或更新状态</li>
+</ul>
+</li>
+<li>卸载阶段<ul>
+<li>componentWillUnmount: 当我们的组件被卸载或者销毁了就会调用，我们可以在这个函数里去清除一些定时器，取消网络请求，清理无效的DOM元素等垃圾清理工作</li>
+</ul>
+</li>
+</ol>
 <p>补一张最新的生命周期图：</p>
+<p>查看React生命周期的网站：<a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" target="_blank" rel="noopener">https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/</a></p>
 <p><img src="Snipaste_2020-04-28_15-11-30.png" alt=""></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -879,10 +889,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            CSS-定位为什么需要定位？实现标准流和浮动都无法实现的效果。浮动可以让多个块级盒子一行没有缝隙排列显示，经常用于横向排列盒子。定位则是可以让盒子自由的在某个盒子内移动位置或固定到某个位置，并且可以压住其他盒子。
+定位的组成
+将盒子固定在某
                         
                     </div>
                     <div class="publish-info">
@@ -1090,7 +1099,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">21.1k</span>&nbsp;字
+                class="white-color">30.2k</span>&nbsp;字
             
             
             
