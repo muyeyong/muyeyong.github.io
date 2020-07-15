@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-14
+                    2020-07-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    851
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -537,8 +537,15 @@ v-model:实现表单输入和应用状态之间的双向绑定</code></pre><p><c
 
 &lt;!-- 动态参数的缩写 (2.6.0+) --&gt;
 &lt;a :[key]=&quot;url&quot;&gt; ... &lt;/a&gt;</code></pre><h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h3><p>控制dom元素的出现与消失</p>
-<h3 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h3><p>遍历待渲染的数据</p>
-<h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h3><p>添加事件监听器，跟React的合成事件差不多？</p>
+<h3 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h3><p>遍历待渲染的数据，尽量使用v-for提供的<code>key</code> attribute。组件上使用v-for,key是必须的，如果想要将v-for遍历的数据注入到组件里面，需要使用组件的props（用<code>v-bind</code>绑定注入）</p>
+<pre><code>//可以使用in/of来遍历
+v-for = &quot;item in/of items&quot;
+//遍历数组时,可选第二个参数代表遍历的下标
+v-for = &quot;(item,index) in/of array&quot;
+//遍历对象时，可选三个参数（value，key/property，index）
+v-for = &quot;(value,key,index) in obj&quot;</code></pre><p>使用index作为<code>key</code> 时，在同一个class/function里，是不是存在渲染问题？</p>
+<p><a href="https://cn.vuejs.org/v2/guide/list.html" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/list.html</a> vue-在组件上使用for中</p>
+<pre><code>ul &gt; li is=&#39;组件名&#39; ， 这样写的必要性？</code></pre><h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h3><p>添加事件监听器，跟React的合成事件差不多？</p>
 <pre><code>&lt;!-- 完整语法 --&gt;
 &lt;a v-on:click=&quot;doSomething&quot;&gt;...&lt;/a&gt;
 
@@ -546,9 +553,11 @@ v-model:实现表单输入和应用状态之间的双向绑定</code></pre><p><c
 &lt;a @click=&quot;doSomething&quot;&gt;...&lt;/a&gt;
 
 &lt;!-- 动态参数的缩写 (2.6.0+) --&gt;
-&lt;a @[event]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><p>实现双向绑定</p>
+&lt;a @[event]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><p>如果需要访问原生的DOM事件，可以使用特殊变量<code>$event</code>把它传入方法</p>
+<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><p>实现双向绑定</p>
 <h3 id="指令动态参数"><a href="#指令动态参数" class="headerlink" title="指令动态参数"></a>指令动态参数</h3><p>用方括号括起来的JavaScript表达式作为一个指令的参数</p>
-<pre><code>&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><h2 id="组件化应用构建"><a href="#组件化应用构建" class="headerlink" title="组件化应用构建"></a>组件化应用构建</h2><p>在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例</p>
+<pre><code>&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><h2 id="指令的搭配使用"><a href="#指令的搭配使用" class="headerlink" title="指令的搭配使用"></a>指令的搭配使用</h2><h3 id="v-if-和-v-for"><a href="#v-if-和-v-for" class="headerlink" title="v-if 和 v-for"></a><code>v-if</code> 和 <code>v-for</code></h3><p>不推荐在同一元素上使用 v-if 和 v-for。当</p>
+<h2 id="组件化应用构建"><a href="#组件化应用构建" class="headerlink" title="组件化应用构建"></a>组件化应用构建</h2><p>在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例</p>
 <pre><code>//注册组件
 Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href="#Vue实例" class="headerlink" title="Vue实例"></a>Vue实例</h2><h3 id="创建vue实例"><a href="#创建vue实例" class="headerlink" title="创建vue实例"></a>创建vue实例</h3><pre><code>var vm = new Vue({
     选项对象
@@ -573,6 +582,18 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
 </blockquote>
 <p>侦听属性（watch） 和 可计算属性的选择？</p>
 <p>​    watch ：当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。</p>
+<h2 id="状态而维护"><a href="#状态而维护" class="headerlink" title="状态而维护"></a>状态而维护</h2><p>对于被侦听的数组，Vue对一下这些方法进行了包裹：</p>
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>splice</li>
+<li>sort()</li>
+<li>reverse()</li>
+</ul>
+<p>这些方法都改变了原数组。对于返回新数组的方法，例如 filter()\concat()，可以使用返回的新数组进行替换。</p>
+<h2 id="渲染多个元素内容"><a href="#渲染多个元素内容" class="headerlink" title="渲染多个元素内容"></a>渲染多个元素内容</h2><p>可以使用<code>template</code>将需要渲染的元素包裹起来。</p>
 <h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
 <li>给你个dom创建一个vue的实例，这个dom</li>
 </ul>
@@ -1126,7 +1147,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.1k</span>&nbsp;字
+                class="white-color">31.4k</span>&nbsp;字
             
             
             
