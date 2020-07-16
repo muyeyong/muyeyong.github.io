@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-15
+                    2020-07-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -554,7 +554,77 @@ v-for = &quot;(value,key,index) in obj&quot;</code></pre><p>使用index作为<co
 
 &lt;!-- 动态参数的缩写 (2.6.0+) --&gt;
 &lt;a @[event]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><p>如果需要访问原生的DOM事件，可以使用特殊变量<code>$event</code>把它传入方法</p>
-<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><p>实现双向绑定</p>
+<pre><code>&lt;button v-on:click=&quot;warn(&#39;Form cannot be submitted yet.&#39;, $event)&quot;&gt;
+  Submit
+&lt;/button&gt;</code></pre><pre><code>methods: {
+  warn: function (message, event) {
+    // 现在我们可以访问原生事件对象
+    if (event) {
+      event.preventDefault()
+    }
+    alert(message)
+  }
+}</code></pre><h4 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h4><blockquote>
+<p>修饰符是由点开头的指令后缀来表示，修饰符可以串联使用</p>
+</blockquote>
+<p>方法只有纯粹的逻辑判断，不去处理DOM的细节</p>
+<ul>
+<li>.stop</li>
+</ul>
+<p>同event.stopPropagation()，阻止冒泡</p>
+<ul>
+<li>.prevent</li>
+<li>.capture</li>
+</ul>
+<p>使用事件捕获模式，内部事件触发的事件先在父元素处理，然后交给内部元素处理</p>
+<p>（对于捕获和冒泡的疑惑，会一直传递到顶端DOM？）</p>
+<ul>
+<li>.self</li>
+<li>.once</li>
+<li>.passive</li>
+</ul>
+<h4 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h4><pre><code>&lt;!-- 只有在 `key` 是 `Enter` 时调用 `vm.submit()` --&gt;
+&lt;input v-on:keyup.enter=&quot;submit&quot;&gt;</code></pre><p>你可以直接将 <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values" target="_blank" rel="noopener"><code>KeyboardEvent.key</code></a> 暴露的任意有效按键名转换为 kebab-case 来作为修饰符。</p>
+<p>Vue提供常见的key的别名：</p>
+<ul>
+<li><code>.enter</code></li>
+<li><code>.tab</code></li>
+<li><code>.delete</code> (捕获“删除”和“退格”键)</li>
+<li><code>.esc</code></li>
+<li><code>.space</code></li>
+<li><code>.up</code></li>
+<li><code>.down</code></li>
+<li><code>.left</code></li>
+<li><code>.right</code></li>
+</ul>
+<p>你还可以通过全局 <code>config.keyCodes</code> 对象<a href="https://cn.vuejs.org/v2/api/#keyCodes" target="_blank" rel="noopener">自定义按键修饰符别名</a>：</p>
+<pre><code>// 可以使用 `v-on:keyup.f1`
+Vue.config.keyCodes.f1 = 112</code></pre><h4 id="系统修饰符"><a href="#系统修饰符" class="headerlink" title="系统修饰符"></a>系统修饰符</h4><ul>
+<li><code>.ctrl</code></li>
+<li><code>.alt</code></li>
+<li><code>.shift</code></li>
+<li><code>.meta</code></li>
+</ul>
+<h4 id="鼠标按钮修饰符"><a href="#鼠标按钮修饰符" class="headerlink" title="鼠标按钮修饰符"></a>鼠标按钮修饰符</h4><ul>
+<li><code>.left</code></li>
+<li><code>.right</code></li>
+<li><code>.middle</code></li>
+</ul>
+<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><blockquote>
+<p>可以用在表单 <code>&lt;input&gt;</code>、<code>textarea</code>以及<code>select</code>元素上创建双向绑定，它会根据控件的类型自动选取正确的方法来更新元素。</p>
+</blockquote>
+<p><code>v-model</code> 会忽略所有表单元素的 <code>value</code>、<code>checked</code>、<code>selected</code> attribute 的初始值而总是将 Vue 实例的数据作为数据来源。你应该通过 JavaScript 在组件的 <code>data</code> 选项中声明初始值。</p>
+<p><code>v-model</code> 在内部为不同的输入元素使用不同的 property 并抛出不同的事件：</p>
+<ul>
+<li>text 和 textarea 元素使用 <code>value</code> property 和 <code>input</code> 事件；</li>
+<li>checkbox 和 radio 使用 <code>checked</code> property 和 <code>change</code> 事件；</li>
+<li>select 字段将 <code>value</code> 作为 prop 并将 <code>change</code> 作为事件。</li>
+</ul>
+<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><ul>
+<li>.lazy</li>
+<li>.number</li>
+<li>.trim</li>
+</ul>
 <h3 id="指令动态参数"><a href="#指令动态参数" class="headerlink" title="指令动态参数"></a>指令动态参数</h3><p>用方括号括起来的JavaScript表达式作为一个指令的参数</p>
 <pre><code>&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt;</code></pre><h2 id="指令的搭配使用"><a href="#指令的搭配使用" class="headerlink" title="指令的搭配使用"></a>指令的搭配使用</h2><h3 id="v-if-和-v-for"><a href="#v-if-和-v-for" class="headerlink" title="v-if 和 v-for"></a><code>v-if</code> 和 <code>v-for</code></h3><p>不推荐在同一元素上使用 v-if 和 v-for。当</p>
 <h2 id="组件化应用构建"><a href="#组件化应用构建" class="headerlink" title="组件化应用构建"></a>组件化应用构建</h2><p>在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例</p>
@@ -1147,7 +1217,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.4k</span>&nbsp;字
+                class="white-color">31.8k</span>&nbsp;字
             
             
             
