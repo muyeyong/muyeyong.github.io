@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-07-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    174
+                    256
                 </div>
                 
 
@@ -505,25 +505,33 @@
 </blockquote>
 <h2 id="Code-Runner"><a href="#Code-Runner" class="headerlink" title="Code Runner"></a>Code Runner</h2><pre><code>我通常会在vs上用js写算法题，但是想直接运行的话不太方便（可以以调试的形式运行，需要配置，详情参见 {% post_link 调试-VSCode  %} ），于是乎可以使用 `Code Runner`</code></pre><p><img src="Snipaste_2020-05-21_10-32-26.png" alt=""></p>
 <h2 id="Live-Server"><a href="#Live-Server" class="headerlink" title="Live Server"></a>Live Server</h2><pre><code>可以默认起一个服务器，去运行你的HTML，改的的话，不需要刷新就可以看到改动</code></pre><p><img src="1.gif" alt=""></p>
-<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open in browser"></a>open in browser</h2><pre><code>在默认浏览器打开你的HTML页面</code></pre><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<h2 id="open-in-browser"><a href="#open-in-browser" class="headerlink" title="open in browser"></a>open in browser</h2><pre><code>在默认浏览器打开你的HTML页面</code></pre><p><code>vetur</code> 、<code>ESlint</code>、<code>Prettier</code>都是用来检查代码规范的，这一些插件都有啥区别 🤣？</p>
+<p><code>ESlint</code>：负责质量检测</p>
+<p><code>Prettier</code>：负责风格检测</p>
+<h2 id="Vetur（在Vue项目中的应用）"><a href="#Vetur（在Vue项目中的应用）" class="headerlink" title="Vetur（在Vue项目中的应用）"></a>Vetur（在Vue项目中的应用）</h2><p>Vetur能提供的功能:</p>
+<ul>
+<li>Syntax Highlighting(代码高亮)</li>
+</ul>
+<p>没有使用前，代码灰蒙蒙一片：</p>
+<p><img src="%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6-VSCode/Snipaste_2020-07-17_16-37-36.png" alt=""></p>
+<p>使用后，像极了我戴眼镜看世界的样子：</p>
+<p><img src="C:/Users/xuxiaojian/AppData/Roaming/Typora/typora-user-images/image-20200717164435131.png" alt="image-20200717164435131"></p>
+<ul>
+<li>Snippet(代码片段)</li>
+<li>Emmet(Emmet语法)</li>
+<li>Linting / Error Checking(代码校验/错误检查)</li>
+</ul>
+<p><img src="%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6-VSCode/Snipaste_2020-07-18_09-50-57.png" alt=""></p>
+<p>​    Vetur的Linting不支持修改，还需要安装<code>ESLint</code>。</p>
+<ul>
+<li>Formatting</li>
+<li>IntelliSense</li>
+<li>Debugging</li>
+<li>Framework Support</li>
+<li>Interpolation Support</li>
+<li>VTI</li>
+</ul>
+<h2 id="ESlint"><a href="#ESlint" class="headerlink" title="ESlint"></a>ESlint</h2><h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><h2 id="Bracket-Pair-Colorizer-2"><a href="#Bracket-Pair-Colorizer-2" class="headerlink" title="Bracket Pair Colorizer 2"></a>Bracket Pair Colorizer 2</h2><h2 id="Code-Spell-Checker"><a href="#Code-Spell-Checker" class="headerlink" title="Code Spell Checker"></a>Code Spell Checker</h2>
             </div>
             <hr/>
 
@@ -1056,7 +1064,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.8k</span>&nbsp;字
+                class="white-color">32.8k</span>&nbsp;字
             
             
             
