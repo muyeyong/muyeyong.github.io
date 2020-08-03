@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-16
+                    2020-08-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -645,14 +645,14 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
 <p>Mustache 语法不能作用在 HTML attribute 上，遇到这种情况应该使用 <a href="https://cn.vuejs.org/v2/api/#v-bind" target="_blank" rel="noopener"><code>v-bind</code> 指令</a></p>
 </blockquote>
 <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><blockquote>
-  ，只能包含单个表达式，不能使用语句和控制流
+ {{表达式}} ，只能包含单个表达式，不能使用语句和控制流
 </blockquote>
 <h2 id="可计算属性"><a href="#可计算属性" class="headerlink" title="可计算属性"></a>可计算属性</h2><blockquote>
 <p>computed 可以使用缓存进行返回，方法的每次都需要重新计算</p>
 </blockquote>
 <p>侦听属性（watch） 和 可计算属性的选择？</p>
 <p>​    watch ：当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。</p>
-<h2 id="状态而维护"><a href="#状态而维护" class="headerlink" title="状态而维护"></a>状态而维护</h2><p>对于被侦听的数组，Vue对一下这些方法进行了包裹：</p>
+<h2 id="状态和维护"><a href="#状态和维护" class="headerlink" title="状态和维护"></a>状态和维护</h2><p>对于被侦听的数组，Vue对一下这些方法进行了包裹：</p>
 <ul>
 <li>push()</li>
 <li>pop()</li>
@@ -664,9 +664,31 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
 </ul>
 <p>这些方法都改变了原数组。对于返回新数组的方法，例如 filter()\concat()，可以使用返回的新数组进行替换。</p>
 <h2 id="渲染多个元素内容"><a href="#渲染多个元素内容" class="headerlink" title="渲染多个元素内容"></a>渲染多个元素内容</h2><p>可以使用<code>template</code>将需要渲染的元素包裹起来。</p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="data必须是一个函数"><a href="#data必须是一个函数" class="headerlink" title="data必须是一个函数"></a>data必须是一个函数</h3><p>data是函数的话，可以让每一个组件实例维护一份返回对象的拷贝</p>
+<h3 id="监听子组件事件"><a href="#监听子组件事件" class="headerlink" title="监听子组件事件"></a>监听子组件事件</h3><blockquote>
+<p>React里面是通过回掉函数完成的</p>
+</blockquote>
+<p>父组件通过props向子组件传入一个函数（v-on监听），子组件通过调用内建的<code>$emit</code>方法并传入事件名称来触发一个事件，<code>$emit</code>方法可以向上传递（抛出值），<code>$emit(props name,抛出参数1,抛出参数2,...)</code>，父组件可以使用<code>$event</code>访问，如果处理函数是一个方法，抛出的参数就以形参的形式传入</p>
+<h2 id="组件的注册"><a href="#组件的注册" class="headerlink" title="组件的注册"></a>组件的注册</h2><ul>
+<li>全局注册</li>
+<li>局部组册</li>
+</ul>
+<p>基础组件全局组册： <a href="https://cn.vuejs.org/v2/guide/components-registration.html（需要练习）" target="_blank" rel="noopener">https://cn.vuejs.org/v2/guide/components-registration.html（需要练习）</a></p>
+<h3 id="插槽分发事件"><a href="#插槽分发事件" class="headerlink" title="插槽分发事件"></a>插槽分发事件</h3><p><code>&lt;slot&gt;&lt;/slot&gt;</code></p>
+<h3 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h3><pre><code>&lt;!-- 组件会在 `currentTabComponent` 改变时改变 --&gt; 
+&lt;component v-bind:is=&quot;currentTabComponent&quot;&gt;&lt;/component&gt;</code></pre><p>​    <code>is</code>也可以用来绑定dom元素</p>
+<h3 id="组件名"><a href="#组件名" class="headerlink" title="组件名"></a>组件名</h3><p>​    使用全小写，单词之间使用短横线(-)隔开: <code>my-first-component</code></p>
 <h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
 <li>给你个dom创建一个vue的实例，这个dom</li>
+<li>v-bind v-model有啥区别</li>
 </ul>
+<blockquote>
+<pre><code>&lt;input v-model=&quot;searchText&quot;&gt;</code></pre><p>等价于：</p>
+<pre><code>&lt;input
+  v-bind:value=&quot;searchText&quot;
+  v-on:input=&quot;searchText = $event.target.value&quot;
+&gt;</code></pre></blockquote>
+<p>也就是说，v-model === v-on + v-bind</p>
 
             </div>
             <hr/>
@@ -1205,7 +1227,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.2k</span>&nbsp;字
+                class="white-color">34k</span>&nbsp;字
             
             
             

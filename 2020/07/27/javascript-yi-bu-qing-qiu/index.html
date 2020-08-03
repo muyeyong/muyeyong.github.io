@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="经验-computed和do-while的使用, 上帝说我帅的很">
+    <meta name="keywords" content="JavaScript-异步请求, 上帝说我帅的很">
     <meta name="description" content="前端 | React | HTML | CSS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>经验-computed和do-while的使用 | 上帝说我帅的很</title>
+    <title>JavaScript-异步请求 | 上帝说我帅的很</title>
     <link rel="icon" type="image/png" href="/popsicle.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">经验-computed和do-while的使用</h1>
+                    <h1 class="description center-align post-title">JavaScript-异步请求</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/computed-%E5%92%8C-do-while%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                                <span class="chip bg-color">computed 和 do-while的使用</span>
+                            <a href="/tags/%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
+                                <span class="chip bg-color">异步请求</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BB%8F%E9%AA%8C/" class="post-category">
-                                经验
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
                             </a>
                         
                     </div>
@@ -464,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-08
+                    2020-07-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-07-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    717
+                    188
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -500,54 +500,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="computed和do-while的使用"><a href="#computed和do-while的使用" class="headerlink" title="computed和do-while的使用"></a>computed和do-while的使用</h1><p>​    这几天一直在改上次live上出的bug（在此表扬下写bug小能手），今天在测试的时候又遇到了一点问题，在此记录一下。</p>
-<h2 id="computed的使用"><a href="#computed的使用" class="headerlink" title="computed的使用"></a>computed的使用</h2><p>​    我们现在用的前端框架是<code>KO</code>（KnockOut，老项目在使用，新项目使用的是React），我要吐槽一下<code>ko</code>(上古框架)，使用<code>ko</code>需要先绑定，当前端页面特别复杂的时候，什么<code>parent</code>、<code>root</code>这些层级结构，让你傻傻分不清，例如下面这个：</p>
-<p><img src="Snipaste_2020-06-08_19-49-36.png" alt=""></p>
-<p>​    parent根本就没有一点语义话的感觉，回到正题。</p>
-<p>​    <code>React</code>里面有可计算属性<code>computed</code>，<code>ko</code>里面也有，通过其它的值去计算当前需要的值。</p>
-<p>​    先介绍一下背景：</p>
-<p><img src="Snipaste_2020-06-10_10-04-24.png" alt=""></p>
-<p><img src="Snipaste_2020-06-10_10-01-11.png" alt=""></p>
-<p>具体的关系如下图：</p>
-<p><img src="Snipaste_2020-06-10_10-13-17.png" alt=""></p>
-<p>现在看起来一切还正常，但是当你选了这个人又不想给他发消息的话，可以将他从发送列表中删除，例如下面这样。</p>
-<p><img src="1.gif" alt=""></p>
-<p>回到代码上的逻辑，最初的写法是：</p>
-<ol>
-<li>先判断当前删除的pill是不是默认的user。</li>
-<li>再判断pill是不是整个大的tab,例如上面的Operation Manager，是的话删除当前tab下所有存在发送列表里面的user。</li>
-<li>最后删除剩下的pill。</li>
-</ol>
-<p>第二步删除里面的用的是<code>do-while</code>，进行操作的。</p>
-<p><img src="Snipaste_2020-06-10_10-30-39.png" alt=""></p>
-<p>但是他取出符合条件的user是随机取得，这里就会出现一个bug，还记得前面的可计算属性吗？<code>imChecked</code>，他会一直遍历整个user列表去执行指定的逻辑。如果他取出的user一直是默认带上的user，发送列表不仅仅存在默认的user，当你从发送列表去除这个默认的user，但是可计算属性通过其它值又把默认的user加上去了，这个时候就有意思了，一个操作是不断的删除，一个操作是一直添加，生成一个完美闭环，然后又遇到<code>do-while</code>，导致一直循环，栈溢出，页面卡死。</p>
-<p>为什么会出现这样的情况？</p>
-<ul>
-<li>考虑不在周全 + 测试也不严谨。</li>
-<li>当使用这种可能会无限循环的语句，需要异常处理（try-catch or 使用标识符跳出 or 其它）。</li>
-<li>从业务角度来说，我觉得设计也是有缺陷的，上面的动图，他突然就出现了默认带上的user（本来是要删除的），默认带上也应该是用户第一次操作带上，而不是每次操作带上。</li>
+                <h1 id="JavaScript-异步请求"><a href="#JavaScript-异步请求" class="headerlink" title="JavaScript-异步请求"></a>JavaScript-异步请求</h1><blockquote>
+<p>最近在写项目中看到发请求中使用了<code>fetch</code>，以前用的<code>axios</code>于是想知道这两种技术有什么区别，就写了这篇文章，打算以理论+实践的方式试一下这两者的区别</p>
+</blockquote>
+<h2 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h2><h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><h3 id="fetch与ajax的区别"><a href="#fetch与ajax的区别" class="headerlink" title="fetch与ajax的区别"></a>fetch与ajax的区别</h3><ul>
+<li>当响应状态码是404或500时，fetch会将Promise的状态变成resolve，但是resolve返回值的ok属性设置为false，只要当网络故障或请求被拒绝的时候才会标记成reject</li>
+<li>fetch可以接受跨域cookies，也可以使用fetch建立跨域会话</li>
+<li>fetch不会发送cookies，除非使用credentials初始化选项</li>
 </ul>
-<p>东西是好东西，但是注意使用场景。</p>
-<p>我这个小菜鸟太难了。。。。。</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<h3 id="带请求参数"><a href="#带请求参数" class="headerlink" title="带请求参数"></a>带请求参数</h3><h3 id="带凭证"><a href="#带凭证" class="headerlink" title="带凭证"></a>带凭证</h3><h3 id="上传JSON"><a href="#上传JSON" class="headerlink" title="上传JSON"></a>上传JSON</h3><h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><h3 id="检测是否成功"><a href="#检测是否成功" class="headerlink" title="检测是否成功"></a>检测是否成功</h3><h3 id="Request对象"><a href="#Request对象" class="headerlink" title="Request对象"></a>Request对象</h3><h3 id="Header对象"><a href="#Header对象" class="headerlink" title="Header对象"></a>Header对象</h3><h3 id="Response对象"><a href="#Response对象" class="headerlink" title="Response对象"></a>Response对象</h3><h3 id="Body对象"><a href="#Body对象" class="headerlink" title="Body对象"></a>Body对象</h3><h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2>
             </div>
             <hr/>
 
@@ -572,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/06/08/jing-yan-computed-he-do-while-de-shi-yong/">https://github.com/muyeyong/muyeyong.github.io/2020/06/08/jing-yan-computed-he-do-while-de-shi-yong/</a>
+                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/07/27/javascript-yi-bu-qing-qiu/">https://github.com/muyeyong/muyeyong.github.io/2020/07/27/javascript-yi-bu-qing-qiu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -610,8 +571,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/computed-%E5%92%8C-do-while%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                                    <span class="chip bg-color">computed 和 do-while的使用</span>
+                                <a href="/tags/%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
+                                    <span class="chip bg-color">异步请求</span>
                                 </a>
                             
                         </div>
@@ -801,29 +762,34 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/16/javascript-hong-ren-wu-wei-ren-wu-he-event-loop/">
+                <a href="/2020/07/27/javascript-yi-bu-qing-qiu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.png" class="responsive-img" alt="JavaScript-宏任务、微任务 和 EventLoop">
+                        <img src="/medias/featureimages/10.png" class="responsive-img" alt="JavaScript-异步请求">
                         
-                        <span class="card-title">JavaScript-宏任务、微任务 和 EventLoop</span>
+                        <span class="card-title">JavaScript-异步请求</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            宏任务、微任务 和 EventLoop让我们来讲一个小故事 6月份在火辣辣的长沙，走在热浪滔天的五一广场，口干舌燥，想来一杯冰凉凉的奶茶，但买奶茶的人特别多，作为一个文明人，我当然选择排队。前面有一个火辣辣的美眉，她点了一杯波霸珍珠奶茶，然
+                            JavaScript-异步请求
+最近在写项目中看到发请求中使用了fetch，以前用的axios于是想知道这两种技术有什么区别，就写了这篇文章，打算以理论+实践的方式试一下这两者的区别
+
+ajaxfetchfetch与ajax的区别
+当响应状
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -836,11 +802,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">基础</span>
+                    <a href="/tags/%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/">
+                        <span class="chip bg-color">异步请求</span>
                     </a>
                     
                 </div>
@@ -854,33 +821,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/01/jing-tai-mo-kuai-da-bao-gong-ju-webpack/">
+                <a href="/2020/07/21/dai-ma-you-hua-dou-dong-jie-liu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.png" class="responsive-img" alt="静态模块打包工具-webpack">
+                        <img src="/medias/featureimages/18.png" class="responsive-img" alt="代码优化-抖动节流">
                         
-                        <span class="card-title">静态模块打包工具-webpack</span>
+                        <span class="card-title">代码优化-抖动节流</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Webpack开始npm  init –y //初始化npm
-npm install –-save-dev webpack webpack-cli //安装webpack，webpack-cli是命令行运行//webpack
-npm ins
+                            上联：优化 优化 在优化 下联：bug bug 去无踪 横批：扶我起来，我还能再写
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9D%99%E6%80%81%E6%A8%A1%E5%9D%97%E6%89%93%E5%8C%85%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    静态模块打包工具
+                            <a href="/categories/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/" class="post-category">
+                                    代码优化
                                 </a>
                             
                             
@@ -890,8 +855,8 @@ npm ins
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/webpack/">
-                        <span class="chip bg-color">webpack</span>
+                    <a href="/tags/%E6%8A%96%E5%8A%A8%E8%8A%82%E6%B5%81/">
+                        <span class="chip bg-color">抖动节流</span>
                     </a>
                     
                 </div>
