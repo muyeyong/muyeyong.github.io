@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-03
+                    2020-08-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -678,7 +678,67 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
 <h3 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h3><pre><code>&lt;!-- 组件会在 `currentTabComponent` 改变时改变 --&gt; 
 &lt;component v-bind:is=&quot;currentTabComponent&quot;&gt;&lt;/component&gt;</code></pre><p>​    <code>is</code>也可以用来绑定dom元素</p>
 <h3 id="组件名"><a href="#组件名" class="headerlink" title="组件名"></a>组件名</h3><p>​    使用全小写，单词之间使用短横线(-)隔开: <code>my-first-component</code></p>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
+<h3 id="Prop"><a href="#Prop" class="headerlink" title="Prop"></a>Prop</h3><h4 id="Prop类型"><a href="#Prop类型" class="headerlink" title="Prop类型"></a>Prop类型</h4><pre><code>props: {
+  title: String,
+  likes: Number,
+  isPublished: Boolean,
+  commentIds: Array,
+  author: Object,
+  callback: Function,
+  contactsPromise: Promise // or any other constructor
+}</code></pre><pre><code>Vue.component(&#39;my-component&#39;, {
+  props: {
+    // 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)
+    propA: Number,
+    // 多个可能的类型
+    propB: [String, Number],
+    // 必填的字符串
+    propC: {
+      type: String,
+      required: true
+    },
+    // 带有默认值的数字
+    propD: {
+      type: Number,
+      default: 100
+    },
+    // 带有默认值的对象
+    propE: {
+      type: Object,
+      // 对象或数组默认值必须从一个工厂函数获取
+      default: function () {
+        return { message: &#39;hello&#39; }
+      }
+    },
+    // 自定义验证函数
+    propF: {
+      validator: function (value) {
+        // 这个值必须匹配下列字符串中的一个
+        return [&#39;success&#39;, &#39;warning&#39;, &#39;danger&#39;].indexOf(value) !== -1
+      }
+    }
+  }
+})</code></pre><p>prop会在一个组件创建之前就进行验证，实例中的property（data，computed等）在<code>default</code>和 <code>validator</code>函数中是不可用的</p>
+<p>type类型：</p>
+<ul>
+<li><code>String</code></li>
+<li><code>Number</code></li>
+<li><code>Boolean</code></li>
+<li><code>Array</code></li>
+<li><code>Object</code></li>
+<li><code>Date</code></li>
+<li><code>Function</code></li>
+<li><code>Symbol</code></li>
+</ul>
+<p>也可以是自定义的构造函数</p>
+<h4 id="传递动态的值"><a href="#传递动态的值" class="headerlink" title="传递动态的值"></a>传递动态的值</h4><p>通过v-bin传递动态值</p>
+<pre><code>&lt;blog-post v-bind:title=&quot;post.title&quot;&gt;&lt;/blog-post&gt;</code></pre><p>v-bind即使绑定的是一个动态的值，也是为了告诉vue这是一个JavaScript表达式，而不是字符串</p>
+<p>v-bind可以带参数： <code>v-bind:name = &quot;person.name&quot;</code> 也可以不带参数，<code>v-bind=&quot;person&quot;</code> 传入整个对象</p>
+<h4 id="禁用Attribute继承（不是很懂）"><a href="#禁用Attribute继承（不是很懂）" class="headerlink" title="禁用Attribute继承（不是很懂）"></a>禁用Attribute继承（不是很懂）</h4><p>如果你<strong>不</strong>希望组件的根元素继承 attribute，你可以在组件的选项中设置 <code>inheritAttrs: false</code>。</p>
+<h3 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h3><h4 id="事件名"><a href="#事件名" class="headerlink" title="事件名"></a>事件名</h4><p><code>v-on</code> 事件监听器在 DOM 模板中会被自动转换为全小写 (因为 HTML 是大小写不敏感的)，所以 <code>v-on:myEvent</code> 将会变成 <code>v-on:myevent</code>——导致 <code>myEvent</code> 不可能被监听到。</p>
+<p>因此，我们推荐你<strong>始终使用 kebab-case 的事件名</strong>。</p>
+<p><em>这一点好像在项目中不是这样的</em></p>
+<h4 id="自定义组件的v-model-不是很懂"><a href="#自定义组件的v-model-不是很懂" class="headerlink" title="自定义组件的v-model(不是很懂)"></a>自定义组件的<code>v-model</code>(不是很懂)</h4><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
 <li>给你个dom创建一个vue的实例，这个dom</li>
 <li>v-bind v-model有啥区别</li>
 </ul>
@@ -1227,7 +1287,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             
