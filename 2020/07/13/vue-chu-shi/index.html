@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-08-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -736,9 +736,17 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
 <p>v-bind可以带参数： <code>v-bind:name = &quot;person.name&quot;</code> 也可以不带参数，<code>v-bind=&quot;person&quot;</code> 传入整个对象</p>
 <h4 id="禁用Attribute继承（不是很懂）"><a href="#禁用Attribute继承（不是很懂）" class="headerlink" title="禁用Attribute继承（不是很懂）"></a>禁用Attribute继承（不是很懂）</h4><p>如果你<strong>不</strong>希望组件的根元素继承 attribute，你可以在组件的选项中设置 <code>inheritAttrs: false</code>。</p>
 <h3 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h3><h4 id="事件名"><a href="#事件名" class="headerlink" title="事件名"></a>事件名</h4><p><code>v-on</code> 事件监听器在 DOM 模板中会被自动转换为全小写 (因为 HTML 是大小写不敏感的)，所以 <code>v-on:myEvent</code> 将会变成 <code>v-on:myevent</code>——导致 <code>myEvent</code> 不可能被监听到。</p>
-<p>因此，我们推荐你<strong>始终使用 kebab-case 的事件名</strong>。</p>
-<p><em>这一点好像在项目中不是这样的</em></p>
-<h4 id="自定义组件的v-model-不是很懂"><a href="#自定义组件的v-model-不是很懂" class="headerlink" title="自定义组件的v-model(不是很懂)"></a>自定义组件的<code>v-model</code>(不是很懂)</h4><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
+<p>因此，我们推荐你<strong>始终使用 kebab-case 的事件名（不是说方法名）</strong>。</p>
+<h4 id="自定义组件的v-model-不是很懂"><a href="#自定义组件的v-model-不是很懂" class="headerlink" title="自定义组件的v-model(不是很懂)"></a>自定义组件的<code>v-model</code>(不是很懂)</h4><h4 id="将原生事件绑定到组件"><a href="#将原生事件绑定到组件" class="headerlink" title="将原生事件绑定到组件"></a>将原生事件绑定到组件</h4><ol>
+<li>可以使用<code>v-on</code>的<code>.native</code> 修饰符，但对于组件的子元素不能生效（比如想要使用原生的onFocus，但是监听的元素不是父组件，这时onFocur不会生效）</li>
+<li>使用 <code>$listeners</code> property，它是一个对象，里面包含了作用在这个组件上的所有监听器。</li>
+</ol>
+<h4 id="sync修饰符"><a href="#sync修饰符" class="headerlink" title=".sync修饰符"></a>.sync修饰符</h4><pre><code>&lt;text-document
+  v-bind:title=&quot;doc.title&quot;
+  v-on:update:title=&quot;doc.title = $event&quot;
+&gt;&lt;/text-document&gt;</code></pre><p>可替代为</p>
+<pre><code>&lt;text-document v-bind:title.sync=&quot;doc.title&quot;&gt;&lt;/text-document&gt;</code></pre><p>不能用在表达式上</p>
+<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
 <li>给你个dom创建一个vue的实例，这个dom</li>
 <li>v-bind v-model有啥区别</li>
 </ul>
@@ -1287,7 +1295,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.7k</span>&nbsp;字
+                class="white-color">35.7k</span>&nbsp;字
             
             
             
