@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>代码优化-充分利用</title>
+      <link href="/2020/08/17/dai-ma-you-hua-chong-fen-li-yong/"/>
+      <url>/2020/08/17/dai-ma-you-hua-chong-fen-li-yong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="代码优化-充分利用"><a href="#代码优化-充分利用" class="headerlink" title="代码优化-充分利用"></a>代码优化-充分利用</h1><p>​                                                                                                   No picture, say jiba</p><p><img src="1f5a00fd-cc66-468d-82ed-1e35fe2996d4.png" alt=""></p><p>首先我们先上图：</p><p><img src="Snipaste_2020-08-17_18-08-44.png" alt=""></p><p>​                                                                                                                        图一</p><p><img src="%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96-%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8/Snipaste_2020-08-17_18-09-51.png" alt=""></p><p>​                                                                                                                    图二</p><p>有没有发现这两张图的不一样的地方？图一地图颜色比图二的地图颜色更加丰富多彩，地图上的颜色是根据每个地区的数据渲染出来的，有一种基本色和五种根据数据变化的可选颜色，图二是我第一次写出来的效果，图二是修改完之后的效果，<del>图二的效果也不是不能用</del>，但是想到：</p><ul><li>颜色没有充分利用</li><li>数据相差比较大的地区也使用相同的颜色，用户体验不好</li></ul><p>于是我开始了代码优化，在改到最终版本之前，有两个版本。</p><p>版本一： 直接划分一个固定的区间，每个区间指定需要渲染的颜色，然后根据传入的数值跟固定区间的数值比较返回颜色值</p><p><img src="Snipaste_2020-08-17_18-22-46.png" alt=""></p><p>这无疑是一个简单高效(代码可以写的快)的做法，但也可以肯定这不是一个好的做法。</p><p>版本二：这是我改的版本(<del>为了快速迭代</del>)，把区间变成了一个动态的，虽然好了那么一丢丢，但效果不尽人意</p><p><img src="Snipaste_2020-08-17_18-28-11.png" alt=""></p><p>这两个版本遇到的问题：</p><ul><li>数据极端分布(就像我跟马云平均一下也是个亿万富翁一样)，颜色不能充分利用</li><li>数据过于集中分布，颜色不能充分利用</li></ul><p>于是我就想怎么样才能充分利用，这就要分情况讨论了</p><ol><li>当需要渲染的地区没有超过我的颜色总数时，直接将颜色分配下去</li><li>当需要渲染的地区超过了我的颜色总数时，需要多个地区共用一个颜色</li></ol><p>第一中情况比较简单，主要是第二种情况，需要确定要分几个区间，以及每个区间的大小</p><p>我的想法是先计算出可以分的的区间的最大值，然后从<code>1</code>枚举到可分区间的最大值，并计算区间的大小，就可以获得平均区间大小下的所有将颜色利用完的可能性，然后确定最优解，只有将数据大小相近的分配到一个区间才比较合适，所以我制定最优解是：根据每种可能性内区间最大值和最小值的差的平局值最小的取为最优。</p><ul><li><p>确定可分区间的最大值(最多可以分几个区间)</p><p><code>let maxBlock</code> = 传入数值的总数(去过重)/可选颜色的总数向上取整</p></li><li><p>计算区间大小</p><p><code>let blockSize</code> = (传入数值的总数(去过重) - 可选颜色的总数 + 当前区间的数量) / 当前区间数量</p></li><li><p>算出每种情况下的差值的平均值</p></li></ul><p><img src="Snipaste_2020-08-17_20-28-34.png" alt=""></p><p>代码实现：</p><pre><code>  let colorMap = []         let countArr = mapAgg.map(item=&gt; parseInt(item.count))          countArr =  Array.from(new Set(countArr)).sort((x,y)=&gt; x-y)          let countLen = countArr.length, colorLen = colors.length          if(countLen &lt;= colorLen){            while(countLen&gt;-1){              countLen--;              colorMap[countArr[countLen]] = colors[--colorLen]            }          }else{            let maxBlock = Math.ceil(countLen/colorLen)            let blockDiff = [], blockDiffDetail= []            for(let blockCount= 1;blockCount&lt;= maxBlock;blockCount++){              let blockSize = (countLen-colorLen+blockCount)/blockCount              if(blockSize&lt;=0) continue              let start= 0, end= start+blockSize              let localOptimum = []              while(end&lt;countLen){                localOptimum.push({start: start,end:end-1,value:countArr[end-1]-countArr[start]})                start++                end = start+blockSize              }              localOptimum.sort((x,y)=&gt; x.value-y.value)              localOptimum = localOptimum.slice(0,blockSize)              blockDiff.push(localOptimum[0].value)              blockDiffDetail.push(localOptimum)            }            let minValue = Number.MAX_VALUE, minValueIndex            blockDiff.forEach((value, index)=&gt;{              if(value&lt;minValue){                minValue = value                minValueIndex = index              }            })            let perfectDiff = blockDiffDetail[minValueIndex]            perfectDiff.forEach((item,index)=&gt;{              let arg = index              for(let i=item.start;i&lt;=item.end;i++){                colorMap[i] = -index              }            })            while(countLen&gt;-1){                countLen--                if(colorMap[countArr[countLen]]&lt; 0){                  colorMap[countArr[countLen]] = colors[colorLen -1]                }else{                   colorMap[countArr[countLen]] = colors[--colorLen]                }            }          }</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实这样也不是特别好，区间大小分配是均匀的，还是太菜了，要多学算法</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 代码优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 充分利用 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>代码优化-刷新界面后怎么保存用户数据</title>
       <link href="/2020/08/13/dai-ma-you-hua-shua-xin-jie-mian-hou-zen-me-bao-cun-yong-hu-shu-ju/"/>
       <url>/2020/08/13/dai-ma-you-hua-shua-xin-jie-mian-hou-zen-me-bao-cun-yong-hu-shu-ju/</url>
