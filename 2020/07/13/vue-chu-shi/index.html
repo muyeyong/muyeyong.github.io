@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-11
+                    2020-08-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    11 分
                 </div>
                 
 
@@ -746,7 +746,16 @@ Vue.component(&#39;组件名&#39;,{...})</code></pre><h2 id="Vue实例"><a href=
   v-on:update:title=&quot;doc.title = $event&quot;
 &gt;&lt;/text-document&gt;</code></pre><p>可替代为</p>
 <pre><code>&lt;text-document v-bind:title.sync=&quot;doc.title&quot;&gt;&lt;/text-document&gt;</code></pre><p>不能用在表达式上</p>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
+<h3 id="访问子组件或子元素"><a href="#访问子组件或子元素" class="headerlink" title="访问子组件或子元素"></a>访问子组件或子元素</h3><p>通过<code>ref</code>这个attribute为子组件赋予一个ID的引用，<code>ref</code>跟<code>v-for</code>一起使用的时候，得到的<code>ref</code>将会是一个包含了对应数据源这些子组件的数组，<code>$ref</code>只会在组件渲染完成之后生效，并且他不是响应式的。</p>
+<h3 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h3><p><code>provide</code>：允许将指定的数据/方法提供给后代</p>
+<pre><code>provide: function () {
+  return {
+    getMap: this.getMap
+  }
+}</code></pre><p><code>inject</code>：子组件接收想要添加在实例上的property</p>
+<pre><code>inject: [&#39;getMap&#39;]</code></pre><h3 id="组件间的循环引用"><a href="#组件间的循环引用" class="headerlink" title="组件间的循环引用"></a>组件间的循环引用</h3><p>两个组件间的相互引用（互为对方的后代和祖先），如果是在全局注册的时候没有问题，如果你使用一个<em>模块系统</em>依赖/导入组件，就会遇到问题，解决的思路是将首次为儿子的组件，晚点加载，使用</p>
+<p><code>beforeCreate</code>或者<code>webpack</code>的异步<code>import</code></p>
+<h2 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h2><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
 <li>给你个dom创建一个vue的实例，这个dom</li>
 <li>v-bind v-model有啥区别</li>
 </ul>
@@ -1295,7 +1304,7 @@ yarn add @types
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">36.7k</span>&nbsp;字
+                class="white-color">37.1k</span>&nbsp;字
             
             
             
