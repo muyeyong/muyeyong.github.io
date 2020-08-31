@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-08-21T10:08:48.840Z</updated>
+  <updated>2020-08-23T02:21:37.057Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS-用户体验优化及小技巧</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/08/23/css-yong-hu-ti-yan-you-hua-ji-xiao-ji-qiao/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/08/23/css-yong-hu-ti-yan-you-hua-ji-xiao-ji-qiao/</id>
+    <published>2020-08-23T02:21:37.000Z</published>
+    <updated>2020-08-23T02:21:37.057Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>CSS-精灵图</title>
@@ -183,7 +198,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/07/13/vue-chu-shi/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/07/13/vue-chu-shi/</id>
     <published>2020-07-13T03:11:17.000Z</published>
-    <updated>2020-08-20T13:03:54.475Z</updated>
+    <updated>2020-08-24T01:38:06.659Z</updated>
     
     <summary type="html">
     
@@ -529,33 +544,6 @@
     
     
       <category term="基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发总结</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/18/jing-yan-kai-fa-zong-jie/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/18/jing-yan-kai-fa-zong-jie/</id>
-    <published>2020-05-18T09:08:08.000Z</published>
-    <updated>2020-08-14T01:22:29.224Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;2020-05-21&quot;&gt;&lt;a href=&quot;#2020-05-21&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="经验" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%BB%8F%E9%AA%8C/"/>
-    
-    
-      <category term="开发总结" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
