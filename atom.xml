@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-09-17T03:05:42.968Z</updated>
+  <updated>2020-10-12T14:25:33.969Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS-2D转换</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/10/12/css-2d-zhuan-huan/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/10/12/css-2d-zhuan-huan/</id>
+    <published>2020-10-12T14:17:43.000Z</published>
+    <updated>2020-10-12T14:25:33.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CSS-2D转换&quot;&gt;&lt;a href=&quot;#CSS-2D转换&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS动画" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/CSS%E5%8A%A8%E7%94%BB/"/>
+    
+    
+      <category term="2D转换" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/2D%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue Router</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/</id>
+    <published>2020-09-30T02:29:30.000Z</published>
+    <updated>2020-10-12T14:15:44.356Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;vue-Router&quot;&gt;&lt;a href=&quot;#vue-Router&quot; class=&quot;headerlink&quot; title=&quot;vue Router&quot;&gt;&lt;/a&gt;vue Router&lt;/h1&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue-Router" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/vue-Router/"/>
+    
+    
+      <category term="Router" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/Router/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-三角、自适应高</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/09/21/css-san-jiao-zi-gua-ying-gao/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/09/21/css-san-jiao-zi-gua-ying-gao/</id>
+    <published>2020-09-21T07:47:10.000Z</published>
+    <updated>2020-09-21T10:18:52.323Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CSS-三角、自适应高&quot;&gt;&lt;a href=&quot;#CSS-三角、自适应高&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/CSS/"/>
+    
+    
+      <category term="提高" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%8F%90%E9%AB%98/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS-无限循环</title>
@@ -474,88 +555,6 @@
     
     
       <category term="webpack" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自动化构建工具-Gulp</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/06/01/zi-dong-hua-gou-jian-gong-ju-gulp/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/06/01/zi-dong-hua-gou-jian-gong-ju-gulp/</id>
-    <published>2020-06-01T06:20:24.000Z</published>
-    <updated>2020-06-01T07:37:32.602Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;自动化构建工具-Gulp&quot;&gt;&lt;a href=&quot;#自动化构建工具-Gulp&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="自动化构建工具" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Gulp" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/Gulp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从零开始-搭建React脚手架</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/29/cong-ling-kai-shi-da-jian-react-jiao-shou-jia/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/29/cong-ling-kai-shi-da-jian-react-jiao-shou-jia/</id>
-    <published>2020-05-29T03:36:16.000Z</published>
-    <updated>2020-07-09T07:47:09.687Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;从零开始-React脚手架搭建&quot;&gt;&lt;a href=&quot;#从零开始-React脚手架搭建&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="从零开始" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B/"/>
-    
-    
-      <category term="React脚手架搭建" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/React%E8%84%9A%E6%89%8B%E6%9E%B6%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>状态管理-mobx</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/05/28/zhuang-tai-guan-li-mobx/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/05/28/zhuang-tai-guan-li-mobx/</id>
-    <published>2020-05-28T01:31:43.000Z</published>
-    <updated>2020-05-29T02:05:46.594Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;状态管理-Mobx&quot;&gt;&lt;a href=&quot;#状态管理-Mobx&quot; class=&quot;headerlink&quot; title=&quot;状态管理-Mobx&quot;&gt;&lt;/a&gt;状态管理-Mobx&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;flow.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="状态管理" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="mobx" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/mobx/"/>
     
   </entry>
   

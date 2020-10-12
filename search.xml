@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>CSS-2D转换</title>
+      <link href="/2020/10/12/css-2d-zhuan-huan/"/>
+      <url>/2020/10/12/css-2d-zhuan-huan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS-2D转换"><a href="#CSS-2D转换" class="headerlink" title="CSS-2D转换"></a>CSS-2D转换</h1><p>transform(转换)可以实现元素的位移、旋转、缩放等效果，2D在二维坐标系中进行转换。</p><h2 id="translate（移动）"><a href="#translate（移动）" class="headerlink" title="translate（移动）"></a>translate（移动）</h2><h2 id="rotate-（旋转）"><a href="#rotate-（旋转）" class="headerlink" title="rotate （旋转）"></a>rotate （旋转）</h2><h2 id="scale（缩放）"><a href="#scale（缩放）" class="headerlink" title="scale（缩放）"></a>scale（缩放）</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS动画 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 2D转换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue Router</title>
+      <link href="/2020/09/30/vue-router/"/>
+      <url>/2020/09/30/vue-router/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vue-Router"><a href="#vue-Router" class="headerlink" title="vue Router"></a>vue Router</h1><p><a href="https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html" target="_blank" rel="noopener">Vue Router</a></p><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><p>注入路由后，可以通过<code>this.$router</code>访问路由器，<code>this.$route</code>访问当前路由</p><h2 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h2><h3 id="匹配特定路径"><a href="#匹配特定路径" class="headerlink" title="匹配特定路径"></a>匹配特定路径</h3><pre><code>routers:[psth:&#39;/user/:id&#39;,component: User]</code></pre><p><code>/user/A</code>、<code>/user/B</code>都将匹配到相同的路由</p><p>动态路径参数使用<code>:</code>标记，可以通过<code>this.$route.params</code>，例如访问上面的<code>id</code>：<code>this.$route.params.id</code></p><p>从<code>/user/A</code>转到<code>/user/B</code>的时候，组件将被复用，生命周期将不会被调用，如果想根据路由参数进行响应的话：</p><ol><li><p>监测<code>$route</code>对象</p><pre><code>watch:{    $route(to,from){        //do something    }}</code></pre></li></ol><ol start="2"><li>使用路由守卫</li></ol><pre><code>beforeRouteUpdate(to,from,next){    //do something}</code></pre><h3 id="匹配任意路径（捕获404）"><a href="#匹配任意路径（捕获404）" class="headerlink" title="匹配任意路径（捕获404）"></a>匹配任意路径（捕获404）</h3><p>使用通配符<code>*</code>，当使用通配符的时候，<code>$route.params</code>会自动添加一个名为<code>pathMatch</code>的参数，包含通过通配符被匹配的部分</p><h3 id="匹配优先级"><a href="#匹配优先级" class="headerlink" title="匹配优先级"></a>匹配优先级</h3><p>同一个路径可以匹配多个路由，匹配的优先级是：谁先匹配，谁的优先级更高</p><h2 id="嵌套路由"><a href="#嵌套路由" class="headerlink" title="嵌套路由"></a>嵌套路由</h2><p><code>&lt;router-view&gt;&lt;/router-view&gt;</code>是最顶层的出口，渲染最高级路由匹配的组件，被渲染的组件也可以包含<code>&lt;router-view&gt;&lt;/router-view&gt;</code>，需要配置<code>children</code>配置：</p><pre><code>routers:[psth:&#39;/user/:id&#39;,component: User,                    children:[{                        path:&#39;&#39;, component:                     },                    .....]]</code></pre><h2 id="命名路由"><a href="#命名路由" class="headerlink" title="命名路由"></a>命名路由</h2><p>可以通过一个名称来标识一个路由</p><pre><code>const router = new VueRouter({  routes: [    {      path: &#39;/user/:userId&#39;,      name: &#39;user&#39;,      component: User    }  ]}</code></pre><pre><code>//声明式&lt;router-link :to=&quot;{ name: &#39;user&#39;, params: { userId: 123 }}&quot;&gt;User&lt;/router-link&gt;//编程式router.push({ name: &#39;user&#39;, params: { userId: 123 }})</code></pre><h2 id="编程式路由"><a href="#编程式路由" class="headerlink" title="编程式路由"></a>编程式路由</h2><pre><code>router指代this.$router</code></pre><h3 id="router-push-location-onComplete-onAbort"><a href="#router-push-location-onComplete-onAbort" class="headerlink" title="router.push(location, onComplete?, onAbort?)"></a>router.push(<code>location, onComplete?, onAbort?</code>)</h3><table><thead><tr><th>声明式</th><th>编程式</th></tr></thead><tbody><tr><td><router-link :to="..."></td><td>router.push(…)</td></tr></tbody></table><p>参数可以是字符串路径或描述地址的对象</p><pre><code>//字符串router.push(&#39;home&#39;)//对象router.push({path:&#39;home&#39;})//命名的路由router.push({name:&#39;user&#39;,params:{userId:&#39;123&#39;}})//带查询参数router.push({path:&#39;register&#39;,query:{plan:&#39;private&#39;}})</code></pre><p>如果提供了<code>path</code>，<code>params</code>会被忽略掉</p><pre><code>// 这里的 params 不生效router.push({ path: &#39;/user&#39;, params: { userId }}) // -&gt; /user</code></pre><p>同样的规则也适用于<code>router-link</code>的<code>to</code>属性</p><h3 id="router-repace-location-onComplete-onAbort"><a href="#router-repace-location-onComplete-onAbort" class="headerlink" title="router.repace(location, onComplete?, onAbort?)"></a>router.repace(<code>location, onComplete?, onAbort?</code>)</h3><table><thead><tr><th>声明式</th><th>编程式</th></tr></thead><tbody><tr><td><router-link :to="..." replace></td><td>Router.replace(…)</td></tr></tbody></table><p>不会向history里面添加记录</p><h3 id="onComplete-和-onAbort"><a href="#onComplete-和-onAbort" class="headerlink" title="onComplete 和 onAbort"></a>onComplete 和 onAbort</h3><p>导航成功完成 (在所有的异步钩子被解析之后) 或终止 (导航到相同的路由、或在当前导航完成之前导航到另一个不同的路由) 的时候进行相应的调用</p><h3 id="router-go-n"><a href="#router-go-n" class="headerlink" title="router.go(n)"></a>router.go(n)</h3><p>在history记录中前进或后退多少步，类似于window.history.go(n)</p><h2 id="对比history"><a href="#对比history" class="headerlink" title="对比history"></a>对比history</h2><table><thead><tr><th align="center">Vue router</th><th align="center">history</th></tr></thead><tbody><tr><td align="center">router.push(…)</td><td align="center">window.history.pushState(…)</td></tr><tr><td align="center">router.replace(…)</td><td align="center">window.history.repalceState(…)</td></tr><tr><td align="center">router.go(n)</td><td align="center">window.history.go(n)</td></tr></tbody></table><h2 id="命名视图"><a href="#命名视图" class="headerlink" title="命名视图"></a>命名视图</h2><p>同级展示多个视图，可以在界面中拥有多个单独命名的视图，而不是一个出口，如果<code>router-view</code>没有设置名字，那么默认为<code>dafault</code></p><pre><code>&lt;router-view class=&quot;view one&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view two&quot; name=&quot;a&quot;&gt;&lt;/router-view&gt;&lt;router-view class=&quot;view three&quot; name=&quot;b&quot;&gt;&lt;/router-view&gt;const router = new VueRouter({  routes: [    {      path: &#39;/&#39;,      components: {        default: Foo,        a: Bar,        b: Baz      }    }  ]})</code></pre><h2 id="重定向和别名"><a href="#重定向和别名" class="headerlink" title="重定向和别名"></a>重定向和别名</h2><p>重定向通过<code>routes</code>来配置</p><pre><code>const router = new VueRouter({  routes: [    { path: &#39;/a&#39;, redirect: &#39;/b&#39; }  ]})</code></pre><p><code>redirect</code>也可以是一个命名的路由，也可以是一个方法</p><pre><code>const router = new VueRouter({  routes: [    { path: &#39;/a&#39;, redirect: { name: &#39;foo&#39; }}  ]})const router = new VueRouter({  routes: [    { path: &#39;/a&#39;, redirect: to =&gt; {      // 方法接收 目标路由 作为参数      // return 重定向的 字符串路径/路径对象    }}  ]})</code></pre><p>别名对应的配置如下：</p><pre><code>const router = new VueRouter({  routes: [    { path: &#39;/a&#39;, component: A, alias: &#39;/b&#39; }  ]})</code></pre><h2 id="路由组件传参"><a href="#路由组件传参" class="headerlink" title="路由组件传参"></a>路由组件传参</h2><p>在组件中直接使用<code>$route</code>会使其与对应路由形成高度耦合，使用<code>props</code>将组件和路由解耦</p><pre><code>const User = {  props: [&#39;id&#39;],  template: &#39;&lt;div&gt;User {{ id }}&lt;/div&gt;&#39;}const router = new VueRouter({  routes: [    { path: &#39;/user/:id&#39;, component: User, props: true },    // 对于包含命名视图的路由，你必须分别为每个命名视图添加 `props` 选项：    {      path: &#39;/user/:id&#39;,      components: { default: User, sidebar: Sidebar },      props: { default: true, sidebar: false }    }  ]})</code></pre><p><a href="https://jsfiddle.net/posva/6du90epg/" target="_blank" rel="noopener">https://jsfiddle.net/posva/6du90epg/</a></p><h2 id="hash和history模式（针对单页应用SPA）"><a href="#hash和history模式（针对单页应用SPA）" class="headerlink" title="hash和history模式（针对单页应用SPA）"></a>hash和history模式（针对单页应用SPA）</h2><pre><code>前端路由的核心，就在于 —— 改变视图的同时不会向后端发出请求。</code></pre><p>hash——即地址栏 URL 中的 # 符号（此 hash 不是密码学里的散列运算）。 比如这个 URL：<a href="http://www.abc.com/#/hello，hash" target="_blank" rel="noopener">http://www.abc.com/#/hello，hash</a> 的值为 #/hello。它的特点在于：hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue-Router </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Router </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS-三角、自适应高</title>
+      <link href="/2020/09/21/css-san-jiao-zi-gua-ying-gao/"/>
+      <url>/2020/09/21/css-san-jiao-zi-gua-ying-gao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS-三角、自适应高"><a href="#CSS-三角、自适应高" class="headerlink" title="CSS-三角、自适应高"></a>CSS-三角、自适应高</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 提高 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS-无限循环</title>
       <link href="/2020/09/17/css-wu-xian-xun-huan/"/>
       <url>/2020/09/17/css-wu-xian-xun-huan/</url>
