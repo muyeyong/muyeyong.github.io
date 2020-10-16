@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -654,6 +654,7 @@ const router = new VueRouter({
   ]
 })</code></pre><p><a href="https://jsfiddle.net/posva/6du90epg/" target="_blank" rel="noopener">https://jsfiddle.net/posva/6du90epg/</a></p>
 <h2 id="hash和history模式（针对单页应用SPA）"><a href="#hash和history模式（针对单页应用SPA）" class="headerlink" title="hash和history模式（针对单页应用SPA）"></a>hash和history模式（针对单页应用SPA）</h2><pre><code>前端路由的核心，就在于 —— 改变视图的同时不会向后端发出请求。</code></pre><p>hash——即地址栏 URL 中的 # 符号（此 hash 不是密码学里的散列运算）。 比如这个 URL：<a href="http://www.abc.com/#/hello，hash" target="_blank" rel="noopener">http://www.abc.com/#/hello，hash</a> 的值为 #/hello。它的特点在于：hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。</p>
+<p>已经有 hash 模式了，而且 hash 能兼容到IE8， history 只能兼容到 IE10，为什么还要搞个 history 呢？<br>首先，hash 本来是拿来做页面定位的，如果拿来做路由的话，原来的锚点功能就不能用了。其次，hash 的传参是基于 url 的，如果要传递复杂的数据，会有体积的限制，而 history 模式不仅可以在url里放参数，还可以将数据存放在一个特定的对象中。</p>
 
             </div>
             <hr/>
@@ -1181,7 +1182,7 @@ const router = new VueRouter({
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">39.9k</span>&nbsp;字
+                class="white-color">40.8k</span>&nbsp;字
             
             
             
