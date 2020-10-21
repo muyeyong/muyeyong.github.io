@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-15
+                    2020-10-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    316
+                    368
                 </div>
                 
 
@@ -511,7 +511,7 @@ transform: translateY(n);</code></pre><h3 id="重点"><a href="#重点" class="h
 <li>translate中的百分数是相对于自身元素的translate:(50%,50%)，相对自身长宽移动50%</li>
 <li>对行内标签没有效果</li>
 </ul>
-<p><img src="CSS-2D%E8%BD%AC%E6%8D%A2/1.gif" alt=""></p>
+<p><img src="1.gif" alt=""></p>
 <h2 id="rotate-（旋转）"><a href="#rotate-（旋转）" class="headerlink" title="rotate （旋转）"></a>rotate （旋转）</h2><blockquote>
 <p>让元素在2d平面内顺时针或逆时针旋转</p>
 </blockquote>
@@ -528,7 +528,8 @@ transform: scale(x);//相当于 scale(x,x)</code></pre><h2 id="重点-2"><a href
 <li>x y都是数字，代表放大倍数</li>
 <li>不会影响其他盒子</li>
 </ul>
-<p>对比</p>
+<p>对比，粉色的盒子使用了<code>scale</code>，红色的盒子使用的是改变宽高，会影响其他的盒子。</p>
+<p><img src="2.gif" alt=""></p>
 <h2 id="2D转换中心点"><a href="#2D转换中心点" class="headerlink" title="2D转换中心点"></a>2D转换中心点</h2><blockquote>
 <p>设置元素转换的中心点</p>
 </blockquote>
@@ -537,6 +538,18 @@ transform: scale(x);//相当于 scale(x,x)</code></pre><h2 id="重点-2"><a href
 <li>默认的中心点是元素的中心点 transform-origin: 50% 50%;</li>
 <li>x y 可以是像素点 或 方位名词（top left right bottom cnnter）</li>
 </ul>
+<pre><code> .rotate{
+            width: 100px;
+            height: 100px;
+            transform-origin:left bottom ;
+            margin: 100px auto;
+            background: pink;
+            transition: all 1s;
+
+        }
+.rotate:hover{
+        transform: rotate(90deg);
+        }</code></pre><p><img src="3.gif" alt=""></p>
 
             </div>
             <hr/>
@@ -1064,7 +1077,7 @@ transform: scale(x);//相当于 scale(x,x)</code></pre><h2 id="重点-2"><a href
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.8k</span>&nbsp;字
+                class="white-color">41.1k</span>&nbsp;字
             
             
             

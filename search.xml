@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CSS-3D转换</title>
+      <link href="/2020/10/21/css-3d-zhuan-huan/"/>
+      <url>/2020/10/21/css-3d-zhuan-huan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="CSS-3D转换"><a href="#CSS-3D转换" class="headerlink" title="CSS-3D转换"></a>CSS-3D转换</h1><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>近大远小，可以被遮挡</p><h2 id="三维坐标系"><a href="#三维坐标系" class="headerlink" title="三维坐标系"></a>三维坐标系</h2><p>x轴：水平向右，向右为正值，向左为负值</p><p>y轴：垂直向下，向下为正值，向上为负值</p><p>z轴：垂直屏幕，屏幕向外为正，屏幕向内为负</p><h2 id="3D移动-translate3d"><a href="#3D移动-translate3d" class="headerlink" title="3D移动 translate3d"></a>3D移动 translate3d</h2><blockquote><p>3D移动在2D移动的基础上多了一个Z轴</p></blockquote><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code>//分开写transform: translateX(100px)transform: translateY(100px)transform: translateZ(1oopx)// translateZ一般用px作为单位//合写transform: translate3d(x,y,z)//x,y,z不能省略</code></pre><p><img src="1.gif" alt=""></p><p>除了位置变化外，其他并没有什么变化，是因为我们没有加透视，就像看3D电影没戴3D眼镜一样</p><h2 id="透视-perspective"><a href="#透视-perspective" class="headerlink" title="透视 perspective"></a>透视 perspective</h2><ul><li><p>在2d平面内产生近大远小的视觉立体，但效果实在二维上呈现的，可以想象成3d物体投影在2d平面内</p></li><li><p>透视也成为视距：眼镜到屏幕的距离</p></li><li><p>透视的单位是像素、</p></li><li><p>透视写在被观察盒子的父盒子上面</p></li></ul><p><img src="2.gif" alt=""></p><p>加上透视后，可以观察到盒子在变大</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CSS动画 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 3D转换 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS-动画</title>
       <link href="/2020/10/15/css-dong-hua/"/>
       <url>/2020/10/15/css-dong-hua/</url>
@@ -33,7 +58,7 @@
       <link href="/2020/10/12/css-2d-zhuan-huan/"/>
       <url>/2020/10/12/css-2d-zhuan-huan/</url>
       
-        <content type="html"><![CDATA[<h1 id="CSS-2D转换"><a href="#CSS-2D转换" class="headerlink" title="CSS-2D转换"></a>CSS-2D转换</h1><p>transform(转换)可以实现元素的位移、旋转、缩放等效果，2D在二维坐标系中进行转换。</p><h2 id="translate（移动）"><a href="#translate（移动）" class="headerlink" title="translate（移动）"></a>translate（移动）</h2><blockquote><p>改变元素在页面中的位置，类似于定位</p></blockquote><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: translate(x,y);transform: translateX(n);transform: translateY(n);</code></pre><h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><ul><li>translate最大优点是：不会影响其他元素的位置，但可以覆盖到其他元素上面</li><li>translate中的百分数是相对于自身元素的translate:(50%,50%)，相对自身长宽移动50%</li><li>对行内标签没有效果</li></ul><p><img src="CSS-2D%E8%BD%AC%E6%8D%A2/1.gif" alt=""></p><h2 id="rotate-（旋转）"><a href="#rotate-（旋转）" class="headerlink" title="rotate （旋转）"></a>rotate （旋转）</h2><blockquote><p>让元素在2d平面内顺时针或逆时针旋转</p></blockquote><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: rotate(度数)// 90deg</code></pre><h3 id="重点-1"><a href="#重点-1" class="headerlink" title="重点"></a>重点</h3><ul><li>度数为正顺时针旋转，度数为负逆时针旋转</li><li>默认旋转中心为元素的中心点</li></ul><h2 id="scale（缩放）"><a href="#scale（缩放）" class="headerlink" title="scale（缩放）"></a>scale（缩放）</h2><blockquote><p>放大或者缩小盒子</p></blockquote><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: scale(x,y);transform: scale(x);//相当于 scale(x,x)</code></pre><h2 id="重点-2"><a href="#重点-2" class="headerlink" title="重点"></a>重点</h2><ul><li>x y之间用,隔开</li><li>x y都是数字，代表放大倍数</li><li>不会影响其他盒子</li></ul><p>对比</p><h2 id="2D转换中心点"><a href="#2D转换中心点" class="headerlink" title="2D转换中心点"></a>2D转换中心点</h2><blockquote><p>设置元素转换的中心点</p></blockquote><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><pre><code>transform-origin: x y;</code></pre><h3 id="重点-3"><a href="#重点-3" class="headerlink" title="重点"></a>重点</h3><ul><li>x y之间用空格隔开</li><li>默认的中心点是元素的中心点 transform-origin: 50% 50%;</li><li>x y 可以是像素点 或 方位名词（top left right bottom cnnter）</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="CSS-2D转换"><a href="#CSS-2D转换" class="headerlink" title="CSS-2D转换"></a>CSS-2D转换</h1><p>transform(转换)可以实现元素的位移、旋转、缩放等效果，2D在二维坐标系中进行转换。</p><h2 id="translate（移动）"><a href="#translate（移动）" class="headerlink" title="translate（移动）"></a>translate（移动）</h2><blockquote><p>改变元素在页面中的位置，类似于定位</p></blockquote><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: translate(x,y);transform: translateX(n);transform: translateY(n);</code></pre><h3 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h3><ul><li>translate最大优点是：不会影响其他元素的位置，但可以覆盖到其他元素上面</li><li>translate中的百分数是相对于自身元素的translate:(50%,50%)，相对自身长宽移动50%</li><li>对行内标签没有效果</li></ul><p><img src="1.gif" alt=""></p><h2 id="rotate-（旋转）"><a href="#rotate-（旋转）" class="headerlink" title="rotate （旋转）"></a>rotate （旋转）</h2><blockquote><p>让元素在2d平面内顺时针或逆时针旋转</p></blockquote><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: rotate(度数)// 90deg</code></pre><h3 id="重点-1"><a href="#重点-1" class="headerlink" title="重点"></a>重点</h3><ul><li>度数为正顺时针旋转，度数为负逆时针旋转</li><li>默认旋转中心为元素的中心点</li></ul><h2 id="scale（缩放）"><a href="#scale（缩放）" class="headerlink" title="scale（缩放）"></a>scale（缩放）</h2><blockquote><p>放大或者缩小盒子</p></blockquote><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><pre><code>transform: scale(x,y);transform: scale(x);//相当于 scale(x,x)</code></pre><h2 id="重点-2"><a href="#重点-2" class="headerlink" title="重点"></a>重点</h2><ul><li>x y之间用,隔开</li><li>x y都是数字，代表放大倍数</li><li>不会影响其他盒子</li></ul><p>对比，粉色的盒子使用了<code>scale</code>，红色的盒子使用的是改变宽高，会影响其他的盒子。</p><p><img src="2.gif" alt=""></p><h2 id="2D转换中心点"><a href="#2D转换中心点" class="headerlink" title="2D转换中心点"></a>2D转换中心点</h2><blockquote><p>设置元素转换的中心点</p></blockquote><h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><pre><code>transform-origin: x y;</code></pre><h3 id="重点-3"><a href="#重点-3" class="headerlink" title="重点"></a>重点</h3><ul><li>x y之间用空格隔开</li><li>默认的中心点是元素的中心点 transform-origin: 50% 50%;</li><li>x y 可以是像素点 或 方位名词（top left right bottom cnnter）</li></ul><pre><code> .rotate{            width: 100px;            height: 100px;            transform-origin:left bottom ;            margin: 100px auto;            background: pink;            transition: all 1s;        }.rotate:hover{        transform: rotate(90deg);        }</code></pre><p><img src="3.gif" alt=""></p>]]></content>
       
       
       <categories>
