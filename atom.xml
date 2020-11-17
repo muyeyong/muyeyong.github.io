@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-10-21T07:38:43.818Z</updated>
+  <updated>2020-11-10T13:50:41.659Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -17,11 +17,81 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS-flex布局</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/11/10/css-flex-bu-ju/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/11/10/css-flex-bu-ju/</id>
+    <published>2020-11-10T13:49:44.000Z</published>
+    <updated>2020-11-10T13:50:41.659Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="移动端" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+    
+      <category term="flex布局" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/flex%E5%B8%83%E5%B1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目学习-Vue</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/11/02/xiang-mu-xue-xi-vue/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/11/02/xiang-mu-xue-xi-vue/</id>
+    <published>2020-11-02T01:44:36.000Z</published>
+    <updated>2020-11-12T13:27:38.642Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;&lt;p&gt;ul li可以相互包含&lt;img src=&quot;%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0-Vue/Snipaste_2020-11-02_15-52-52.png&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>移动端-基础</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/10/29/yi-dong-duan-ji-chu/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/10/29/yi-dong-duan-ji-chu/</id>
+    <published>2020-10-29T13:57:50.000Z</published>
+    <updated>2020-10-30T08:42:11.555Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;移动端-基础&quot;&gt;&lt;a href=&quot;#移动端-基础&quot; class=&quot;headerlink&quot; title=&quot;移动端-基础&quot;&gt;&lt;/a&gt;移动端-基础&lt;/h1&gt;&lt;h2 id=&quot;开发现状&quot;&gt;&lt;a href=&quot;#开发现状&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="移动端" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
+    
+      <category term="基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS-3D转换</title>
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/10/21/css-3d-zhuan-huan/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/10/21/css-3d-zhuan-huan/</id>
     <published>2020-10-21T06:55:48.000Z</published>
-    <updated>2020-10-21T07:38:43.818Z</updated>
+    <updated>2020-10-21T13:38:09.965Z</updated>
     
     <summary type="html">
     
@@ -102,7 +172,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/</id>
     <published>2020-09-30T02:29:30.000Z</published>
-    <updated>2020-10-13T13:47:33.031Z</updated>
+    <updated>2020-10-26T09:39:33.625Z</updated>
     
     <summary type="html">
     
@@ -265,7 +335,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2020/08/17/dai-ma-you-hua-chong-fen-li-yong/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2020/08/17/dai-ma-you-hua-chong-fen-li-yong/</id>
     <published>2020-08-17T01:54:44.000Z</published>
-    <updated>2020-08-17T12:32:44.141Z</updated>
+    <updated>2020-11-17T01:26:47.208Z</updated>
     
     <summary type="html">
     
@@ -473,88 +543,6 @@
     
     
       <category term="大纲" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%A4%A7%E7%BA%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript-Promise</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/06/16/javascript-promise/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/06/16/javascript-promise/</id>
-    <published>2020-06-16T06:57:22.000Z</published>
-    <updated>2020-07-09T03:53:20.824Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Promise&quot;&gt;&lt;a href=&quot;#Promise&quot; class=&quot;headerlink&quot; title=&quot;Promise&quot;&gt;&lt;/a&gt;Promise&lt;/h1&gt;&lt;p&gt;promise.resove()–&amp;gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/JavaScript/"/>
-    
-    
-      <category term="基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式-发布订阅模式</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/06/16/she-ji-mo-shi-fa-bu-ding-yue-mo-shi/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/06/16/she-ji-mo-shi-fa-bu-ding-yue-mo-shi/</id>
-    <published>2020-06-16T06:37:59.000Z</published>
-    <updated>2020-07-09T07:53:38.240Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;设计模式-发布订阅模式&quot;&gt;&lt;a href=&quot;#设计模式-发布订阅模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式-发布订阅模式&quot;&gt;&lt;/a&gt;设计模式-发布订阅模式&lt;/h1&gt;&lt;p&gt;emit：发布&lt;/p&gt;
-&lt;p&gt;on：订阅
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="发布订阅模式" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript-宏任务、微任务 和 EventLoop</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/06/16/javascript-hong-ren-wu-wei-ren-wu-he-event-loop/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/06/16/javascript-hong-ren-wu-wei-ren-wu-he-event-loop/</id>
-    <published>2020-06-16T06:35:36.000Z</published>
-    <updated>2020-07-09T07:34:45.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;宏任务、微任务-和-EventLoop&quot;&gt;&lt;a href=&quot;#宏任务、微任务-和-EventLoop&quot; class=&quot;headerlink&quot; title=&quot;宏任务、微任务 和 EventLoop&quot;&gt;&lt;/a&gt;宏任务、微任务 和 EventLoop&lt;/h1&gt;&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/JavaScript/"/>
-    
-    
-      <category term="基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
