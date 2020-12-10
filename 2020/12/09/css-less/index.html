@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="动画效果-饿了么购物车动效, 上帝说我帅的很">
+    <meta name="keywords" content="CSS-Less, 上帝说我帅的很">
     <meta name="description" content="前端 | React | HTML | CSS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>动画效果-饿了么购物车动效 | 上帝说我帅的很</title>
+    <title>CSS-Less | 上帝说我帅的很</title>
     <link rel="icon" type="image/png" href="/popsicle.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">动画效果-饿了么购物车动效</h1>
+                    <h1 class="description center-align post-title">CSS-Less</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/animation/">
-                                <span class="chip bg-color">animation</span>
+                            <a href="/tags/%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E8%A8%80/">
+                                <span class="chip bg-color">预处理语言</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" class="post-category">
-                                动画效果
+                            <a href="/categories/CSS/" class="post-category">
+                                CSS
                             </a>
                         
                     </div>
@@ -478,14 +478,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    545
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -500,80 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="饿了么购物车动画实现"><a href="#饿了么购物车动画实现" class="headerlink" title="饿了么购物车动画实现"></a>饿了么购物车动画实现</h1><p>NO PICTURE SAY JB</p>
-<p><img src="https://i.loli.net/2020/12/09/J5PikUvSjVFIMXO.gif" alt=""></p>
-<p><a href="https://github.com/muyeyong/eleAnimation">源码自取</a></p>
-<p><a href="http://meyeyong.top/" target="_blank" rel="noopener">演示网址，可能是其他练习🤣</a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>好久好久没有更新博客了，最近工作确实有点忙，最近的项目总结也一直拖着没写，但是懒才是原罪😔，年轻人要努力啊😤</p>
-<h1 id="实现技术"><a href="#实现技术" class="headerlink" title="实现技术"></a>实现技术</h1><ol>
-<li>移动端布局： flex + rem + <a href="https://github.com/amfe/lib-flexible">flexible</a>(移动端貌似用视口单位更好)  + SVG</li>
-<li>前端框架： VUE(使用了VUE脚手架，版本3+)</li>
-<li>第三方插件：<a href="https://github.com/ustbhuangyi/better-scroll">better-scroll</a></li>
-</ol>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><h2 id="基本结构的搭建"><a href="#基本结构的搭建" class="headerlink" title="基本结构的搭建"></a>基本结构的搭建</h2><p>开发是以宽750px的屏幕为基准的，使用rem是为了适应不同尺寸的屏幕。flexible的原理是将屏幕直接分为10等份，以750的屏幕来说，每一份是75px，然后设置1rem === 75px就可以了。</p>
-<p><strong>引入flexible</strong></p>
-<p>​    <img src="https://i.loli.net/2020/12/09/ciI31BuHnWN8pPb.png" alt=""></p>
-<p><strong>需要注意的地方</strong></p>
-<p><img src="https://i.loli.net/2020/12/09/mvkNo6GEHeIzygF.png" alt=""></p>
-<p>当屏幕宽度小于750的时候强制指定根元素的： font-size: 75px去覆盖flexible的值，rem(root rm)是根据根元素的font-size大小确定的。</p>
-<p><strong>好用的vscode插件</strong></p>
-<p><code>px to rem &amp; rpx</code>：自动帮你把px转化为rem，前提是需要设置好参考值：1rem对应多少px</p>
-<p><img src="https://i.loli.net/2020/12/09/z4LsuZagtQPkBdC.png" alt=""></p>
-<p><strong>在项目中使用SVG</strong></p>
-<ol>
-<li>安装插件： <code>npm install vue-svg-loader --save</code></li>
-<li>在根目录下新建vue.config.js</li>
-</ol>
-<pre><code>const path = require(&#39;path&#39;)
-
-function resolve(dir) {
-  return path.join(__dirname, &#39;./&#39;, dir)
-}
-
-module.exports = {
-  chainWebpack: config =&gt; {
-    config.plugin(&#39;define&#39;).tap(args =&gt; {
-      const argv = process.argv
-      const icourt = argv[argv.indexOf(&#39;--icourt-mode&#39;) + 1]
-
-      args[0][&#39;process.env&#39;].MODE = `&quot;${icourt}&quot;`
-
-      return args
-    })
-    // svg rule loader
-    const svgRule = config.module.rule(&#39;svg&#39;) // 找到svg-loader
-    svgRule.uses.clear() // 清除已有的loader, 如果不这样做会添加在此loader之后
-    svgRule.exclude.add(/node_modules/) // 正则匹配排除node_modules目录
-    svgRule // 添加svg新的loader处理
-      .test(/\.svg$/)
-      .use(&#39;svg-sprite-loader&#39;)
-      .loader(&#39;svg-sprite-loader&#39;)
-      .options({
-        symbolId: &#39;icon-[name]&#39;,
-      })
-
-    // 修改images loader 添加svg处理
-    const imagesRule = config.module.rule(&#39;images&#39;)
-    imagesRule.exclude.add(resolve(&#39;src/icons&#39;)) //存储svg文件的根目录
-    config.module
-      .rule(&#39;images&#39;)
-      .test(/\.(png|jpe?g|gif|svg)(\?.*)?$/)
-  },
-  configureWebpack: {
-    devServer: {
-      open: true,
-      // https: true,
-      proxy: {
-        &#39;/user&#39;: {
-          target: &#39;https://devadminschool.icourt.cc&#39;,
-        },
-        &#39;/live&#39;: {
-          target: &#39;https://devadminschool.icourt.cc&#39;,
-        },
-      },
-    },
-  },
-}</code></pre><h2 id="功能点实现"><a href="#功能点实现" class="headerlink" title="功能点实现"></a>功能点实现</h2><h3 id="滑动效果实现"><a href="#滑动效果实现" class="headerlink" title="滑动效果实现"></a>滑动效果实现</h3><h3 id="加入购物车效果实现"><a href="#加入购物车效果实现" class="headerlink" title="加入购物车效果实现"></a>加入购物车效果实现</h3>
+                
             </div>
             <hr/>
 
@@ -598,7 +525,7 @@ module.exports = {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/12/09/dong-hua-xiao-guo-e-liao-me-gou-wu-che-dong-xiao/">https://github.com/muyeyong/muyeyong.github.io/2020/12/09/dong-hua-xiao-guo-e-liao-me-gou-wu-che-dong-xiao/</a>
+                    <a href="https://github.com/muyeyong/muyeyong.github.io/2020/12/09/css-less/">https://github.com/muyeyong/muyeyong.github.io/2020/12/09/css-less/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -636,8 +563,8 @@ module.exports = {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/animation/">
-                                    <span class="chip bg-color">animation</span>
+                                <a href="/tags/%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E8%A8%80/">
+                                    <span class="chip bg-color">预处理语言</span>
                                 </a>
                             
                         </div>
@@ -827,9 +754,10 @@ module.exports = {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/09/css-less/">
                     <div class="card-image">
@@ -847,9 +775,9 @@ module.exports = {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -862,6 +790,7 @@ module.exports = {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -880,32 +809,44 @@ module.exports = {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/07/dong-hua-xiao-guo-div-shan-xing/">
+                <a href="/2020/12/09/dong-hua-xiao-guo-e-liao-me-gou-wu-che-dong-xiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.png" class="responsive-img" alt="动画效果-div扇形">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="动画效果-饿了么购物车动效">
                         
-                        <span class="card-title">动画效果-div扇形</span>
+                        <span class="card-title">动画效果-饿了么购物车动效</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            饿了么购物车动画效果
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            木叶勇
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/" class="post-category">
+                                    动画效果
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/animation/">
+                        <span class="chip bg-color">animation</span>
+                    </a>
+                    
                 </div>
                 
             </div>

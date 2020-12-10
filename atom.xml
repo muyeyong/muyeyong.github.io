@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2020-12-09T13:44:20.034Z</updated>
+  <updated>2020-12-09T14:13:32.163Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS-Less</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/12/09/css-less/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2020/12/09/css-less/</id>
+    <published>2020-12-09T13:56:12.000Z</published>
+    <updated>2020-12-09T14:13:32.163Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/CSS/"/>
+    
+    
+      <category term="预处理语言" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>动画效果-饿了么购物车动效</title>
@@ -489,33 +508,6 @@
     
     
       <category term="元素的显示与隐藏" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript-异步请求</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/07/27/javascript-yi-bu-qing-qiu/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/07/27/javascript-yi-bu-qing-qiu/</id>
-    <published>2020-07-27T01:59:05.000Z</published>
-    <updated>2020-07-27T10:10:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;JavaScript-异步请求&quot;&gt;&lt;a href=&quot;#JavaScript-异步请求&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/JavaScript/"/>
-    
-    
-      <category term="异步请求" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82/"/>
     
   </entry>
   
