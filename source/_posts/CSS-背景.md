@@ -38,6 +38,14 @@ br { background-image: url(http://Fred.com/ImageFile/Q.gif); }
 body { background-image: none; 
 ```
 
+### 设置背景颜色透明度
+
+```
+background-color: rgba(255, 0, 0,0.3)// a 指的是alpha（透明度），取值在0~1之间
+```
+
+
+
 ## backgroung-repeat
 
 > 设置背景图片的平铺方法，默认为repeat
