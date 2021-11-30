@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2021-11-24T12:24:56.148Z</updated>
+  <updated>2021-11-30T11:24:08.776Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>源码-trigger</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2021/11/30/yuan-ma-trigger/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2021/11/30/yuan-ma-trigger/</id>
+    <published>2021-11-30T08:01:33.000Z</published>
+    <updated>2021-11-30T11:24:08.776Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;源码-trigger&quot;&gt;&lt;a href=&quot;#源码-trigger&quot; class=&quot;headerlink&quot; title=&quot;源码-trigger&quot;&gt;&lt;/a&gt;源码-trigger&lt;/h1&gt;&lt;p&gt;​    逛b站的时候，偶然发现一个有意思的&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="源码" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E6%BA%90%E7%A0%81/"/>
+    
+    
+      <category term="有意思的npm" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84npm/"/>
+    
+  </entry>
   
   <entry>
     <title>项目学习-Vue/项目总结</title>
@@ -529,33 +556,6 @@
     
     
       <category term="2D转换" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/2D%E8%BD%AC%E6%8D%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue Router</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/09/30/vue-router/</id>
-    <published>2020-09-30T02:29:30.000Z</published>
-    <updated>2021-11-24T12:24:56.080Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;vue-Router&quot;&gt;&lt;a href=&quot;#vue-Router&quot; class=&quot;headerlink&quot; title=&quot;vue Router&quot;&gt;&lt;/a&gt;vue Router&lt;/h1&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue-Router" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/vue-Router/"/>
-    
-    
-      <category term="Router" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/Router/"/>
     
   </entry>
   
