@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2021-11-30T11:24:08.776Z</updated>
+  <updated>2022-01-20T12:51:36.689Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>折腾-NAS（Network Attached Storage）</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2022/01/06/zhe-teng-nas/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2022/01/06/zhe-teng-nas/</id>
+    <published>2022-01-06T11:43:08.000Z</published>
+    <updated>2022-01-20T12:51:36.689Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;NAS的折腾之路&quot;&gt;&lt;a href=&quot;#NAS的折腾之路&quot; class=&quot;headerlink&quot; title=&quot;NAS的折腾之路&quot;&gt;&lt;/a&gt;NAS的折腾之路&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="NAS 路由 内网穿透 影视 观影自动化" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/NAS-%E8%B7%AF%E7%94%B1-%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-%E5%BD%B1%E8%A7%86-%E8%A7%82%E5%BD%B1%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>源码-trigger</title>
@@ -529,33 +556,6 @@
     
     
       <category term="动画" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%8A%A8%E7%94%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS-2D转换</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/10/12/css-2d-zhuan-huan/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/10/12/css-2d-zhuan-huan/</id>
-    <published>2020-10-12T14:17:43.000Z</published>
-    <updated>2021-11-24T12:24:55.906Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;CSS-2D转换&quot;&gt;&lt;a href=&quot;#CSS-2D转换&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="CSS动画" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/CSS%E5%8A%A8%E7%94%BB/"/>
-    
-    
-      <category term="2D转换" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/2D%E8%BD%AC%E6%8D%A2/"/>
     
   </entry>
   
