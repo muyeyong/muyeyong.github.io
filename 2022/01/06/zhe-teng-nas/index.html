@@ -471,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-20
+                    2022-01-25
                 </div>
                 
 
@@ -624,12 +624,13 @@ sudop docker run -it movie_robot // 运行镜像</code></pre></li>
 <ol start="3">
 <li><p><strong>制作Docker</strong></p>
 <p>将你配置好的代码全部上传到你需要运行的机器上，运行下面的代码</p>
-<pre><code>sudo docker build -t movie_robot  . -f Dockerfile  // 制作镜像
+<pre><code>sudo docker build -t movie_robot  . -f Dockerfile  --platform linux/amd64 // 制作镜像
 
 docker images // 查看镜像
 
-sudop docker run -it movie_robot // 运行镜像</code></pre></li>
+sudo docker run -it -v data:放置user_config.yml的路径 movie_robot // 运行镜像，需要将/data和你放user_config.yml的目录做映射</code></pre></li>
 </ol>
+<p><img src="https://s2.loli.net/2022/01/25/6T2e8RXdriGbAsl.png" alt=""></p>
 <p>最后的效果：    </p>
 <p><img src="https://s2.loli.net/2022/01/20/pz6RiHwNS8MuehD.png" alt=""></p>
 <p>个人水平有限，里面还是有很多问题，有几率添加不成功，马马虎虎能用，如果你能改进，请随意，切图仔不容易。</p>
