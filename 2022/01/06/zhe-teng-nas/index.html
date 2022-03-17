@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-25
+                    2022-03-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    10 分
                 </div>
                 
 
@@ -634,6 +634,20 @@ sudo docker run -it -v data:放置user_config.yml的路径 movie_robot // 运行
 <p>最后的效果：    </p>
 <p><img src="https://s2.loli.net/2022/01/20/pz6RiHwNS8MuehD.png" alt=""></p>
 <p>个人水平有限，里面还是有很多问题，有几率添加不成功，马马虎虎能用，如果你能改进，请随意，切图仔不容易。</p>
+<h2 id="2022-03-17-补充"><a href="#2022-03-17-补充" class="headerlink" title="2022-03-17 补充"></a>2022-03-17 补充</h2><h3 id="关于docker制作"><a href="#关于docker制作" class="headerlink" title="关于docker制作"></a>关于docker制作</h3><pre><code>sudo docker build -t movie_robot  . -f Dockerfile  --platform linux/amd64 // 制作镜像
+
+docker images // 查看镜像
+
+可以将镜像打包成tar格式，然后上传到安装机器： docker save -o movie_robot.tar movie_robot 
+就会在当前目录下生成movie_robot.tar上传到运行的机器即可
+
+sudo docker run -it -v data:放置user_config.yml的路径 movie_robot // 运行镜像，需要将/data和你放user_config.yml的目录做映射</code></pre><p>以威联通为例：</p>
+<p>​    <img src="https://s2.loli.net/2022/03/17/yaMifmPXO5j3BnQ.png" alt=""></p>
+<h3 id="FlareSolver-意外停止"><a href="#FlareSolver-意外停止" class="headerlink" title="FlareSolver 意外停止"></a>FlareSolver 意外停止</h3><p><img src="https://s2.loli.net/2022/03/17/6xZksRwLG25lAFh.png" alt=""></p>
+<p>原因是访问不了google，需要在环境变量配置 <code>URL_TEST:https://www.baidu.com</code>就可以解决</p>
+<p><img src="https://s2.loli.net/2022/03/17/ORZe3q1sy8Gg5Af.png" alt=""></p>
+<h3 id="Sonarr-Radarr-索引器-Indexers-配置"><a href="#Sonarr-Radarr-索引器-Indexers-配置" class="headerlink" title="Sonarr Radarr 索引器(Indexers)配置"></a>Sonarr Radarr 索引器(Indexers)配置</h3><p>​    是否选择这个索引器搜索跟Categories有很大的关系，例如你想下载电影，但是Categories没有电影这个类别，就不会使用这个索引器搜索资源，如果不知道怎么选择，就全部勾上吧。</p>
+<p><img src="https://s2.loli.net/2022/03/17/XWgT28qnrNLv7ay.png" alt=""></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1181,7 +1195,7 @@ sudo docker run -it -v data:放置user_config.yml的路径 movie_robot // 运行
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">62.3k</span>&nbsp;字
+                class="white-color">62.5k</span>&nbsp;字
             
             
             
