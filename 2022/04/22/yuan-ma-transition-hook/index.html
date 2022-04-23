@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-22
+                    2022-04-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    653
+                    876
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -526,6 +526,65 @@
 实现思路：
     外部传入state，通过state改变stage状态，stage共分为三个状态from、enter和leave，如果 stage === true，结点可见，且状态为from，在下一次重绘前状态变为enter。如果stage === false，说明结点状态要变为leave，且需要提示可以卸载结点了。
 */</span>    
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useRef<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Props</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">:</span> boolean
+  timeout<span class="token punctuation">:</span> number
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Timer</span> <span class="token punctuation">{</span>
+  id<span class="token operator">?</span><span class="token punctuation">:</span> number
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> setAnimationFrameTimeout <span class="token operator">=</span> <span class="token punctuation">(</span>callBack<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span><span class="token punctuation">,</span>timeout<span class="token punctuation">:</span> number <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> startTime <span class="token operator">=</span> performance<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> timer<span class="token punctuation">:</span> Timer <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">const</span> call <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>now <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>now <span class="token operator">-</span> startTime <span class="token operator">></span> timeout<span class="token punctuation">)</span> callBack
+      <span class="token keyword">else</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> timer
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> clearAnimationFrame <span class="token operator">=</span> <span class="token punctuation">(</span>timer<span class="token punctuation">:</span> Timer<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  timer<span class="token punctuation">.</span>id <span class="token operator">&amp;&amp;</span> <span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span>timer<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+
+type Stage <span class="token operator">=</span> <span class="token string">'from'</span> <span class="token operator">|</span> <span class="token string">'enter'</span> <span class="token operator">|</span> <span class="token string">'leave'</span>
+
+
+
+<span class="token keyword">const</span> useTransition <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token punctuation">:</span> Props<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> state<span class="token punctuation">,</span> timeout <span class="token punctuation">}</span> <span class="token operator">=</span> props
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>stage<span class="token punctuation">,</span> setStage<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span>Stage<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> timerRef <span class="token operator">=</span> useRef<span class="token operator">&lt;</span>Timer<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>shouldMount<span class="token punctuation">,</span> setShouldMount<span class="token punctuation">]</span> <span class="token operator">=</span> useState<span class="token operator">&lt;</span>boolean<span class="token operator">></span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">setStage</span><span class="token punctuation">(</span><span class="token string">'from'</span><span class="token punctuation">)</span>
+      <span class="token function">setShouldMount</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+      <span class="token function">setAnimationFrameTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token function">setStage</span><span class="token punctuation">(</span><span class="token string">'enter'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">setStage</span><span class="token punctuation">(</span><span class="token string">'leave'</span><span class="token punctuation">)</span>
+      <span class="token function">clearAnimationFrame</span><span class="token punctuation">(</span>timerRef<span class="token punctuation">.</span>current<span class="token punctuation">)</span>
+      timerRef<span class="token punctuation">.</span>current <span class="token operator">=</span> timerRef<span class="token punctuation">.</span>current <span class="token operator">=</span> <span class="token function">setAnimationFrameTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token function">setShouldMount</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> timeout<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>state<span class="token punctuation">,</span> timeout<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>stage<span class="token punctuation">,</span> shouldMount<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> useTransition
 </code></pre>
 <h2 id="useSwitchTransition"><a href="#useSwitchTransition" class="headerlink" title="useSwitchTransition"></a>useSwitchTransition</h2><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*
 实现思路：
@@ -535,7 +594,7 @@
         这种实现只需要维护一个状态
          const [latestState] = stateList
          const inputState
-         inputState === latestState return
+         if inputState === latestState return
          stateList = [{inputState, stage: from}, {...latestState, stage: leave}]
          下一次重绘：
                  stateList = [{inputState, stage: enter}, {...latestState, stage: leave}]
@@ -545,24 +604,24 @@
     实现先入后出 or 先出后入的效果
     const [secondState, latestState] = stateList
     const inputState
-    inputState !== latestState:
+    if inputState !== latestState:
       加入状态列表
       stateList = [latestState, {inputState,stage:'from'}]
 
-    inputState === latestState
+    if inputState === latestState
     &amp; !secondState:
       需要更新上一次加入的状态 stage = enter
 
-    inputState === latestState
+    if inputState === latestState
     &amp; secondState:
       需要更新上上次加入的状态 stage === leave，并且在指定时间后移除状态列表
-
-    三个阶段的转换：
-        from
-        enter
-        leave
+*/</span>
+</code></pre>
+<h2 id="useListTransition"><a href="#useListTransition" class="headerlink" title="useListTransition"></a>useListTransition</h2><pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/*
+实现思路：
+    useListTransition的实现其实很简单，自身维护一个状态数组，跟外部传入的Array对比，如果没有变化，就将stage === from 的状态改变成 stage = enter，如果有变化的话，要么是增加，要么是删除，增加的话就加入状态数组且stage = from，如果是删除的话，即刻将stage 变成leave，然后在指定时间内将其移除状态列表
 */</span></code></pre>
-<h2 id="useListTransition"><a href="#useListTransition" class="headerlink" title="useListTransition"></a>useListTransition</h2><script>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1112,7 +1171,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">62.1k</span>&nbsp;字
+                class="white-color">62.4k</span>&nbsp;字
             
             
             
