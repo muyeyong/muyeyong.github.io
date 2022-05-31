@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2022-04-23T13:27:36.744Z</updated>
+  <updated>2022-05-31T15:18:57.295Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组件-图片缩放</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2022/05/20/zu-jian-tu-pian-suo-fang/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2022/05/20/zu-jian-tu-pian-suo-fang/</id>
+    <published>2022-05-20T06:09:05.000Z</published>
+    <updated>2022-05-31T15:18:57.295Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;实现的功能&quot;&gt;&lt;a href=&quot;#实现的功能&quot; class=&quot;headerlink&quot; title=&quot;实现的功能&quot;&gt;&lt;/a&gt;实现的功能&lt;/h2&gt;&lt;p&gt;放大缩小&lt;/p&gt;
+&lt;p&gt;超过视口可以拖动&lt;/p&gt;
+&lt;p&gt;自定义快捷操作？&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="组件" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%BB%84%E4%BB%B6/"/>
+    
+    
+      <category term="React" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title>源码-transition-hook</title>
@@ -530,33 +560,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>移动端-基础</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/10/29/yi-dong-duan-ji-chu/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/10/29/yi-dong-duan-ji-chu/</id>
-    <published>2020-10-29T13:57:50.000Z</published>
-    <updated>2021-11-24T12:24:56.127Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;移动端-基础&quot;&gt;&lt;a href=&quot;#移动端-基础&quot; class=&quot;headerlink&quot; title=&quot;移动端-基础&quot;&gt;&lt;/a&gt;移动端-基础&lt;/h1&gt;&lt;h2 id=&quot;开发现状&quot;&gt;&lt;a href=&quot;#开发现状&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="移动端" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-    
-      <category term="基础" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
