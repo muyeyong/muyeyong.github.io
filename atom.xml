@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2022-06-01T14:45:23.127Z</updated>
+  <updated>2022-06-08T15:35:01.969Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>折腾-github issue 配合Obsidian 生成每日计划</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2022/06/08/zhe-teng-github-issue-pei-he-obsidian-sheng-cheng-mei-ri-ji-hua/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2022/06/08/zhe-teng-github-issue-pei-he-obsidian-sheng-cheng-mei-ri-ji-hua/</id>
+    <published>2022-06-08T03:40:00.000Z</published>
+    <updated>2022-06-08T15:35:01.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;github-issue配合Obsidian生成每日计划&quot;&gt;&lt;a href=&quot;#github-issue配合Obsidian生成每日计划&quot; class=&quot;headerlink&quot; title=&quot;github
+        
+      
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="每日计划" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%AF%8F%E6%97%A5%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>组件-图片缩放</title>
@@ -536,30 +563,6 @@
     
     
       <category term="flex布局" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/flex%E5%B8%83%E5%B1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>项目学习-Vue</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/11/02/xiang-mu-xue-xi-vue/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/11/02/xiang-mu-xue-xi-vue/</id>
-    <published>2020-11-02T01:44:36.000Z</published>
-    <updated>2021-11-24T12:24:56.146Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;ul li可以相互包含&lt;img src=&quot;%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0-Vue/Snipaste_2020-11-02_15-52-52.png&quot;
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>折腾-github issue 配合Obsidian 生成每日计划</title>
+      <link href="/2022/06/08/zhe-teng-github-issue-pei-he-obsidian-sheng-cheng-mei-ri-ji-hua/"/>
+      <url>/2022/06/08/zhe-teng-github-issue-pei-he-obsidian-sheng-cheng-mei-ri-ji-hua/</url>
+      
+        <content type="html"><![CDATA[<h1 id="github-issue配合Obsidian生成每日计划"><a href="#github-issue配合Obsidian生成每日计划" class="headerlink" title="github issue配合Obsidian生成每日计划"></a>github issue配合Obsidian生成每日计划</h1><h2 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h2><blockquote><p>这个仓库兼具了记录📝每日计划和自动创建issue的功能</p></blockquote><h3 id="每日自动创建issue"><a href="#每日自动创建issue" class="headerlink" title="每日自动创建issue"></a>每日自动创建issue</h3><p>​    首先需要创建一个<code>Token</code>，具体的步骤是点击你的头像 <code>settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code></p><p><img src="https://s2.loli.net/2022/06/08/KODXIHJAlBV8y3S.png" alt=""></p><p>创建完之后，需要立马保存，只会出现一次。然后clone这个<a href="https://github.com/muyeyong/every_plan">仓库</a>上传到你自己存放每日计划的仓库，进入仓库设置<code>settings</code> -&gt; <code>secrects</code>  -&gt; <code>New repository</code>将<code>Token</code>保存在里面，名称就是Token</p><p><img src="https://s2.loli.net/2022/06/08/dJfqvGm7IQLbDlT.png" alt=""></p><p>然后利用github action自动创建issue，这一阶段就结束了。</p><h2 id="使用Obsidian"><a href="#使用Obsidian" class="headerlink" title="使用Obsidian"></a>使用Obsidian</h2><blockquote><p>主要是使用Obsidan插件完成自动更新issue</p></blockquote><p>​    使用了社区插件（<code>Calender</code> 和<code>Deploy Content To Anywhere</code>），核心插件（<code>Daily notes</code>）</p><p>效果预览图，点击左下方的日期就可以自动创建一个带模板的日计划，<code>command + P</code>唤起命令栏选择对应的命令就可以同步到github对应的仓库里面去。</p><p><img src="https://s2.loli.net/2022/06/08/Zmvx26LD9o1TSMO.png" alt=""></p><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>​    首先需要在设置里面的<code>Community plugins</code> 关闭<code>Safe mode</code>才能安装插件，然后去社区搜索🔍<code>Calender</code>即可</p><p><img src="https://s2.loli.net/2022/06/08/13gtfAmBFq8PpjK.png" alt=""></p><p>​    <code>Daily notes</code>是自带的核心插件，直接打开即可。</p><p>![image-20220608230915893](/Users/tornado/Library/Application Support/typora-user-images/image-20220608230915893.png)</p><p>​    <code>PLUGIN OpTIONES</code>可以去配置插件选项，我们可以为<code>Daily notes</code>配置一个模板，模板可以随意编写 or <a href="https://github.com/muyeyong/every_plan/blob/main/dailyTemplate">简单模板</a>。</p><p><img src="https://s2.loli.net/2022/06/08/WC4RrN8u6lfvLaj.png" alt=""></p><p>​    <code>Deploy Content To Anywhere</code> 这个插件在社区找不到，需要我们自己安装，具体过程可以看<a href="https://www.bilibili.com/video/BV1cm4y1X7Vw?spm_id_from=333.999.0.0" target="_blank" rel="noopener">bilibi视频</a> 和 <a href="https://github.com/cuixiaorui/obsidian-plugin-deploy-content-to-anywhere">Deploy Content To Anywhere</a>，这个插件就是去查找你对应仓库的issue，需要注意的一点是仓库一定要存在名称相同的issue，插件会创建一个名称到你对应的仓库里面去查找相同名称的issue，如果找不到的话，就失败了（找不到就应该新建个才对，这里可以改进），所有github action创建的issue名称要和插件查找的名称格式要一致，名称格式全部可以自定义，如果用了我提供的仓库跑github action 注意更改Deploy Content To Anywhere的代码<code>currentIssueName -&gt; getDate</code>格式改成跟下图一直，按照视频操作就可以在Obsidian看到这个插件了，其中要配置的参数<code>Token</code>一项跟我们之前生成的<code>Token</code>是一致的。</p><p><img src="https://s2.loli.net/2022/06/08/Ys9xOcBnaWbVwgl.png" alt=""></p><h2 id="铛铛铛"><a href="#铛铛铛" class="headerlink" title="铛铛铛"></a>铛铛铛</h2><p>​    重在自律，不管你如何花式创建每日任务，只有真正执行了才有用，不然只是纸上功夫。</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://www.bilibili.com/video/BV1cm4y1X7Vw?spm_id_from=333.999.0.0" target="_blank" rel="noopener">bilibi视频</a></p><p><a href="https://github.com/cuixiaorui/obsidian-plugin-deploy-content-to-anywhere">ob 插件</a></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 折腾 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 每日计划 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>组件-图片缩放</title>
       <link href="/2022/05/20/zu-jian-tu-pian-suo-fang/"/>
       <url>/2022/05/20/zu-jian-tu-pian-suo-fang/</url>
