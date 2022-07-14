@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2022-06-08T15:35:01.969Z</updated>
+  <updated>2022-07-14T08:27:08.533Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nodejs-实战</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2022/07/14/nodejs-shi-zhan/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2022/07/14/nodejs-shi-zhan/</id>
+    <published>2022-07-14T07:44:55.000Z</published>
+    <updated>2022-07-14T08:27:08.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://github.com/muyeyong/nodejs-study/tree/main/refact-less&quot;&gt;代码链接&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="nodejs" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/nodejs/"/>
+    
+    
+      <category term="nodejs webapck" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/nodejs-webapck/"/>
+    
+  </entry>
   
   <entry>
     <title>折腾-github issue 配合Obsidian 生成每日计划</title>
@@ -48,7 +76,7 @@
     <link href="https://github.com/muyeyong/muyeyong.github.io/2022/05/20/zu-jian-tu-pian-suo-fang/"/>
     <id>https://github.com/muyeyong/muyeyong.github.io/2022/05/20/zu-jian-tu-pian-suo-fang/</id>
     <published>2022-05-20T06:09:05.000Z</published>
-    <updated>2022-06-01T14:45:23.127Z</updated>
+    <updated>2022-06-14T02:56:44.476Z</updated>
     
     <summary type="html">
     
@@ -532,37 +560,6 @@
     </summary>
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>CSS-flex布局</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/11/10/css-flex-bu-ju/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/11/10/css-flex-bu-ju/</id>
-    <published>2020-11-10T13:49:44.000Z</published>
-    <updated>2021-11-24T12:24:55.917Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
-        
-      
-    
-    </summary>
-    
-    
-      <category term="移动端" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    
-    
-      <category term="flex布局" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/flex%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
