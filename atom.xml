@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2022-07-20T07:22:52.765Z</updated>
+  <updated>2022-07-29T09:27:09.772Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack-进阶1</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2022/07/29/webpack-jin-jie-1/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2022/07/29/webpack-jin-jie-1/</id>
+    <published>2022-07-29T09:25:13.000Z</published>
+    <updated>2022-07-29T09:27:09.772Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;webpack-进阶&quot;&gt;&lt;a href=&quot;#webpack-进阶&quot; class=&quot;headerlink&quot; title=&quot;webpack 进阶&quot;&gt;&lt;/a&gt;webpack 进阶&lt;/h2&gt;&lt;h3 id=&quot;自动清理构建产物&quot;&gt;&lt;a href=&quot;#自动清理构建产物&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/webpack/"/>
+    
+    
+      <category term="webapck 打包" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/webapck-%E6%89%93%E5%8C%85/"/>
+    
+  </entry>
   
   <entry>
     <title>webapck-基础学习</title>
@@ -532,34 +559,6 @@
     
     
       <category term="预处理语言" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E9%A2%84%E5%A4%84%E7%90%86%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>动画效果-饿了么购物车动效</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2020/12/09/dong-hua-xiao-guo-e-liao-me-gou-wu-che-dong-xiao/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2020/12/09/dong-hua-xiao-guo-e-liao-me-gou-wu-che-dong-xiao/</id>
-    <published>2020-12-09T08:17:46.000Z</published>
-    <updated>2021-11-24T12:24:56.116Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;饿了么购物车动画实现&quot;&gt;&lt;a href=&quot;#饿了么购物车动画实现&quot; class=&quot;headerlink&quot; title=&quot;饿了么购物车动画实现&quot;&gt;&lt;/a&gt;饿了么购物车动画实现&lt;/h1&gt;&lt;p&gt;NO PICTURE SAY JB&lt;/p&gt;
-&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-    
-      <category term="动画效果" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/"/>
-    
-    
-      <category term="animation" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/animation/"/>
     
   </entry>
   
