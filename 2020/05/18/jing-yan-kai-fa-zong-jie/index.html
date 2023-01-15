@@ -471,14 +471,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-24
+                    2022-08-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.7k
                 </div>
                 
 
@@ -500,7 +500,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2020-05-21"><a href="#2020-05-21" class="headerlink" title="2020/05/21"></a>2020/05/21</h1><pre><code>这个迭代的单，逻辑上不难理解，根据某些逻辑，打开联系人的时候默认选中以IM（系统消息）的形式发送，三个端都需要改动，但是是在以前的老代码上改动。</code></pre><p>​    需要实现的效果</p>
+                <h2 id="2020-05-21"><a href="#2020-05-21" class="headerlink" title="2020/05/21"></a>2020/05/21</h2><pre><code>这个迭代的单，逻辑上不难理解，根据某些逻辑，打开联系人的时候默认选中以IM（系统消息）的形式发送，三个端都需要改动，但是是在以前的老代码上改动。</code></pre><p>​    需要实现的效果</p>
 <p><img src="Snipaste_2020-05-21_10-58-07.png" alt=""></p>
 <p>​    在以前老项目上改动，就需要先理解原先代码的逻辑，这就让人很奔溃，老代码字段很多很多，而且没有注解或注解很少（公司规定），这就提高了开发的难度，虽然每个迭代开始之前会写开发文档，但是我觉得这样做主要目的是为了服务开发流程的，对后续去他人的开发参考价值并不大。我需要理解每个字段的含义（<del>草泥马</del>）。</p>
 <p>​    在写代码的过程种发现了几个问题：</p>
@@ -530,7 +530,7 @@
 </ol>
 </li>
 </ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
 <li><p>配套文档缺少</p>
 </li>
 <li><p>代码质量不高，当时是怎么过review的？？？，设计的时候须要考虑到可扩展性，设计模式的应用。</p>
@@ -539,15 +539,14 @@
 </li>
 </ol>
 <hr>
-<p>2020/06/03</p>
-<p>​    来了来了，live bug来了，还是上一个迭代的单，今天在live上出bug了，原因是之前没有关注的可操作入口导致的。</p>
+<h2 id="2020-06-03"><a href="#2020-06-03" class="headerlink" title="2020/06/03"></a>2020/06/03</h2><p>​    来了来了，live bug来了，还是上一个迭代的单，今天在live上出bug了，原因是之前没有关注的可操作入口导致的。</p>
 <p>​    总结一下： </p>
 <ol>
 <li>对于老代码的更改，在不明白全部逻辑的情况下大刀阔斧的更改，但是全部理清老代码的逻辑也需要时间的，是否可行还不一定，另一种想法还是增量开发，但是对于需求跟以前的代码有冲突，进行增量开发不一定可行，这又要求对整体的把握，总之开始写代码之前，一定要去看代码，理清逻辑。</li>
 <li>还是粗心。今天再去测的时候发现有些接口还在报404，自测的时候为了省事，自测一部分，导致后面浪费更多时间。</li>
 </ol>
 <hr>
-<h1 id="2020-07-25"><a href="#2020-07-25" class="headerlink" title="2020/07/25"></a>2020/07/25</h1><p>​    到新的公司都一周多了，也要对最近遇到的问题，进行总结一下了。</p>
+<h2 id="2020-07-25"><a href="#2020-07-25" class="headerlink" title="2020/07/25"></a>2020/07/25</h2><p>​    到新的公司都一周多了，也要对最近遇到的问题，进行总结一下了。</p>
 <ul>
 <li>搜索框实现像百度一样的效果</li>
 </ul>
@@ -586,8 +585,7 @@ onFocus={e =&gt; e.target.value.length &gt; 0 &amp;&amp; setIsshow(true) &amp;&a
 <li>合理断句，不能直接将一段话一刀两段</li>
 <li>当隐藏的部分很短时，是不是要考虑其他实现方法（就像图片上那样）</li>
 </ul>
-<p>#2020/08/13</p>
-<a href="/2020/08/13/dai-ma-you-hua-shua-xin-jie-mian-hou-zen-me-bao-cun-yong-hu-shu-ju/" title="代码优化-刷新界面后怎么保存用户数据">代码优化-刷新界面后怎么保存用户数据</a>
+<h2 id="2020-08-13"><a href="#2020-08-13" class="headerlink" title="2020/08/13"></a>2020/08/13</h2><a href="/2020/08/13/dai-ma-you-hua-shua-xin-jie-mian-hou-zen-me-bao-cun-yong-hu-shu-ju/" title="代码优化-刷新界面后怎么保存用户数据">代码优化-刷新界面后怎么保存用户数据</a>
 
 <p>#2020/12/19</p>
 <p>一直想总结下最近的项目经验，但是懒就拖到现在，最近两个月做项目的时候挫败感挺强的，深感到自己太菜了。</p>
@@ -649,6 +647,8 @@ datePickerOptionsEnd: {
 <p>这是我前天的反思，轮播的环状饼图和自动滚动的列表起始在项目里早就封装好了的，虽然饼图还是自己写的，但用到了自动滚动列表，出现这种现象的原因是没有开发文档以及自己对存在的工具方法不熟悉。前期没有很好的沟通也导致了我浪费了大量时间，我觉得ui出设计稿的同时也要跟前端沟通，看看怎样设计才能更快更好的完成，有这个想法是因为时间选择组件</p>
 <p><img src="https://i.loli.net/2020/12/19/LvhOwRNFPxAJSbY.png" alt=""></p>
 <p>完全可以使用组件库已有的，但这个设计就相当于让我自己重新去写一个新的组件，不是不能完成，是没有必要</p>
+<h2 id="2022-08-22"><a href="#2022-08-22" class="headerlink" title="2022-08-22"></a>2022-08-22</h2><p>​    遇到一个很诡异的bug，起初是查看图片的历史版本的时候，显示的内容不正确，简单查看下，是传入的值不对，修正传入的值之后，就直接不能预览了</p>
+<p>​    传入的数据不对，历史版本双击预览应该显示历史记录的内容，不是显示资源区内容</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1198,7 +1198,7 @@ Code Runner我通常会在vs上用js写算法题，但是想直接运行的话�
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">66.2k</span>&nbsp;字
+                class="white-color">66.6k</span>&nbsp;字
             
             
             
