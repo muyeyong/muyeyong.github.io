@@ -471,21 +471,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-15
+                    2023-01-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    102
+                    664
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -500,10 +500,50 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Vue源码学习总结"><a href="#Vue源码学习总结" class="headerlink" title="Vue源码学习总结"></a>Vue源码学习总结</h1><blockquote>
+                <h1 id="Vue3源码学习总结"><a href="#Vue3源码学习总结" class="headerlink" title="Vue3源码学习总结"></a>Vue3源码学习总结</h1><blockquote>
 <p>2022-11-17开始，2023-01-15大概结束，坚持下来了</p>
 </blockquote>
-<h2 id="响应式数据"><a href="#响应式数据" class="headerlink" title="响应式数据"></a>响应式数据</h2><h2 id="虚拟节点跟真实dom"><a href="#虚拟节点跟真实dom" class="headerlink" title="虚拟节点跟真实dom"></a>虚拟节点跟真实dom</h2><h2 id="虚拟节点跟实例"><a href="#虚拟节点跟实例" class="headerlink" title="虚拟节点跟实例"></a>虚拟节点跟实例</h2><h2 id="实现更新"><a href="#实现更新" class="headerlink" title="实现更新"></a>实现更新</h2><h3 id="props更新"><a href="#props更新" class="headerlink" title="props更新"></a>props更新</h3><script>
+<h2 id="响应式数据"><a href="#响应式数据" class="headerlink" title="响应式数据"></a>响应式数据</h2><h3 id="怎么实现响应式数据"><a href="#怎么实现响应式数据" class="headerlink" title="怎么实现响应式数据"></a>怎么实现响应式数据</h3><blockquote>
+<p>reactive、readonly、ref、effect和computed</p>
+</blockquote>
+<p>响应式数据就是劫持数据的读写，get的时候收集依赖，set的时候触发依赖，这个依赖可以理解为它的上级上下文。</p>
+<p>TODO: 对reactive、readonly、ref 写下实现</p>
+<h3 id="响应式数据触发视图更新"><a href="#响应式数据触发视图更新" class="headerlink" title="响应式数据触发视图更新"></a>响应式数据触发视图更新</h3><p>依赖收集/触发：全局的变量存储依赖</p>
+<p>effect: 接受一个函数然后执行这个函数</p>
+<p>跟effect结合：effect接受一个函数(fn)，这个函数会被实例化成一个Effect对象，执行Effect对象的run(执行fn)，一个全局的变量activeEffect的值就是当前Effect对象，如果fn里面有响应式数据，响应式数据读取的时候会触发track的过程，会将activeEffect加入到，响应式数据的依赖中，当响应式数据改变的时候，会将相应的依赖取出来，然后执行。</p>
+<h2 id="虚拟节点跟真实dom"><a href="#虚拟节点跟真实dom" class="headerlink" title="虚拟节点跟真实dom"></a>虚拟节点跟真实dom</h2><p>虚拟节点是对真实dom的一个描述，创建虚拟节点的时候，会根据这个虚拟节点的属性创建</p>
+<pre class=" language-js"><code class="language-js"> <span class="token keyword">const</span> vnode <span class="token operator">=</span>  <span class="token punctuation">{</span>
+        type<span class="token punctuation">,</span>
+        props<span class="token punctuation">,</span>
+        children<span class="token punctuation">,</span>
+        key<span class="token punctuation">:</span> props<span class="token operator">?</span><span class="token punctuation">.</span>key <span class="token operator">?</span><span class="token operator">?</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        shapeFlag<span class="token punctuation">:</span> <span class="token function">getShapeFlag</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        el<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        component<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span></code></pre>
+<h2 id="虚拟节点跟实例"><a href="#虚拟节点跟实例" class="headerlink" title="虚拟节点跟实例"></a>虚拟节点跟实例</h2><p>虚拟节点只是描述了真实dom，具体的组件操作方法需要挂载到组件的实例上。</p>
+<pre class=" language-js"><code class="language-js"> <span class="token keyword">const</span> instance <span class="token operator">=</span>  <span class="token punctuation">{</span>
+        vnode<span class="token punctuation">,</span>
+        props<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        setupState<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        type<span class="token punctuation">:</span> vnode<span class="token punctuation">.</span>type<span class="token punctuation">,</span>
+        emit<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        provides<span class="token punctuation">:</span> parent <span class="token operator">?</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span>provides<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 原型链指向构造函数,怎么指向</span>
+        parent<span class="token punctuation">,</span>
+        slots<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        isMounted<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        subTree<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// effect的返回值</span>
+        update<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 下一个需要更新的节点</span>
+        nextVNode<span class="token punctuation">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span></code></pre>
+<h2 id="实现更新"><a href="#实现更新" class="headerlink" title="实现更新"></a>实现更新</h2><p>props更新</p>
+<p>children更新</p>
+<h2 id="学到了什么"><a href="#学到了什么" class="headerlink" title="学到了什么"></a>学到了什么</h2><p>1: 实现一个功能的时候，现全部实现，后续在拆分重构，没必要一开始就想的很好</p>
+<p>2: 发现vue的实现也不是很复杂，但是各各部分之间的结合比较巧妙，比如说effect跟响应式数据的结合、虚拟节点跟实例之间的关系（存在对对方的相互引用），还有就是写代码的过程中抽离重复逻辑</p>
+<p>3: 设计思想方面的话，模块指责划分，比如说<code>runtime-core</code> 和 <code>runtime-dom</code>，<code>runtime-core</code>只负责虚拟节点的创建更新的流程，如果想要创建dom元素的话，<code>runtime-dom</code>提供对应的api注入到<code>runtime-core</code>里面，类似于依赖注入。</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1051,7 +1091,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">66.6k</span>&nbsp;字
+                class="white-color">67.1k</span>&nbsp;字
             
             
             
