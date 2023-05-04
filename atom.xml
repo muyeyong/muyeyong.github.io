@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/muyeyong/muyeyong.github.io/"/>
-  <updated>2023-01-15T14:33:08.258Z</updated>
+  <updated>2023-05-04T15:04:00.465Z</updated>
   <id>https://github.com/muyeyong/muyeyong.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用vue3+vite实现一个按需打包的组件库</title>
+    <link href="https://github.com/muyeyong/muyeyong.github.io/2023/05/04/yong-vue3-vite-shi-xian-yi-ge-an-xu-da-bao-de-zu-jian-ku/"/>
+    <id>https://github.com/muyeyong/muyeyong.github.io/2023/05/04/yong-vue3-vite-shi-xian-yi-ge-an-xu-da-bao-de-zu-jian-ku/</id>
+    <published>2023-05-04T15:04:00.000Z</published>
+    <updated>2023-05-04T15:04:00.465Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Electron-实现多平台打包及检测更新</title>
@@ -527,33 +554,6 @@
     
     
       <category term="实践" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E5%AE%9E%E8%B7%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码优化-无限循环列表</title>
-    <link href="https://github.com/muyeyong/muyeyong.github.io/2021/01/12/dai-ma-you-hua-wu-xian-xun-huan-lie-biao/"/>
-    <id>https://github.com/muyeyong/muyeyong.github.io/2021/01/12/dai-ma-you-hua-wu-xian-xun-huan-lie-biao/</id>
-    <published>2021-01-12T03:53:21.000Z</published>
-    <updated>2021-11-24T12:24:56.116Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;无限循环列表Vue实现&quot;&gt;&lt;a href=&quot;#无限循环列表Vue实现&quot; class=&quot;headerlink&quot; title=&quot;无限循环列表Vue实现&quot;&gt;&lt;/a&gt;无限循环列表Vue实现&lt;/h1&gt;&lt;p&gt;为了实现上次的承诺&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="代码优化" scheme="https://github.com/muyeyong/muyeyong.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/"/>
-    
-    
-      <category term="无限循环" scheme="https://github.com/muyeyong/muyeyong.github.io/tags/%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AF/"/>
     
   </entry>
   
