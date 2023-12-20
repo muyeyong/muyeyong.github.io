@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>从零开始-项目搭建大礼包</title>
+      <link href="/2023/12/20/cong-ling-kai-shi-xiang-mu-da-jian-da-li-bao/"/>
+      <url>/2023/12/20/cong-ling-kai-shi-xiang-mu-da-jian-da-li-bao/</url>
+      
+        <content type="html"><![CDATA[<h1 id="搭建基于vue3-qiankun-pnpm的开发框架"><a href="#搭建基于vue3-qiankun-pnpm的开发框架" class="headerlink" title="搭建基于vue3 + qiankun + pnpm的开发框架"></a>搭建基于vue3 + qiankun + pnpm的开发框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>之前也写过基于qiankun的小项目，但这次是要用到实际的项目中，跟自己的小项目还是有很大的不同，涉及到全局的跳转、历史操作的保存恢复、全局数据共享、全局页面离开前的钩子处理以及全局通信等，基本的架构类似于下图，各个应用间都能相互跳转，需要的效果是虽然是多个应用拼成的系统，但使用起来需要像一个单独的系统一样，项目中的子应用实际上多达十几个，主应用在其中相当于一个中介，接受子应用的请求，协助子应用进行默写操作，最常见的就是协助一个字应用跳转到另一个字应用，这其中就涉及到子应用的显示隐藏、更新以及主应用决定要处理那些消息等。</p><p><img src="https://s2.loli.net/2023/12/20/pIGKuUlVtFQJbeO.png" alt=""></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> qiankun 项目搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 从零开始 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用vue3+vite实现一个按需引入的组件库</title>
       <link href="/2023/05/04/yong-vue3-vite-shi-xian-yi-ge-an-xu-da-bao-de-zu-jian-ku/"/>
       <url>/2023/05/04/yong-vue3-vite-shi-xian-yi-ge-an-xu-da-bao-de-zu-jian-ku/</url>
